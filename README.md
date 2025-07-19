@@ -39,10 +39,24 @@ Visit [http://localhost:3002](http://localhost:3002)
 
 ### 4. Build for Production
 
+To generate a production build, run:
+
 ```bash
 npm run build
+```
+
+The output will be in the `dist/` directory. **Note:** The `dist/` directory is automatically ignored by git and should not be committed.
+
+### 5. Preview Production Build
+
+```bash
 npm run preview
 ```
+
+## Favicon
+
+- The favicon should be placed in `public/favicon.svg`.
+- Do not edit or commit any favicon in the `dist/` directory; it is generated automatically during build.
 
 ## Deployment
 
