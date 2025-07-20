@@ -25,7 +25,7 @@ const MuscadineFooter = () => (
           <h4 className="text-lg font-semibold text-white mb-4 font-serif">Product</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="https://defi.muscadine.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Launch DeFi</a></li>
-            <li><a href="https://health.muscadine.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Health AI</a></li>
+            <li><a href="https://health.muscadine.box" target="_blank" rel="noopener noreferrer">Launch Health</a></li>
             <li><a href="https://nicholasconnelly.substack.com/" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Articles</a></li>
           </ul>
         </div>
@@ -43,6 +43,7 @@ const MuscadineFooter = () => (
             <li><a href="https://twitter.com/nicklutk" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Twitter</a></li>
             <li><a href="https://nicholasconnelly.substack.com/" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Substack</a></li>
             <li><a href="mailto:nickconnelly10@gmail.com?subject=Muscadine%20Inquiry" className="text-stone-400 hover:text-white transition-colors">Contact</a></li>
+            <li><a href="https://www.strava.com/clubs/1284036" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Strava Club</a></li>
           </ul>
         </div>
       </div>

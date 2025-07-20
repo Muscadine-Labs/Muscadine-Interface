@@ -97,3 +97,9 @@ npm run preview
 ## License
 
 MIT 
+
+*Built on BITCOIN • Secure • Transparent • Professional • Strava Club* 
+
+## Product
+
+- **Launch Health**: `https://health.muscadine.box` 
