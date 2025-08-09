@@ -24,8 +24,8 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, Error
     if (this.state.hasError) {
       return (
         <div className="flex flex-col items-center justify-center min-h-[200px] p-8">
-          <div className="text-2xl font-bold text-burgundy mb-2">Something went wrong</div>
-          <div className="text-burgundy/80 mb-4">{this.state.error?.message}</div>
+        <div className="text-2xl font-bold text-stone-900 mb-2">Something went wrong</div>
+        <div className="text-stone-700 mb-4">{this.state.error?.message}</div>
           <button className="btn-primary" onClick={() => window.location.reload()}>Reload</button>
         </div>
       );
