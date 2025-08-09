@@ -2,14 +2,48 @@ import { useState } from 'react';
 import Loader from './components/Loader';
 import ErrorBoundary from './components/ErrorBoundary';
 
-const MuscadineBanner = () => (
-  <div className="w-full bg-white/90 backdrop-blur-md border-b border-stone-200/50 py-6 px-6 flex flex-col md:flex-row items-center justify-between text-stone-900 text-base font-medium shadow-sm">
-    <a href="https://muscadine.box" className="font-serif text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity" target="_blank" rel="noopener noreferrer">Muscadine</a>
-    <div className="flex flex-wrap gap-6 mt-3 md:mt-0 items-center">
-      <a href="https://muscadine.box" className="btn-secondary text-sm px-6 py-3" target="_blank" rel="noopener noreferrer">Home</a>
-    </div>
-  </div>
-);
+const MuscadineBanner = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <nav className="w-full bg-white/90 backdrop-blur-md border-b border-stone-200/50 py-4 md:py-6 px-4 md:px-6 text-stone-900 shadow-sm sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <a
+          href="https://muscadine.box"
+          className="font-serif text-xl md:text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Muscadine
+        </a>
+        <div className="hidden md:flex items-center gap-6">
+          <a href="https://muscadine.box" className="btn-secondary text-sm px-6 py-3" target="_blank" rel="noopener noreferrer">Home</a>
+        </div>
+        <button
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded={isOpen}
+          className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-stone-700 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-400"
+          onClick={() => setIsOpen((v) => !v)}
+        >
+          <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            {isOpen ? (
+              <path d="M18 6L6 18M6 6l12 12" />
+            ) : (
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            )}
+          </svg>
+        </button>
+      </div>
+      {isOpen && (
+        <div className="md:hidden mt-3 border-t border-stone-200">
+          <div className="max-w-6xl mx-auto px-4 py-3 space-y-3">
+            <a href="https://muscadine.box" className="btn-secondary block w-full text-center px-4 py-3" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>Home</a>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
 
 const MuscadineFooter = () => (
   <footer className="bg-stone-800 text-stone-300 py-16">
@@ -180,16 +214,16 @@ function App() {
         <MuscadineBanner />
         <main className="flex-1 max-w-6xl mx-auto px-4 pb-20">
           {/* Main Tabs */}
-          <div className="flex border-b border-stone-200 mb-12 mt-12">
+          <div className="flex border-b border-stone-200 mb-8 md:mb-12 mt-8 md:mt-12 -mx-4 px-4 overflow-x-auto">
             <button
               onClick={() => setMainTab('bitcoin')}
-              className={`px-12 py-6 font-serif text-3xl font-bold transition-all duration-200 whitespace-nowrap rounded-t-lg ${mainTab === 'bitcoin' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}
+              className={`px-6 md:px-12 py-3 md:py-6 font-serif text-2xl md:text-3xl font-bold transition-all duration-200 whitespace-nowrap rounded-t-lg ${mainTab === 'bitcoin' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}
             >
               Bitcoin
             </button>
             <button
               onClick={() => setMainTab('defi')}
-              className={`px-12 py-6 font-serif text-3xl font-bold transition-all duration-200 whitespace-nowrap rounded-t-lg ${mainTab === 'defi' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}
+              className={`px-6 md:px-12 py-3 md:py-6 font-serif text-2xl md:text-3xl font-bold transition-all duration-200 whitespace-nowrap rounded-t-lg ${mainTab === 'defi' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}
             >
               DeFi
             </button>
@@ -201,10 +235,10 @@ function App() {
                 <h2 className="text-2xl font-bold text-stone-800 font-serif">Bitcoin</h2>
               </div>
               <div className="bg-gradient-to-br from-gold-50 via-stone-50 to-green-50 rounded-2xl shadow-xl p-8 border-l-8 border-gold-400">
-                <div className="flex border-b border-gold-200 mb-8 overflow-x-auto">
-                  <button onClick={() => setBitcoinTab('about')} className={`px-6 py-3 font-semibold text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'about' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>About</button>
-                  <button onClick={() => setBitcoinTab('node')} className={`px-6 py-3 font-semibold text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'node' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Node</button>
-                  <button onClick={() => setBitcoinTab('mempool')} className={`px-6 py-3 font-semibold text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'mempool' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Mempool</button>
+                <div className="flex border-b border-gold-200 mb-8 overflow-x-auto -mx-4 px-4">
+                  <button onClick={() => setBitcoinTab('about')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'about' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>About</button>
+                  <button onClick={() => setBitcoinTab('node')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'node' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Node</button>
+                  <button onClick={() => setBitcoinTab('mempool')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'mempool' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Mempool</button>
                 </div>
                 <div>
                   {bitcoinTab === 'about' && <AboutBitcoin />}
@@ -260,10 +294,10 @@ function App() {
                 <h2 className="text-2xl font-bold text-stone-800 font-serif">DeFi</h2>
               </div>
               <div className="bg-gradient-to-br from-gold-50 via-stone-50 to-green-50 rounded-2xl shadow-xl p-8 border-l-8 border-gold-400">
-                <div className="flex border-b border-gold-200 mb-8 overflow-x-auto">
-                  <button onClick={() => setDefiTab('about')} className={`px-6 py-3 font-semibold text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${defiTab === 'about' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}>About</button>
-                  <button onClick={() => setDefiTab('lending')} className={`px-6 py-3 font-semibold text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${defiTab === 'lending' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}>Earn & Borrow</button>
-                  <button onClick={() => setDefiTab('swap')} className={`px-6 py-3 font-semibold text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${defiTab === 'swap' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}>Token Swap</button>
+                <div className="flex border-b border-gold-200 mb-8 overflow-x-auto -mx-4 px-4">
+                  <button onClick={() => setDefiTab('about')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${defiTab === 'about' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}>About</button>
+                  <button onClick={() => setDefiTab('lending')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${defiTab === 'lending' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}>Earn & Borrow</button>
+                  <button onClick={() => setDefiTab('swap')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${defiTab === 'swap' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}>Token Swap</button>
                 </div>
                 <div>
                   {defiTab === 'about' && <AboutDefi />}
