@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Loader from './components/Loader';
 import ErrorBoundary from './components/ErrorBoundary';
+import MobileNav from './components/MobileNav';
 
 const MuscadineBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -330,6 +331,7 @@ function App() {
           )}
         </main>
         <MuscadineFooter />
+        <MobileNav />
       </div>
     </ErrorBoundary>
   );
