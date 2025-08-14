@@ -173,7 +173,7 @@ function App() {
   const mempoolExplanation = "The mempool (memory pool) is where unconfirmed Bitcoin transactions wait before being added to a block. It helps the network manage and prioritize pending transactions.";
   const lendingExplanation = "Earn & Borrow lets you lend your crypto to earn interest or borrow assets by providing collateral. These protocols are non-custodial and operate transparently on-chain.";
   const swapExplanation = "Token Swap allows you to exchange one cryptocurrency for another instantly using decentralized exchanges, without relying on a central authority.";
-
+  const walletExplanation = "Crypto wallets are your gateway to the decentralized world. They allow you to store, send, and receive cryptocurrencies while maintaining full control over your digital assets.";
   // External link handlers
   const openMempool = () => window.open('https://mempool.space', '_blank', 'noopener,noreferrer');
   const openAave = () => window.open('https://app.aave.com/', '_blank', 'noopener,noreferrer');
@@ -181,7 +181,9 @@ function App() {
   const openMorpho = () => window.open('https://app.morpho.org/base/earn', '_blank', 'noopener,noreferrer');
   const openAerodrome = () => window.open('https://aerodrome.finance/', '_blank', 'noopener,noreferrer');
   const openUniswap = () => window.open('https://app.uniswap.org/', '_blank', 'noopener,noreferrer');
-
+  const openZerion = () => window.open('https://app.zerion.io/', '_blank', 'noopener,noreferrer');
+  const openRabby = () => window.open('https://rabby.io/', '_blank', 'noopener,noreferrer');
+  const openPhantom = () => window.open('https://phantom.com/', '_blank', 'noopener,noreferrer');
   // DeFi Card Component
   const DeFiCard = ({ title, subtitle, className = "", onClick, aboutLink }: { 
     title: string; 
@@ -299,6 +301,7 @@ function App() {
                   <button onClick={() => setDefiTab('about')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${defiTab === 'about' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}>About</button>
                   <button onClick={() => setDefiTab('lending')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${defiTab === 'lending' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}>Earn & Borrow</button>
                   <button onClick={() => setDefiTab('swap')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${defiTab === 'swap' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}>Token Swap</button>
+                  <button onClick={() => setDefiTab('wallet')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${defiTab === 'wallet' ? 'text-gold-600 border-b-2 border-gold-600 bg-white shadow-sm' : 'text-stone-500 hover:text-gold-600'}`}>Wallet</button>
                 </div>
                 <div>
                   {defiTab === 'about' && <AboutDefi />}
@@ -325,7 +328,20 @@ function App() {
                       </div>
                     </div>
                   )}
-                </div>
+                  {defiTab === 'wallet' && (
+                    <div>
+                      <div className="mb-4 p-4 bg-stone-50 rounded-lg">
+                        <p className="text-stone-700 font-sans">{walletExplanation}</p>
+                      </div>
+                      <div className="grid md:grid-cols-3 gap-6">
+                        <DeFiCard title="Zerion" className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-300" onClick={openZerion} aboutLink="https://app.zerion.io/" />
+
+                        <DeFiCard title="Rabby" className="bg-gradient-to-br from-red-50 to-red-100 border-red-300" onClick={openRabby} aboutLink="https://rabby.io/" />
+
+                        <DeFiCard title="Phantom" className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-300" onClick={openPhantom} aboutLink="https://phantom.com/" />
+                      </div>
+                    </div>
+                  )}                </div>
               </div>
             </section>
           )}
