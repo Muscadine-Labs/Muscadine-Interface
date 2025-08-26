@@ -181,6 +181,22 @@ function App() {
   const openMorpho = () => window.open('https://app.morpho.org/base/earn', '_blank', 'noopener,noreferrer');
   const openAerodrome = () => window.open('https://aerodrome.finance/', '_blank', 'noopener,noreferrer');
   const openUniswap = () => window.open('https://app.uniswap.org/', '_blank', 'noopener,noreferrer');
+
+  // Copy to clipboard function
+  const copyToClipboard = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      // You could add a toast notification here if desired
+    } catch (err) {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+    }
+  };
   const openZerion = () => window.open('https://app.zerion.io/', '_blank', 'noopener,noreferrer');
   const openRabby = () => window.open('https://rabby.io/', '_blank', 'noopener,noreferrer');
   const openPhantom = () => window.open('https://phantom.com/', '_blank', 'noopener,noreferrer');
@@ -257,14 +273,24 @@ function App() {
                             <p className="text-sm text-stone-600 mb-2 font-sans">Electrum Server Hostname:</p>
                             <div className="flex items-center gap-2">
                               <code className="bg-stone-100 px-3 py-2 rounded text-sm flex-1 break-all">lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion</code>
-                              <button className="bg-stone-600 text-white px-3 py-2 rounded text-sm hover:bg-stone-700">Copy</button>
+                              <button 
+                                className="bg-stone-600 text-white px-3 py-2 rounded text-sm hover:bg-stone-700 transition-colors" 
+                                onClick={() => copyToClipboard('lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion')}
+                              >
+                                Copy
+                              </button>
                             </div>
                           </div>
                           <div>
                             <p className="text-sm text-stone-600 mb-2 font-sans">Port:</p>
                             <div className="flex items-center gap-2">
                               <span className="bg-stone-100 px-3 py-2 rounded text-sm">50001</span>
-                              <button className="bg-stone-600 text-white px-3 py-2 rounded text-sm hover:bg-stone-700">Copy</button>
+                              <button 
+                                className="bg-stone-600 text-white px-3 py-2 rounded text-sm hover:bg-stone-700 transition-colors" 
+                                onClick={() => copyToClipboard('50001')}
+                              >
+                                Copy
+                              </button>
                             </div>
                           </div>
                         </div>
