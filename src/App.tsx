@@ -9,15 +9,15 @@ const MuscadineBanner = () => {
     <nav className="w-full bg-white/90 backdrop-blur-md border-b border-stone-200/50 py-4 md:py-6 px-4 md:px-6 text-stone-900 shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <a
-          href="https://muscadine.box"
+          href="https://nicholasconnelly.box"
           className="font-serif text-xl md:text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Muscadine
+          Nicholas Connelly
         </a>
         <div className="hidden md:flex items-center gap-6">
-          <a href="https://muscadine.box" className="btn-secondary text-sm px-6 py-3" target="_blank" rel="noopener noreferrer">Home</a>
+          <a href="https://nicholasconnelly.box" className="btn-secondary text-sm px-6 py-3" target="_blank" rel="noopener noreferrer">Home</a>
         </div>
         <button
           type="button"
@@ -38,7 +38,7 @@ const MuscadineBanner = () => {
       {isOpen && (
         <div className="md:hidden mt-3 border-t border-stone-200">
           <div className="max-w-6xl mx-auto px-4 py-3 space-y-3">
-            <a href="https://muscadine.box" className="btn-secondary block w-full text-center px-4 py-3" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>Home</a>
+            <a href="https://nicholasconnelly.box" className="btn-secondary block w-full text-center px-4 py-3" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>Home</a>
           </div>
         </div>
       )}
@@ -51,7 +51,7 @@ const MuscadineFooter = () => (
     <div className="max-w-6xl mx-auto px-4">
       <div className="grid md:grid-cols-4 gap-8 mb-8">
         <div>
-          <h4 className="text-lg font-semibold text-white mb-4 font-serif">Muscadine</h4>
+          <h4 className="text-lg font-semibold text-white mb-4 font-serif">Nicholas Connelly</h4>
           <p className="text-sm text-stone-400 font-sans">
             Health and Financial self-sovereignty.
           </p>
@@ -59,8 +59,8 @@ const MuscadineFooter = () => (
         <div>
           <h4 className="text-lg font-semibold text-white mb-4 font-serif">Product</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="https://defi.muscadine.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Launch DeFi</a></li>
-            <li><a href="https://health.muscadine.box" target="_blank" rel="noopener noreferrer">Launch Health</a></li>
+            <li><a href="https://defi.nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Launch DeFi</a></li>
+            <li><a href="https://health.nicholasconnelly.box" target="_blank" rel="noopener noreferrer">Launch Health</a></li>
             <li><a href="https://nicholasconnelly.substack.com/" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Articles</a></li>
           </ul>
         </div>
@@ -69,7 +69,7 @@ const MuscadineFooter = () => (
           <ul className="space-y-2 text-sm">
             <li><a href="/privacy.html" className="text-stone-400 hover:text-white transition-colors">Privacy Policy</a></li>
             <li><a href="/terms.html" className="text-stone-400 hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="https://github.com/nickconnelly10/muscadine.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Open Source</a></li>
+            <li><a href="https://github.com/nickconnelly10/defi.nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Open Source</a></li>
           </ul>
         </div>
         <div>
@@ -83,7 +83,7 @@ const MuscadineFooter = () => (
         </div>
       </div>
       <div className="border-t border-stone-700 pt-8 text-center">
-        <p className="text-sm mb-4">&copy; 2025 Muscadine. All rights reserved.</p>
+        <p className="text-sm mb-4">&copy; 2025 Nicholas Connelly. All rights reserved.</p>
         <p className="text-xs text-stone-400">
           Built on BITCOIN • Secure • Transparent • Professional
         </p>
