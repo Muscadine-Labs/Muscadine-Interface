@@ -6,6 +6,9 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
+    target: 'esnext',
+    minify: 'esbuild',
+    cssMinify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -15,10 +18,18 @@ export default defineConfig({
       }
     },
     chunkSizeWarningLimit: 1000,
-    minify: 'esbuild',
   },
   server: {
     port: 3002,
     host: true
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion']
+  },
+  esbuild: {
+    target: 'esnext',
+    minifyIdentifiers: true,
+    minifySyntax: true,
+    minifyWhitespace: true
   }
 }); 
