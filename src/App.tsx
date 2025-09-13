@@ -3,6 +3,7 @@ import Loader from './components/Loader';
 import ErrorBoundary from './components/ErrorBoundary';
 import MobileNav from './components/MobileNav';
 import CryptoPlan from './components/CryptoPlan';
+import Analytics from './components/Analytics';
 
 const MuscadineBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -310,6 +311,7 @@ function App() {
 
   return (
     <ErrorBoundary>
+      <Analytics pageName="defi-dashboard" />
       <div className="min-h-screen bg-stone-50 flex flex-col font-serif">
         <MuscadineBanner />
         {isLoading && (
