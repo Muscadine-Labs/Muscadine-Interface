@@ -7,7 +7,7 @@ const CryptoPlan = () => {
         <div className="bg-white rounded-2xl shadow-xl border border-stone-200 p-8">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-stone-900 font-serif mb-4">
-              Crypto Plan
+              Crypto Guide
             </h1>
             <p className="text-stone-600 text-lg">
               Strategic roadmap for cryptocurrency investments and portfolio management

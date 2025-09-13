@@ -7,18 +7,6 @@ import Analytics from './components/Analytics';
 
 const MuscadineBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
-
-  const copyNodeInfo = async () => {
-    const nodeInfo = `Electrum Server: lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion:50001`;
-    try {
-      await navigator.clipboard.writeText(nodeInfo);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
-  };
 
   return (
     <nav className="w-full bg-white/95 backdrop-blur-lg border-b border-stone-200/50 py-4 md:py-6 px-4 md:px-6 text-stone-900 shadow-lg sticky top-0 z-50">
@@ -34,23 +22,6 @@ const MuscadineBanner = () => {
           </span>
         </a>
         <div className="hidden md:flex items-center gap-4">
-          <button
-            onClick={copyNodeInfo}
-            className="relative group bg-stone-100 hover:bg-stone-200 text-stone-700 hover:text-stone-900 text-sm px-4 py-2 rounded-lg transition-all duration-200 border border-stone-200 hover:border-stone-300"
-            title="Copy Node Info"
-          >
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-              {copied ? 'Copied!' : 'Node Info'}
-            </span>
-            {copied && (
-              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-xs px-2 py-1 rounded shadow-lg">
-                Copied to clipboard!
-              </div>
-            )}
-          </button>
           <a href="https://nicholasconnelly.box" className="btn-secondary text-sm px-6 py-3 hover:shadow-md transition-all duration-200" target="_blank" rel="noopener noreferrer">Home</a>
         </div>
         <button
@@ -72,18 +43,6 @@ const MuscadineBanner = () => {
       {isOpen && (
         <div className="md:hidden mt-3 border-t border-stone-200 bg-white/95 backdrop-blur-lg">
           <div className="max-w-6xl mx-auto px-4 py-3 space-y-3">
-            <button
-              onClick={() => {
-                copyNodeInfo();
-                setIsOpen(false);
-              }}
-              className="w-full text-left bg-stone-100 hover:bg-stone-200 text-stone-700 hover:text-stone-900 text-sm px-4 py-3 rounded-lg transition-all duration-200 border border-stone-200 hover:border-stone-300 flex items-center gap-2"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-              {copied ? 'Copied!' : 'Copy Node Info'}
-            </button>
             <a href="https://nicholasconnelly.box" className="btn-secondary block w-full text-center px-4 py-3 hover:shadow-md transition-all duration-200" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>Home</a>
           </div>
         </div>
@@ -126,9 +85,9 @@ const MuscadineFooter = () => (
         </div>
       </div>
       <div className="border-t border-stone-700 pt-8 text-center">
-        <p className="text-sm mb-4">&copy; 2025 Muscadine. All rights reserved.</p>
+        <p className="text-sm mb-4">&copy; September 2025 Muscadine. All rights reserved.</p>
         <p className="text-xs text-stone-400 mb-2">
-          Built on BITCOIN • Secure • Transparent • Professional
+          Financial self-sovereignty
         </p>
         <p className="text-xs text-stone-400">
           <a href="https://nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Visit nicholasconnelly.box</a>
@@ -348,7 +307,7 @@ function App() {
                 <div className="flex border-b border-gold-200 mb-8 overflow-x-auto -mx-4 px-4">
                   <button onClick={() => setBitcoinTab('about')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'about' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>About</button>
                   <button onClick={() => setBitcoinTab('node')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'node' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Node</button>
-                  <button onClick={() => setBitcoinTab('crypto-plan')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'crypto-plan' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Crypto Plan</button>
+                  <button onClick={() => setBitcoinTab('crypto-plan')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'crypto-plan' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Crypto Guide</button>
                   <button onClick={() => setBitcoinTab('mempool')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'mempool' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Mempool</button>
                 </div>
                 <div>

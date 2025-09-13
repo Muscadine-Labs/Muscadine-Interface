@@ -1,7 +1,7 @@
 {
-  "name": "Nicholas Connelly - DeFi Dashboard",
-  "short_name": "DeFi Dashboard",
-  "description": "Your gateway to decentralized finance analytics and management",
+  "name": "Muscadine - Financial self-sovereignty",
+  "short_name": "Muscadine",
+  "description": "Financial self-sovereignty through decentralized finance",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fafaf9",
