@@ -84,14 +84,20 @@ const MuscadineFooter = () => (
           </ul>
         </div>
       </div>
-      <div className="border-t border-stone-700 pt-8 text-center">
-        <p className="text-sm mb-4">&copy; September 2025 Muscadine. All rights reserved.</p>
-        <p className="text-xs text-stone-400 mb-2">
-          Financial self-sovereignty
-        </p>
-        <p className="text-xs text-stone-400">
-          <a href="https://nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Visit nicholasconnelly.box</a>
-        </p>
+      <div className="border-t border-stone-700 pt-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-left">
+            <p className="text-xs text-stone-400 mb-2">
+              <a href="https://nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Visit nicholasconnelly.box</a>
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-sm mb-4">&copy; September 2025 Muscadine. All rights reserved.</p>
+            <p className="text-xs text-stone-400 mb-2">
+              Built on BITCOIN • Secure • Transparent • Professional
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
