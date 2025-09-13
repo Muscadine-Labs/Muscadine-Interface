@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Loader from './components/Loader';
 import ErrorBoundary from './components/ErrorBoundary';
 import MobileNav from './components/MobileNav';
+import CryptoPlan from './components/CryptoPlan';
 
 const MuscadineBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -257,10 +258,12 @@ function App() {
                 <div className="flex border-b border-gold-200 mb-8 overflow-x-auto -mx-4 px-4">
                   <button onClick={() => setBitcoinTab('about')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'about' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>About</button>
                   <button onClick={() => setBitcoinTab('node')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'node' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Node</button>
+                  <button onClick={() => setBitcoinTab('crypto-plan')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'crypto-plan' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Crypto Plan</button>
                   <button onClick={() => setBitcoinTab('mempool')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'mempool' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Mempool</button>
                 </div>
                 <div>
                   {bitcoinTab === 'about' && <AboutBitcoin />}
+                  {bitcoinTab === 'crypto-plan' && <CryptoPlan />}
                   {bitcoinTab === 'node' && (
                     <div>
                       <div className="mb-4 p-4 bg-stone-50 rounded-lg">
