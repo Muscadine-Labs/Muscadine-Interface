@@ -57,8 +57,11 @@ const MuscadineFooter = () => (
       <div className="grid md:grid-cols-4 gap-8 mb-8">
         <div>
           <h4 className="text-lg font-semibold text-white mb-4 font-serif">Muscadine</h4>
-          <p className="text-sm text-stone-400 font-sans">
+          <p className="text-sm text-stone-400 font-sans mb-3">
             Financial self-sovereignty.
+          </p>
+          <p className="text-xs text-stone-400">
+            <a href="https://nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Visit nicholasconnelly.box</a>
           </p>
         </div>
         <div>
@@ -84,20 +87,11 @@ const MuscadineFooter = () => (
           </ul>
         </div>
       </div>
-      <div className="border-t border-stone-700 pt-8">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-left">
-            <p className="text-xs text-stone-400 mb-2">
-              <a href="https://nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Visit nicholasconnelly.box</a>
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-sm mb-4">&copy; September 2025 Muscadine. All rights reserved.</p>
-            <p className="text-xs text-stone-400 mb-2">
-              Built on BITCOIN • Secure • Transparent • Professional
-            </p>
-          </div>
-        </div>
+      <div className="border-t border-stone-700 pt-8 text-center">
+        <p className="text-sm mb-4">&copy; September 2025 Muscadine. All rights reserved.</p>
+        <p className="text-xs text-stone-400 mb-2">
+          Built on BITCOIN • Secure • Transparent • Professional
+        </p>
       </div>
     </div>
   </footer>
