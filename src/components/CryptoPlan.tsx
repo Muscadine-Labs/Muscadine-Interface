@@ -23,7 +23,7 @@ const CryptoPlan = () => {
                   This comprehensive guide provides clear, step-by-step instructions for setting up your Start9 server, Bitcoin node, Lightning network, Electrum, and related tools. Designed for easy following by you and family members to achieve full infrastructure setup and management.
                 </p>
                 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-1 gap-6">
                   <div className="bg-white rounded-lg p-4 border border-blue-200">
                     <h3 className="text-xl font-semibold text-stone-800 mb-3">Start9 Server & Node Access</h3>
                     <p className="text-stone-600 mb-3">Your Start9 Server runs Bitcoin, Electrum, Lightning (LND/CLN), and BTCPay. Access it locally or remotely.</p>
@@ -32,17 +32,6 @@ const CryptoPlan = () => {
                       <li><strong>Local Network:</strong> https://two-words.local</li>
                       <li><strong>Local IP:</strong> 192.000.0.00</li>
                       <li><strong>Electrum RPC Port:</strong> 50001</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-white rounded-lg p-4 border border-blue-200">
-                    <h3 className="text-xl font-semibold text-stone-800 mb-3">Nick's Electrum Bitcoin Node</h3>
-                    <p className="text-stone-600 mb-3">Connect to my personal electrum server for enhanced privacy and security.</p>
-                    <ul className="space-y-2 text-sm text-stone-700">
-                      <li><strong>Website:</strong> https://defi.muscadine.box/</li>
-                      <li><strong>Tor RPC URL:</strong> lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion</li>
-                      <li><strong>Port:</strong> 50001</li>
-                      <li><strong>Contact:</strong> nickconnelly10@gmail.com</li>
                     </ul>
                   </div>
                 </div>
