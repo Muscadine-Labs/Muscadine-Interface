@@ -463,7 +463,7 @@ const CryptoPlan = () => {
                     <h3 className="text-xl font-semibold text-stone-800 mb-3">Monitoring</h3>
                     <ul className="space-y-1 text-sm text-stone-700">
                       <li>• Create read-only profiles in <a href="https://app.zerion.io/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Zerion</a>/<a href="https://debank.com/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">DeBank</a></li>
-                      <li>• Check Health Factor daily if borrowing; set alert thresholds (HF < 1.5)</li>
+                        <li>• Check Health Factor daily if borrowing; set alert thresholds (HF &lt; 1.5)</li>
                       <li>• Only use official/verified bridges & token addresses</li>
                       <li>• Avoid volatile LTVs; liquidation risk rises quickly during market moves</li>
                       <li>• If cbBTC or other tokens are not supported in a given protocol, do not force deposits; stick to supported assets</li>
