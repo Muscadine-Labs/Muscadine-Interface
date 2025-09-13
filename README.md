@@ -130,4 +130,11 @@ MIT License - see LICENSE file for details.
 
 - **Health Dashboard**: `https://health.nicholasconnelly.box`
 - **Main Site**: `https://nicholasconnelly.box`
-- **DeFi Dashboard**: `https://defi.nicholasconnelly.box` 
+
+## 🌐 Domain Configuration
+
+This repository serves the following domains:
+- **Primary**: `https://defi.nicholasconnelly.box`
+- **Muscadine**: `https://muscadine.box`
+- **Muscadine WWW**: `https://www.muscadine.box`
+- **Muscadine DeFi**: `https://defi.muscadine.box` 
