@@ -1,22 +1,25 @@
-# Muscadine DeFi Information Site
+# 🚀 Muscadine DeFi Information Site
 
 A clean, informative DeFi and Bitcoin resource site for the Muscadine ecosystem. Built as a static React app with educational content about Bitcoin and DeFi protocols.
 
-## Features
+## ✨ Features
 
-- **Bitcoin Education**: Comprehensive guides on Bitcoin basics, wallet setup, and node connection details
-- **DeFi Information**: Educational content about DeFi protocols, lending platforms, and token swapping
-- **Clean UI**: Modern, responsive design with consistent styling
-- **No Backend**: 100% static front-end app—no server or database required
-- **Error Handling**: Global error boundaries and Sentry integration for robust error logging
+- **💰 Bitcoin Education**: Comprehensive guides on Bitcoin basics, wallet setup, and node connection details
+- **🔄 DeFi Information**: Educational content about DeFi protocols, lending platforms, and token swapping
+- **🎨 Clean UI**: Modern, responsive design with consistent styling and smooth animations
+- **⚡ Fast Performance**: Optimized static site with global CDN delivery
+- **🔒 Secure**: HTTPS-only with comprehensive security headers
+- **📱 Responsive**: Works perfectly on desktop and mobile devices
+- **🛡️ Error Handling**: Global error boundaries and Sentry integration for robust error logging
+- **🌙 Dark Mode**: Built-in dark/light mode support
 
-## Getting Started
+## 🚀 Quick Start
 
 ### 1. Clone & Install
 
 ```bash
-git clone <repository-url>
-cd defi.muscadine.box
+git clone https://github.com/nickconnelly10/defi.nicholasconnelly.box.git
+cd defi.nicholasconnelly.box
 npm install
 ```
 
@@ -86,20 +89,45 @@ npm run preview
 
 - Sentry is integrated for front-end error monitoring (optional, set DSN in `.env`)
 
-## Testing
+## 🧪 Testing
 
+- **Build Test**: Run `npm run build` to ensure the project builds successfully
+- **Linting**: Run `npm run lint` to check code quality
 - **Note:** There are currently no automated tests or test script in this project. If you add tests, update the README accordingly.
 
-## Contributing
+## 📦 Deployment Hygiene: What to Commit
+
+| File/Folder         | Required for Deployment? | Commit to Repo? | Notes                                 |
+|---------------------|-------------------------|-----------------|---------------------------------------|
+| `node_modules/`     | No                      | No              | Only for local dev/build. Should be in `.gitignore`. |
+| `package-lock.json` | Yes                     | Yes             | Ensures consistent dependency install |
+| `vercel.json`       | Yes (if using Vercel)   | Yes             | Custom Vercel config                  |
+| `dist/`             | No                      | No              | Build output, auto-generated          |
+| `public/`           | Yes                     | Yes             | Static assets (favicon, legal, etc)   |
+| `src/`              | Yes                     | Yes             | Source code                           |
+| `.gitignore`        | Yes                     | Yes             | Ensures build artifacts are ignored   |
+
+**Delete or do not commit:**
+- `node_modules/` (never commit)
+- `dist/` (never commit)
+- Any backup files like `package-lock 2.json`, `vercel 2.json`, etc.
+
+## 🤝 Contributing
 
 - PRs welcome! Please open an issue for feature requests or bugs.
+- Follow the existing code style and conventions.
+- Ensure all builds pass before submitting.
 
-## License
+## 📄 License
 
-MIT 
+MIT License - see LICENSE file for details.
 
-*Built on BITCOIN • Secure • Transparent • Professional • Strava Club* 
+---
 
-## Product
+*Built on BITCOIN • Secure • Transparent • Professional • Strava Club*
 
-- **Launch Health**: `https://health.muscadine.box` 
+## 🔗 Related Projects
+
+- **Health Dashboard**: `https://health.nicholasconnelly.box`
+- **Main Site**: `https://nicholasconnelly.box`
+- **DeFi Dashboard**: `https://defi.nicholasconnelly.box` 
