@@ -6,28 +6,60 @@ import CryptoPlan from './components/CryptoPlan';
 
 const MuscadineBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const copyNodeInfo = async () => {
+    const nodeInfo = `Electrum Server: lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion:50001`;
+    try {
+      await navigator.clipboard.writeText(nodeInfo);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
   return (
-    <nav className="w-full bg-white/90 backdrop-blur-md border-b border-stone-200/50 py-4 md:py-6 px-4 md:px-6 text-stone-900 shadow-sm sticky top-0 z-50">
+    <nav className="w-full bg-white/95 backdrop-blur-lg border-b border-stone-200/50 py-4 md:py-6 px-4 md:px-6 text-stone-900 shadow-lg sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <a
           href="https://muscadine.box"
-          className="font-serif text-xl md:text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity"
+          className="font-serif text-xl md:text-2xl font-bold tracking-tight hover:opacity-80 transition-all duration-300 group"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Muscadine
+          <span className="bg-gradient-to-r from-gold-600 to-gold-800 bg-clip-text text-transparent group-hover:from-gold-700 group-hover:to-gold-900 transition-all duration-300">
+            Muscadine
+          </span>
         </a>
-        <div className="hidden md:flex items-center gap-6">
-          <a href="https://nicholasconnelly.box" className="btn-secondary text-sm px-6 py-3" target="_blank" rel="noopener noreferrer">Home</a>
+        <div className="hidden md:flex items-center gap-4">
+          <button
+            onClick={copyNodeInfo}
+            className="relative group bg-stone-100 hover:bg-stone-200 text-stone-700 hover:text-stone-900 text-sm px-4 py-2 rounded-lg transition-all duration-200 border border-stone-200 hover:border-stone-300"
+            title="Copy Node Info"
+          >
+            <span className="flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              {copied ? 'Copied!' : 'Node Info'}
+            </span>
+            {copied && (
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-xs px-2 py-1 rounded shadow-lg">
+                Copied to clipboard!
+              </div>
+            )}
+          </button>
+          <a href="https://nicholasconnelly.box" className="btn-secondary text-sm px-6 py-3 hover:shadow-md transition-all duration-200" target="_blank" rel="noopener noreferrer">Home</a>
         </div>
         <button
           type="button"
           aria-label="Toggle menu"
           aria-expanded={isOpen}
-          className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-stone-700 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-400"
+          className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-stone-700 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-400 transition-all duration-200"
           onClick={() => setIsOpen((v) => !v)}
         >
-          <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg className="h-6 w-6 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             {isOpen ? (
               <path d="M18 6L6 18M6 6l12 12" />
             ) : (
@@ -37,9 +69,21 @@ const MuscadineBanner = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="md:hidden mt-3 border-t border-stone-200">
+        <div className="md:hidden mt-3 border-t border-stone-200 bg-white/95 backdrop-blur-lg">
           <div className="max-w-6xl mx-auto px-4 py-3 space-y-3">
-            <a href="https://nicholasconnelly.box" className="btn-secondary block w-full text-center px-4 py-3" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>Home</a>
+            <button
+              onClick={() => {
+                copyNodeInfo();
+                setIsOpen(false);
+              }}
+              className="w-full text-left bg-stone-100 hover:bg-stone-200 text-stone-700 hover:text-stone-900 text-sm px-4 py-3 rounded-lg transition-all duration-200 border border-stone-200 hover:border-stone-300 flex items-center gap-2"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              {copied ? 'Copied!' : 'Copy Node Info'}
+            </button>
+            <a href="https://nicholasconnelly.box" className="btn-secondary block w-full text-center px-4 py-3 hover:shadow-md transition-all duration-200" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>Home</a>
           </div>
         </div>
       )}
@@ -168,6 +212,8 @@ function App() {
   const [mainTab, setMainTab] = useState<'bitcoin' | 'defi'>('bitcoin');
   const [bitcoinTab, setBitcoinTab] = useState<'about' | 'node' | 'mempool'>('about');
   const [defiTab, setDefiTab] = useState<'about' | 'lending' | 'swap'>('about');
+  const [isLoading, setIsLoading] = useState(false);
+  const [loadingMessage, setLoadingMessage] = useState('');
 
   // Explanations
   const nodeExplanation = "A node is a computer that participates in the Bitcoin network by validating transactions and blocks. Running your own node gives you full control and privacy over your Bitcoin experience.";
@@ -175,13 +221,25 @@ function App() {
   const lendingExplanation = "Earn & Borrow lets you lend your crypto to earn interest or borrow assets by providing collateral. These protocols are non-custodial and operate transparently on-chain.";
   const swapExplanation = "Token Swap allows you to exchange one cryptocurrency for another instantly using decentralized exchanges, without relying on a central authority.";
   const walletExplanation = "Crypto wallets are your gateway to the decentralized world. They allow you to store, send, and receive cryptocurrencies while maintaining full control over your digital assets.";
-  // External link handlers
-  const openMempool = () => window.open('https://mempool.space', '_blank', 'noopener,noreferrer');
-  const openAave = () => window.open('https://app.aave.com/', '_blank', 'noopener,noreferrer');
-  const openMoonwell = () => window.open('https://moonwell.fi/portfolio', '_blank', 'noopener,noreferrer');
-  const openMorpho = () => window.open('https://app.morpho.org/base/earn', '_blank', 'noopener,noreferrer');
-  const openAerodrome = () => window.open('https://aerodrome.finance/', '_blank', 'noopener,noreferrer');
-  const openUniswap = () => window.open('https://app.uniswap.org/', '_blank', 'noopener,noreferrer');
+  // Enhanced external link handlers with loading states
+  const handleExternalLink = (url: string, name: string) => {
+    setIsLoading(true);
+    setLoadingMessage(`Opening ${name}...`);
+    
+    // Simulate a brief loading state for better UX
+    setTimeout(() => {
+      window.open(url, '_blank', 'noopener,noreferrer');
+      setIsLoading(false);
+      setLoadingMessage('');
+    }, 300);
+  };
+
+  const openMempool = () => handleExternalLink('https://mempool.space', 'Mempool');
+  const openAave = () => handleExternalLink('https://app.aave.com/', 'Aave');
+  const openMoonwell = () => handleExternalLink('https://moonwell.fi/portfolio', 'Moonwell');
+  const openMorpho = () => handleExternalLink('https://app.morpho.org/base/earn', 'Morpho');
+  const openAerodrome = () => handleExternalLink('https://aerodrome.finance/', 'Aerodrome');
+  const openUniswap = () => handleExternalLink('https://app.uniswap.org/', 'Uniswap');
 
   // Copy to clipboard function
   const copyToClipboard = async (text: string) => {
@@ -198,9 +256,9 @@ function App() {
       document.body.removeChild(textArea);
     }
   };
-  const openZerion = () => window.open('https://app.zerion.io/', '_blank', 'noopener,noreferrer');
-  const openRabby = () => window.open('https://rabby.io/', '_blank', 'noopener,noreferrer');
-  const openPhantom = () => window.open('https://phantom.com/', '_blank', 'noopener,noreferrer');
+  const openZerion = () => handleExternalLink('https://app.zerion.io/', 'Zerion');
+  const openRabby = () => handleExternalLink('https://rabby.io/', 'Rabby');
+  const openPhantom = () => handleExternalLink('https://phantom.com/', 'Phantom');
   // DeFi Card Component
   const DeFiCard = ({ title, subtitle, className = "", onClick, aboutLink }: { 
     title: string; 
@@ -209,21 +267,43 @@ function App() {
     onClick: () => void;
     aboutLink?: string;
   }) => (
-    <div className={`bg-white border-2 border-stone-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer ${className}`} onClick={onClick}>
+    <div 
+      className={`group bg-white border-2 border-stone-200 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105 hover:-translate-y-1 ${className}`} 
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick();
+        }
+      }}
+      aria-label={`Open ${title}`}
+    >
       <div className="text-center">
-        <h3 className="text-xl font-semibold text-stone-800 mb-2 font-serif">{title}</h3>
-        {subtitle && <p className="text-sm text-stone-600 mb-4 font-sans">{subtitle}</p>}
+        <div className="mb-4 flex justify-center">
+          <div className="w-12 h-12 bg-gradient-to-br from-stone-100 to-stone-200 rounded-lg flex items-center justify-center group-hover:from-gold-100 group-hover:to-gold-200 transition-all duration-300">
+            <svg className="w-6 h-6 text-stone-600 group-hover:text-gold-700 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+        </div>
+        <h3 className="text-xl font-semibold text-stone-800 mb-2 font-serif group-hover:text-gold-700 transition-colors duration-300">{title}</h3>
+        {subtitle && <p className="text-sm text-stone-600 mb-4 font-sans group-hover:text-stone-700 transition-colors duration-300">{subtitle}</p>}
         {aboutLink && (
           <a
             href={aboutLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-blue-600 hover:text-blue-800 underline font-sans"
+            className="text-sm text-blue-600 hover:text-blue-800 underline font-sans transition-colors duration-200"
             onClick={e => e.stopPropagation()}
           >
-            About
+            Learn More
           </a>
         )}
+        <div className="mt-3 text-xs text-stone-400 group-hover:text-stone-500 transition-colors duration-300">
+          Click to open →
+        </div>
       </div>
     </div>
   );
@@ -232,6 +312,14 @@ function App() {
     <ErrorBoundary>
       <div className="min-h-screen bg-stone-50 flex flex-col font-serif">
         <MuscadineBanner />
+        {isLoading && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
+            <div className="bg-white rounded-xl p-6 shadow-2xl flex items-center gap-4">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gold-600"></div>
+              <span className="text-lg font-medium text-stone-800">{loadingMessage}</span>
+            </div>
+          </div>
+        )}
         <main className="flex-1 max-w-6xl mx-auto px-4 pb-20">
           {/* Main Tabs */}
           <div className="flex border-b border-stone-200 mb-8 md:mb-12 mt-8 md:mt-12 -mx-4 px-4 overflow-x-auto">
