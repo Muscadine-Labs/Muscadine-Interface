@@ -10,12 +10,12 @@ const MuscadineBanner = () => {
     <nav className="w-full bg-white/90 backdrop-blur-md border-b border-stone-200/50 py-4 md:py-6 px-4 md:px-6 text-stone-900 shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <a
-          href="https://nicholasconnelly.box"
+          href="https://muscadine.box"
           className="font-serif text-xl md:text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Nicholas Connelly
+          Muscadine
         </a>
         <div className="hidden md:flex items-center gap-6">
           <a href="https://nicholasconnelly.box" className="btn-secondary text-sm px-6 py-3" target="_blank" rel="noopener noreferrer">Home</a>
@@ -52,17 +52,15 @@ const MuscadineFooter = () => (
     <div className="max-w-6xl mx-auto px-4">
       <div className="grid md:grid-cols-4 gap-8 mb-8">
         <div>
-          <h4 className="text-lg font-semibold text-white mb-4 font-serif">Nicholas Connelly</h4>
+          <h4 className="text-lg font-semibold text-white mb-4 font-serif">Muscadine</h4>
           <p className="text-sm text-stone-400 font-sans">
-            Health and Financial self-sovereignty.
+            Financial self-sovereignty.
           </p>
         </div>
         <div>
           <h4 className="text-lg font-semibold text-white mb-4 font-serif">Product</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="https://defi.nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Launch DeFi</a></li>
-            <li><a href="https://health.nicholasconnelly.box" target="_blank" rel="noopener noreferrer">Launch Health</a></li>
-            <li><a href="https://nicholasconnelly.substack.com/" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Articles</a></li>
           </ul>
         </div>
         <div>
@@ -79,14 +77,16 @@ const MuscadineFooter = () => (
             <li><a href="https://twitter.com/nicklutk" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Twitter</a></li>
             <li><a href="https://nicholasconnelly.substack.com/" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Substack</a></li>
             <li><a href="mailto:nickconnelly10@gmail.com?subject=Muscadine%20Inquiry" className="text-stone-400 hover:text-white transition-colors">Contact</a></li>
-            <li><a href="https://www.strava.com/clubs/1284036" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Strava Club</a></li>
           </ul>
         </div>
       </div>
       <div className="border-t border-stone-700 pt-8 text-center">
-        <p className="text-sm mb-4">&copy; 2025 Nicholas Connelly. All rights reserved.</p>
-        <p className="text-xs text-stone-400">
+        <p className="text-sm mb-4">&copy; 2025 Muscadine. All rights reserved.</p>
+        <p className="text-xs text-stone-400 mb-2">
           Built on BITCOIN • Secure • Transparent • Professional
+        </p>
+        <p className="text-xs text-stone-400">
+          <a href="https://nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Visit nicholasconnelly.box</a>
         </p>
       </div>
     </div>
