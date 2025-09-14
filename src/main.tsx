@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import * as Sentry from '@sentry/react';
+import { browserTracingIntegration } from '@sentry/react';
 
 Sentry.init({
   dsn: import.meta.env.VITE_SENTRY_DSN,
-  integrations: [new Sentry.BrowserTracing()],
+  integrations: [browserTracingIntegration()],
   tracesSampleRate: 1.0,
   environment: import.meta.env.MODE,
 });
