@@ -59,10 +59,10 @@ const MuscadineFooter = () => (
           <h4 className="text-lg font-semibold text-white mb-4 font-serif">Muscadine</h4>
         </div>
         <div>
-          <h4 className="text-lg font-semibold text-white mb-4 font-serif">Product</h4>
+          <h4 className="text-lg font-semibold text-white mb-4 font-serif">Website Links</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="https://muscadine.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Launch DeFi</a></li>
-            <li><a href="https://muscadine.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Muscadine Home</a></li>
+            <li><a href="https://nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">nicholasconnelly.box</a></li>
           </ul>
         </div>
         <div>
