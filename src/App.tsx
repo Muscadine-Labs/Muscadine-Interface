@@ -57,17 +57,12 @@ const MuscadineFooter = () => (
       <div className="grid md:grid-cols-4 gap-8 mb-8">
         <div>
           <h4 className="text-lg font-semibold text-white mb-4 font-serif">Muscadine</h4>
-          <p className="text-sm text-stone-400 font-sans mb-3">
-            Financial self-sovereignty.
-          </p>
-          <p className="text-xs text-stone-400">
-            <a href="https://nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Visit nicholasconnelly.box</a>
-          </p>
         </div>
         <div>
           <h4 className="text-lg font-semibold text-white mb-4 font-serif">Product</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="https://defi.nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Launch DeFi</a></li>
+            <li><a href="https://muscadine.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Muscadine Home</a></li>
           </ul>
         </div>
         <div>
@@ -81,6 +76,7 @@ const MuscadineFooter = () => (
         <div>
           <h4 className="text-lg font-semibold text-white mb-4 font-serif">Connect</h4>
           <ul className="space-y-2 text-sm">
+            <li><a href="https://nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Visit nicholasconnelly.box</a></li>
             <li><a href="https://twitter.com/nicklutk" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Twitter</a></li>
             <li><a href="https://nicholasconnelly.substack.com/" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Substack</a></li>
             <li><a href="mailto:nickconnelly10@gmail.com?subject=Muscadine%20Inquiry" className="text-stone-400 hover:text-white transition-colors">Contact</a></li>
@@ -88,7 +84,7 @@ const MuscadineFooter = () => (
         </div>
       </div>
       <div className="border-t border-stone-700 pt-8 text-center">
-        <p className="text-sm mb-4">&copy; September 2025 Muscadine. All rights reserved.</p>
+        <p className="text-sm mb-4">&copy; 2025 Muscadine. All rights reserved.</p>
         <p className="text-xs text-stone-400 mb-2">
           Built on BITCOIN • Secure • Transparent • Professional
         </p>
@@ -170,7 +166,7 @@ const AboutDefi = () => (
 
 function App() {
   const [mainTab, setMainTab] = useState<'bitcoin' | 'defi'>('bitcoin');
-  const [bitcoinTab, setBitcoinTab] = useState<'about' | 'node' | 'mempool'>('about');
+  const [bitcoinTab, setBitcoinTab] = useState<'about' | 'node' | 'wallets' | 'explorer'>('about');
   const [defiTab, setDefiTab] = useState<'about' | 'lending' | 'swap'>('about');
   const [isLoading, setIsLoading] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('');
@@ -195,6 +191,8 @@ function App() {
   };
 
   const openMempool = () => handleExternalLink('https://mempool.space', 'Mempool');
+  const openSparrowWallet = () => handleExternalLink('https://sparrowwallet.com/', 'Sparrow Wallet');
+  const openSparrowDocs = () => handleExternalLink('https://sparrowwallet.com/docs/', 'Sparrow Docs');
   const openAave = () => handleExternalLink('https://app.aave.com/', 'Aave');
   const openMoonwell = () => handleExternalLink('https://moonwell.fi/portfolio', 'Moonwell');
   const openMorpho = () => handleExternalLink('https://app.morpho.org/base/earn', 'Morpho');
@@ -308,7 +306,8 @@ function App() {
                   <button onClick={() => setBitcoinTab('about')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'about' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>About</button>
                   <button onClick={() => setBitcoinTab('node')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'node' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Node</button>
                   <button onClick={() => setBitcoinTab('crypto-plan')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'crypto-plan' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Crypto Guide</button>
-                  <button onClick={() => setBitcoinTab('mempool')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'mempool' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Mempool</button>
+                  <button onClick={() => setBitcoinTab('wallets')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'wallets' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Wallets</button>
+                  <button onClick={() => setBitcoinTab('explorer')} className={`px-4 md:px-6 py-2.5 md:py-3 font-semibold text-base md:text-lg transition-all duration-200 whitespace-nowrap rounded-t-lg ${bitcoinTab === 'explorer' ? 'text-gold-700 border-b-4 border-gold-500 bg-gold-50 shadow-sm' : 'text-stone-500 hover:text-gold-700'}`}>Explorer</button>
                 </div>
                 <div>
                   {bitcoinTab === 'about' && <AboutBitcoin />}
@@ -349,7 +348,30 @@ function App() {
                       </div>
                     </div>
                   )}
-                  {bitcoinTab === 'mempool' && (
+                  {bitcoinTab === 'wallets' && (
+                    <div>
+                      <div className="mb-4 p-4 bg-gold-50 rounded-lg border border-gold-200">
+                        <p className="text-stone-900 font-sans">Bitcoin wallets are essential tools for managing your Bitcoin securely. Choose the right wallet based on your security needs and technical comfort level.</p>
+                      </div>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <DeFiCard 
+                          title="Sparrow Wallet" 
+                          subtitle="Advanced Bitcoin wallet for financial self-sovereignty"
+                          className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-300"
+                          onClick={openSparrowWallet}
+                          aboutLink="https://sparrowwallet.com/"
+                        />
+                        <DeFiCard 
+                          title="Sparrow Docs" 
+                          subtitle="Complete documentation and guides"
+                          className="bg-gradient-to-br from-indigo-50 to-indigo-100 border-indigo-300"
+                          onClick={openSparrowDocs}
+                          aboutLink="https://sparrowwallet.com/docs/"
+                        />
+                      </div>
+                    </div>
+                  )}
+                  {bitcoinTab === 'explorer' && (
                     <div>
                       <div className="mb-4 p-4 bg-gold-50 rounded-lg border border-gold-200">
                         <p className="text-stone-900 font-sans">{mempoolExplanation}</p>
