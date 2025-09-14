@@ -18,8 +18,8 @@ A clean, informative DeFi and Bitcoin resource site for the Muscadine ecosystem.
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/nickconnelly10/defi.nicholasconnelly.box.git
-cd defi.nicholasconnelly.box
+git clone https://github.com/nickconnelly10/muscadine.box.git
+cd muscadine.box
 npm install
 ```
 
@@ -134,7 +134,9 @@ MIT License - see LICENSE file for details.
 ## 🌐 Domain Configuration
 
 This repository serves the following domains:
-- **Primary**: `https://defi.nicholasconnelly.box`
-- **Muscadine**: `https://muscadine.box`
+- **Primary**: `https://muscadine.box` ⭐
 - **Muscadine WWW**: `https://www.muscadine.box`
-- **Muscadine DeFi**: `https://defi.muscadine.box` 
+- **Muscadine DeFi**: `https://defi.muscadine.box`
+- **Legacy**: `https://defi.nicholasconnelly.box`
+
+All domains point to the same Muscadine platform for financial self-sovereignty. 

@@ -61,7 +61,7 @@ const MuscadineFooter = () => (
         <div>
           <h4 className="text-lg font-semibold text-white mb-4 font-serif">Product</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="https://defi.nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Launch DeFi</a></li>
+            <li><a href="https://muscadine.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Launch DeFi</a></li>
             <li><a href="https://muscadine.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Muscadine Home</a></li>
           </ul>
         </div>
@@ -70,7 +70,7 @@ const MuscadineFooter = () => (
           <ul className="space-y-2 text-sm">
             <li><a href="/privacy.html" className="text-stone-400 hover:text-white transition-colors">Privacy Policy</a></li>
             <li><a href="/terms.html" className="text-stone-400 hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="https://github.com/nickconnelly10/defi.nicholasconnelly.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Open Source</a></li>
+            <li><a href="https://github.com/nickconnelly10/muscadine.box" className="text-stone-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Open Source</a></li>
           </ul>
         </div>
         <div>
