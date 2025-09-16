@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import MobileNav from './components/MobileNav';
-import CryptoPlan from './components/CryptoPlan';
 import Analytics from './components/Analytics';
 import BitcoinPage from './components/BitcoinPage';
 import DeFiPage from './components/DeFiPage';
@@ -10,6 +9,7 @@ import AboutMuscadine from './components/AboutMuscadine';
 import ContactPage from './components/ContactPage';
 import NodePage from './components/NodePage';
 import CryptoGuidePage from './components/CryptoGuidePage';
+import SolutionsPage from './components/SolutionsPage';
 import MuscadineFooter from './components/MuscadineFooter';
 
 const MuscadineBanner = () => {
@@ -32,7 +32,7 @@ const MuscadineBanner = () => {
             to="/"
             className={`text-lg font-medium transition-colors ${location.pathname === '/' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-700'}`}
           >
-            Muscadine
+            Home
           </Link>
           <Link 
             to="/bitcoin"
@@ -45,6 +45,18 @@ const MuscadineBanner = () => {
             className={`text-lg font-medium transition-colors ${location.pathname === '/defi' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-700'}`}
           >
             DeFi
+          </Link>
+          <Link 
+            to="/solutions"
+            className={`text-lg font-medium transition-colors ${location.pathname === '/solutions' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-700'}`}
+          >
+            Solutions
+          </Link>
+          <Link 
+            to="/contact"
+            className={`text-lg font-medium transition-colors ${location.pathname === '/contact' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-700'}`}
+          >
+            Contact
           </Link>
         </div>
 
@@ -75,7 +87,7 @@ const MuscadineBanner = () => {
               onClick={() => setIsOpen(false)}
               className={`block text-base font-medium transition-colors duration-200 w-full text-left ${location.pathname === '/' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
             >
-              Muscadine
+              Home
             </Link>
             <Link 
               to="/bitcoin"
@@ -90,6 +102,20 @@ const MuscadineBanner = () => {
               className={`block text-base font-medium transition-colors duration-200 w-full text-left ${location.pathname === '/defi' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
             >
               DeFi
+            </Link>
+            <Link 
+              to="/solutions"
+              onClick={() => setIsOpen(false)}
+              className={`block text-base font-medium transition-colors duration-200 w-full text-left ${location.pathname === '/solutions' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+            >
+              Solutions
+            </Link>
+            <Link 
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className={`block text-base font-medium transition-colors duration-200 w-full text-left ${location.pathname === '/contact' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+            >
+              Contact
             </Link>
           </div>
         </div>
@@ -137,77 +163,17 @@ const ContactMuscadine = () => (
 
 
 const MuscadineHome = () => {
-  const [muscadineTab, setMuscadineTab] = useState<'about' | 'contact' | 'node' | 'crypto-plan'>('about');
-
-  // Explanations
-  const nodeExplanation = "A node is a computer that participates in the Bitcoin network by validating transactions and blocks. Running your own node gives you full control and privacy over your Bitcoin experience.";
-
-  // Copy to clipboard function
-  const copyToClipboard = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      // You could add a toast notification here if desired
-    } catch (err) {
-      // Fallback for older browsers
-      const textArea = document.createElement('textarea');
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-    }
-  };
-
   return (
     <section className="mb-20">
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-        <div className="flex border-b border-gray-200 mb-8 overflow-x-auto">
-          <button onClick={() => setMuscadineTab('about')} className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${muscadineTab === 'about' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>About</button>
-          <button onClick={() => setMuscadineTab('contact')} className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${muscadineTab === 'contact' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>Contact</button>
-          <button onClick={() => setMuscadineTab('node')} className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${muscadineTab === 'node' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>Node</button>
-          <button onClick={() => setMuscadineTab('crypto-plan')} className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${muscadineTab === 'crypto-plan' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>Crypto Guide</button>
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Muscadine</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Empowering financial freedom through Bitcoin security and decentralized finance
+          </p>
         </div>
-        <div>
-          {muscadineTab === 'about' && <AboutMuscadine onNavigate={() => {}} />}
-          {muscadineTab === 'contact' && <ContactMuscadine />}
-          {muscadineTab === 'node' && (
-            <div>
-              <div className="mb-4 p-4 bg-stone-50 rounded-lg">
-                <p className="text-stone-700 font-sans">{nodeExplanation}</p>
-              </div>
-              <div className="bg-white border border-stone-200 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-stone-800 mb-4 font-serif">Node Connection Details</h3>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-sm text-stone-600 mb-2 font-sans">Electrum Server Hostname:</p>
-                    <div className="flex items-center gap-2">
-                      <code className="bg-stone-100 px-3 py-2 rounded text-sm flex-1 break-all">lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion</code>
-                      <button 
-                        className="bg-stone-600 text-white px-3 py-2 rounded text-sm hover:bg-stone-700 transition-colors" 
-                        onClick={() => copyToClipboard('lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion')}
-                      >
-                        Copy
-                      </button>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-sm text-stone-600 mb-2 font-sans">Port:</p>
-                    <div className="flex items-center gap-2">
-                      <span className="bg-stone-100 px-3 py-2 rounded text-sm">50001</span>
-                      <button 
-                        className="bg-stone-600 text-white px-3 py-2 rounded text-sm hover:bg-stone-700 transition-colors" 
-                        onClick={() => copyToClipboard('50001')}
-                      >
-                        Copy
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-          {muscadineTab === 'crypto-plan' && <CryptoPlan />}
-        </div>
+        
+        <AboutMuscadine onNavigate={() => {}} />
       </div>
     </section>
   );
@@ -225,6 +191,7 @@ function App() {
               <Route path="/" element={<MuscadineHome />} />
               <Route path="/bitcoin" element={<BitcoinPage />} />
               <Route path="/defi" element={<DeFiPage />} />
+              <Route path="/solutions" element={<SolutionsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/node" element={<NodePage />} />
               <Route path="/cryptoguide" element={<CryptoGuidePage />} />

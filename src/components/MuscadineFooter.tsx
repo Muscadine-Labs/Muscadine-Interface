@@ -42,14 +42,12 @@ export default function MuscadineFooter() {
           <div>
             <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Connect</h4>
             <div className="space-y-2">
-              <a 
-                href="https://muscadine.box/#contact" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link 
+                to="/contact"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Connect
-              </a>
+              </Link>
               <a 
                 href="https://linkedin.com/in/nicholasconnelly" 
                 target="_blank" 
@@ -73,6 +71,18 @@ export default function MuscadineFooter() {
           <div>
             <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Resources</h4>
             <div className="space-y-2">
+              <Link 
+                to="/node"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Node
+              </Link>
+              <Link 
+                to="/cryptoguide"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Crypto Guide
+              </Link>
               <a 
                 href="https://www.nicholasconnelly.box" 
                 target="_blank" 
