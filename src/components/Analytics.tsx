@@ -25,7 +25,7 @@ const Analytics = ({ pageName = 'unknown' }: AnalyticsProps) => {
       };
 
       // Store in localStorage for debugging (remove in production)
-      if (process.env.NODE_ENV === 'development') {
+      if (import.meta.env.MODE === 'development') {
         console.log('Analytics:', data);
       }
 
@@ -48,7 +48,7 @@ const Analytics = ({ pageName = 'unknown' }: AnalyticsProps) => {
             timestamp: new Date().toISOString()
           };
 
-          if (process.env.NODE_ENV === 'development') {
+          if (import.meta.env.MODE === 'development') {
             console.log('Performance:', perfData);
           }
         }
@@ -75,7 +75,7 @@ const Analytics = ({ pageName = 'unknown' }: AnalyticsProps) => {
           timestamp: new Date().toISOString()
         };
 
-        if (process.env.NODE_ENV === 'development') {
+        if (import.meta.env.MODE === 'development') {
           console.log('Interaction:', interactionData);
         }
       }
