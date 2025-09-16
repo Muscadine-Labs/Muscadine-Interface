@@ -3,6 +3,10 @@ import ErrorBoundary from './components/ErrorBoundary';
 import MobileNav from './components/MobileNav';
 import CryptoPlan from './components/CryptoPlan';
 import Analytics from './components/Analytics';
+import BitcoinPage from './components/BitcoinPage';
+import DeFiPage from './components/DeFiPage';
+import AboutMuscadine from './components/AboutMuscadine';
+import MuscadineFooter from './components/MuscadineFooter';
 
 const MuscadineBanner = ({ setMainTab }: { setMainTab: (tab: 'muscadine' | 'bitcoin' | 'defi') => void }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +16,7 @@ const MuscadineBanner = ({ setMainTab }: { setMainTab: (tab: 'muscadine' | 'bitc
       <div className="w-full flex justify-between items-center max-w-6xl mx-auto">
         {/* Logo */}
         <div className="text-xl font-medium text-gray-800">
-          <a href="https://nicholasconnelly.box" target="_blank" rel="noopener noreferrer">
+          <a href="https://muscadine.box" target="_blank" rel="noopener noreferrer">
             Muscadine
           </a>
         </div>
@@ -20,7 +24,7 @@ const MuscadineBanner = ({ setMainTab }: { setMainTab: (tab: 'muscadine' | 'bitc
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           <a 
-            href="https://nicholasconnelly.box" 
+            href="https://muscadine.box" 
             className="nav-link text-gray-600"
             target="_blank"
             rel="noopener noreferrer"
@@ -64,7 +68,7 @@ const MuscadineBanner = ({ setMainTab }: { setMainTab: (tab: 'muscadine' | 'bitc
         <div className="md:hidden mt-3 border-t border-gray-200 bg-white/95 backdrop-blur-lg">
           <div className="max-w-6xl mx-auto px-4 py-3 space-y-3">
             <a 
-              href="https://nicholasconnelly.box" 
+              href="https://muscadine.box" 
               className="block text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200" 
               target="_blank" 
               rel="noopener noreferrer" 
@@ -91,177 +95,8 @@ const MuscadineBanner = ({ setMainTab }: { setMainTab: (tab: 'muscadine' | 'bitc
   );
 };
 
-const MuscadineFooter = () => (
-  <footer className="bg-gray-900 text-white">
-    <div className="max-w-6xl mx-auto px-8 py-16">
-      <div className="grid md:grid-cols-4 gap-8">
-        {/* Brand */}
-        <div>
-          <h3 className="text-lg font-medium text-white mb-4">Muscadine</h3>
-          <p className="text-gray-300 text-sm leading-relaxed">
-            DeFi analytics platform helping users navigate the decentralized finance ecosystem with data-driven insights.
-          </p>
-        </div>
-        
-        {/* Navigation */}
-        <div>
-          <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Navigation</h4>
-          <nav className="space-y-2">
-            <a href="https://nicholasconnelly.box" className="block text-sm text-gray-300 hover:text-white transition-colors duration-200" target="_blank" rel="noopener noreferrer">
-              Home
-            </a>
-            <a href="https://health.nicholasconnelly.box" className="block text-sm text-gray-300 hover:text-white transition-colors duration-200" target="_blank" rel="noopener noreferrer">
-              Health & Wellness
-            </a>
-            <a href="https://muscadine.box" className="block text-sm text-gray-300 hover:text-white transition-colors duration-200" target="_blank" rel="noopener noreferrer">
-              DeFi - Muscadine
-            </a>
-          </nav>
-        </div>
-        
-        {/* Connect */}
-        <div>
-          <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Connect</h4>
-          <div className="space-y-2">
-            <a 
-              href="https://github.com/nickconnelly10" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              GitHub
-            </a>
-            <a 
-              href="https://linkedin.com/in/nicholasconnelly" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              LinkedIn
-            </a>
-            <a 
-              href="https://nicholasconnelly.substack.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              Substack
-            </a>
-            <a 
-              href="mailto:nickconnelly10@gmail.com"
-              className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              Email
-            </a>
-          </div>
-        </div>
-        
-        {/* Resources */}
-        <div>
-          <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Resources</h4>
-          <div className="space-y-2">
-            <a 
-              href="https://health.nicholasconnelly.box" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              Health
-            </a>
-            <a 
-              href="https://github.com/nickconnelly10/muscadine.box" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              Open Source
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-        <p className="text-sm text-gray-400">
-          © {new Date().getFullYear()} Nicholas Connelly. All rights reserved.
-        </p>
-      </div>
-    </div>
-  </footer>
-);
 
-const AboutBitcoin = () => (
-  <div className="p-6">
-    <h2 className="section-title">What is Bitcoin?</h2>
-    <p className="text-body mb-8">
-      Bitcoin is a decentralized digital currency that enables peer-to-peer transactions without intermediaries, secured by cryptography and maintained on a distributed ledger (the blockchain).
-    </p>
-    <h3 className="text-display mb-4">Getting Started with Bitcoin</h3>
-    <div className="space-y-6">
-      <div>
-        <h4 className="text-xl font-semibold text-stone-800 mb-2 font-serif">1. Buy Bitcoin on an Exchange</h4>
-        <p className="text-body">
-          Choose a reputable exchange—Coinbase is user-friendly—and purchase Bitcoin there, then transfer it to your self-hosted wallet. Peer-to-peer platforms are another great way to stack sats.
-        </p>
-      </div>
-      <div>
-        <h4 className="text-xl font-semibold text-stone-800 mb-2 font-serif">2. Set Up Your Wallet</h4>
-        <ul className="text-body space-y-2 ml-4">
-          <li><strong>Cold Wallet:</strong> Use a SeedSigner (for paper-wallet setups; record every seed word carefully) or a Coldcard hardware wallet.</li>
-          <li><strong>Hot Wallet:</strong> Sparrow Wallet works well for both watch-only (cold) setups and live transactions. Mobile options like BlueWallet are convenient too.</li>
-        </ul>
-        <p className="text-body mt-2">
-          Always write down your seed phrase on paper and store it securely.
-        </p>
-      </div>
-      <div>
-        <h4 className="text-xl font-semibold text-stone-800 mb-2 font-serif">3. Connect to a Node</h4>
-        <p className="text-body">
-          Point Sparrow Wallet (or your chosen wallet) to our self-hosted Electrum Server (details on the next page).
-        </p>
-      </div>
-    </div>
-    <div className="mt-8 p-4 bg-amber-50 border-l-4 border-amber-400 rounded">
-      <p className="text-amber-800 font-medium text-body">Not your keys, not your coins.</p>
-    </div>
-  </div>
-);
 
-const AboutMuscadine = () => (
-  <div className="p-6">
-    <h2 className="text-3xl font-bold text-gray-900 mb-6">About Muscadine</h2>
-    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-      Muscadine is a comprehensive DeFi analytics platform designed to help users navigate the decentralized finance ecosystem with data-driven insights and educational resources.
-    </p>
-    <h3 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h3>
-    <p className="text-gray-600 mb-6 leading-relaxed">
-      We believe in financial sovereignty and the power of decentralized technologies. Muscadine provides the tools and knowledge needed to safely participate in the DeFi ecosystem while maintaining full control over your digital assets.
-    </p>
-    <h3 className="text-2xl font-semibold text-gray-900 mb-4">What We Offer</h3>
-    <div className="space-y-6">
-      <div>
-        <h4 className="text-xl font-semibold text-gray-900 mb-2">Educational Resources</h4>
-        <p className="text-gray-600 leading-relaxed">
-          Comprehensive guides on Bitcoin, DeFi protocols, and wallet security to help you make informed decisions.
-        </p>
-      </div>
-      <div>
-        <h4 className="text-xl font-semibold text-gray-900 mb-2">Node Infrastructure</h4>
-        <p className="text-gray-600 leading-relaxed">
-          Self-hosted Bitcoin node and Electrum server for enhanced privacy and security in your Bitcoin transactions.
-        </p>
-      </div>
-      <div>
-        <h4 className="text-xl font-semibold text-gray-900 mb-2">DeFi Analytics</h4>
-        <p className="text-gray-600 leading-relaxed">
-          Real-time data and insights on DeFi protocols, helping you identify opportunities and manage risks.
-        </p>
-      </div>
-    </div>
-    <div className="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-lg">
-      <p className="text-gray-700 font-medium">Built on Bitcoin • Secure • Transparent • Professional</p>
-    </div>
-  </div>
-);
 
 const ContactMuscadine = () => (
   <div className="p-6">
@@ -502,7 +337,7 @@ function App() {
                   <button onClick={() => setMuscadineTab('crypto-plan')} className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${muscadineTab === 'crypto-plan' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>Crypto Guide</button>
                 </div>
                 <div>
-                  {muscadineTab === 'about' && <AboutMuscadine />}
+                  {muscadineTab === 'about' && <AboutMuscadine onNavigate={setMainTab} />}
                   {muscadineTab === 'contact' && <ContactMuscadine />}
                   {muscadineTab === 'node' && (
                     <div>
@@ -547,110 +382,16 @@ function App() {
           )}
           {mainTab === 'bitcoin' && (
             <section className="mb-20">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-                <div className="flex border-b border-gray-200 mb-8 overflow-x-auto">
-                  <button onClick={() => setBitcoinTab('about')} className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'about' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>About</button>
-                  <button onClick={() => setBitcoinTab('wallets')} className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'wallets' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>Wallets</button>
-                  <button onClick={() => setBitcoinTab('explorer')} className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'explorer' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>Explorer</button>
-                </div>
-                <div>
-                  {bitcoinTab === 'about' && <AboutBitcoin />}
-                  {bitcoinTab === 'wallets' && (
-                    <div>
-                      <div className="mb-4 p-4 bg-gold-50 rounded-lg border border-gold-200">
-                        <p className="text-stone-900 font-sans">Bitcoin wallets are essential tools for managing your Bitcoin securely. Choose the right wallet based on your security needs and technical comfort level.</p>
-                      </div>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <DeFiCard 
-                          title="Sparrow Wallet" 
-                          subtitle="Advanced Bitcoin wallet for financial self-sovereignty"
-                          className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-300"
-                          onClick={openSparrowWallet}
-                          aboutLink="https://sparrowwallet.com/"
-                        />
-                        <DeFiCard 
-                          title="Sparrow Docs" 
-                          subtitle="Complete documentation and guides"
-                          className="bg-gradient-to-br from-indigo-50 to-indigo-100 border-indigo-300"
-                          onClick={openSparrowDocs}
-                          aboutLink="https://sparrowwallet.com/docs/"
-                        />
-                      </div>
-                    </div>
-                  )}
-                  {bitcoinTab === 'explorer' && (
-                    <div>
-                      <div className="mb-4 p-4 bg-gold-50 rounded-lg border border-gold-200">
-                        <p className="text-stone-900 font-sans">{mempoolExplanation}</p>
-                      </div>
-                      <div className="flex justify-center">
-                        <DeFiCard 
-                          title="Mempool" 
-                          subtitle="Bitcoin transaction viewer"
-                          className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-300"
-                          onClick={openMempool}
-                          aboutLink="https://mempool.space/about"
-                        />
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
+              <BitcoinPage />
             </section>
           )}
           {mainTab === 'defi' && (
             <section className="mb-20">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-                <div className="flex border-b border-gray-200 mb-8 overflow-x-auto">
-                  <button onClick={() => setDefiTab('about')} className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${defiTab === 'about' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>About</button>
-                  <button onClick={() => setDefiTab('lending')} className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${defiTab === 'lending' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>Earn & Borrow</button>
-                  <button onClick={() => setDefiTab('swap')} className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${defiTab === 'swap' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>Token Swap</button>
-                  <button onClick={() => setDefiTab('wallet')} className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${defiTab === 'wallet' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>Wallet</button>
-                </div>
-                <div>
-                  {defiTab === 'about' && <AboutDefi />}
-                  {defiTab === 'lending' && (
-                    <div>
-                      <div className="mb-4 p-4 bg-stone-50 rounded-lg">
-                        <p className="text-stone-700 font-sans">{lendingExplanation}</p>
-                      </div>
-                      <div className="grid md:grid-cols-3 gap-6">
-                        <DeFiCard title="Aave" className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-300" onClick={openAave} aboutLink="https://aave.com/docs" />
-                        <DeFiCard title="Moonwell" className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-yellow-300" onClick={openMoonwell} aboutLink="https://docs.moonwell.fi/moonwell/" />
-                        <DeFiCard title="Morpho" className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-300" onClick={openMorpho} aboutLink="https://docs.morpho.org/overview/" />
-                      </div>
-                    </div>
-                  )}
-                  {defiTab === 'swap' && (
-                    <div>
-                      <div className="mb-4 p-4 bg-stone-50 rounded-lg">
-                        <p className="text-stone-700 font-sans">{swapExplanation}</p>
-                      </div>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <DeFiCard title="Aerodrome" className="bg-gradient-to-br from-pink-50 to-pink-100 border-pink-300" onClick={openAerodrome} aboutLink="https://aerodrome.finance/docs" />
-                        <DeFiCard title="Uniswap" className="bg-gradient-to-br from-indigo-50 to-indigo-100 border-indigo-300" onClick={openUniswap} aboutLink="https://docs.uniswap.org/" />
-                      </div>
-                    </div>
-                  )}
-                  {defiTab === 'wallet' && (
-                    <div>
-                      <div className="mb-4 p-4 bg-stone-50 rounded-lg">
-                        <p className="text-stone-700 font-sans">{walletExplanation}</p>
-                      </div>
-                      <div className="grid md:grid-cols-3 gap-6">
-                        <DeFiCard title="Zerion" className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-300" onClick={openZerion} aboutLink="https://app.zerion.io/" />
-
-                        <DeFiCard title="Rabby" className="bg-gradient-to-br from-red-50 to-red-100 border-red-300" onClick={openRabby} aboutLink="https://rabby.io/" />
-
-                        <DeFiCard title="Phantom" className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-300" onClick={openPhantom} aboutLink="https://phantom.com/" />
-                      </div>
-                    </div>
-                  )}                </div>
-              </div>
+              <DeFiPage />
             </section>
           )}
         </main>
-        <MuscadineFooter />
+        <MuscadineFooter onNavigate={setMainTab} />
         <MobileNav />
       </div>
     </ErrorBoundary>
