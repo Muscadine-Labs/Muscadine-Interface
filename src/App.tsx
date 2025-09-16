@@ -4,7 +4,7 @@ import MobileNav from './components/MobileNav';
 import CryptoPlan from './components/CryptoPlan';
 import Analytics from './components/Analytics';
 
-const MuscadineBanner = () => {
+const MuscadineBanner = ({ setMainTab }: { setMainTab: (tab: 'muscadine' | 'bitcoin' | 'defi') => void }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -27,14 +27,18 @@ const MuscadineBanner = () => {
           >
             Home
           </a>
-          <a 
-            href="https://health.nicholasconnelly.box" 
+          <button 
+            onClick={() => setMainTab('bitcoin')}
             className="nav-link text-gray-600"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            Health
-          </a>
+            Bitcoin
+          </button>
+          <button 
+            onClick={() => setMainTab('defi')}
+            className="nav-link text-gray-600"
+          >
+            DeFi
+          </button>
         </div>
 
         {/* Mobile menu button */}
@@ -68,15 +72,18 @@ const MuscadineBanner = () => {
             >
               Home
             </a>
-            <a 
-              href="https://health.nicholasconnelly.box" 
-              className="block text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              onClick={() => setIsOpen(false)}
+            <button 
+              onClick={() => { setMainTab('bitcoin'); setIsOpen(false); }}
+              className="block text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200 w-full text-left"
             >
-              Health
-            </a>
+              Bitcoin
+            </button>
+            <button 
+              onClick={() => { setMainTab('defi'); setIsOpen(false); }}
+              className="block text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200 w-full text-left"
+            >
+              DeFi
+            </button>
           </div>
         </div>
       )}
@@ -104,10 +111,10 @@ const MuscadineFooter = () => (
               Home
             </a>
             <a href="https://health.nicholasconnelly.box" className="block text-sm text-gray-300 hover:text-white transition-colors duration-200" target="_blank" rel="noopener noreferrer">
-              Health
+              Health & Wellness
             </a>
             <a href="https://muscadine.box" className="block text-sm text-gray-300 hover:text-white transition-colors duration-200" target="_blank" rel="noopener noreferrer">
-              DeFi Platform
+              DeFi - Muscadine
             </a>
           </nav>
         </div>
@@ -299,14 +306,6 @@ const ContactMuscadine = () => (
           >
             💼 LinkedIn Profile
           </a>
-          <a 
-            href="https://github.com/nickconnelly10"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-gray-600 hover:text-gray-900 transition-colors duration-200"
-          >
-            💻 GitHub
-          </a>
         </div>
         <div className="mt-6 p-4 bg-gray-50 rounded-lg">
           <p className="text-sm text-gray-600">
@@ -461,7 +460,7 @@ function App() {
     <ErrorBoundary>
       <Analytics pageName="defi-dashboard" />
       <div className="min-h-screen bg-white flex flex-col">
-        <MuscadineBanner />
+        <MuscadineBanner setMainTab={setMainTab} />
         {isLoading && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
             <div className="bg-white rounded-xl p-6 shadow-2xl flex items-center gap-4">
