@@ -9,7 +9,7 @@ export default function MuscadineFooter() {
           <div>
             <h3 className="text-lg font-medium text-white mb-4">Muscadine</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              A comprehensive DeFi analytics platform designed to help users navigate the decentralized finance ecosystem with data-driven insights and educational resources.
+              A small business dedicated to helping individuals take control of their financial future through Bitcoin security, self-custody, and DeFi solutions.
             </p>
           </div>
           
@@ -82,12 +82,12 @@ export default function MuscadineFooter() {
                 nicholasconnelly.box
               </a>
               <a 
-                href="https://health.nicholasconnelly.box" 
+                href="https://health.muscadine.box" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                health.nicholasconnelly.box
+                Health & Wellness
               </a>
             </div>
           </div>

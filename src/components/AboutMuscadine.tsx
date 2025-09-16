@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface AboutMuscadineProps {
   onNavigate: (tab: 'bitcoin' | 'defi') => void;
@@ -13,6 +12,10 @@ export default function AboutMuscadine({ onNavigate }: AboutMuscadineProps) {
         <div className="prose prose-lg max-w-none text-stone-700 space-y-6">
           <p>
             I founded Muscadine to help individuals secure and manage their digital assets with confidence. From Bitcoin node deployment to DeFi onboarding, I specialize in building safe, privacy-focused systems that put people in control of their wealth. At its core, Muscadine is about empowering financial independence in a changing economy.
+          </p>
+          
+          <p>
+            Muscadine is a small business dedicated to helping individuals take control of their financial future through Bitcoin security, self-custody, and DeFi solutions. I provide support with Bitcoin node deployment, secure asset management, and onboarding into decentralized finance, ensuring people can navigate the new financial system with confidence. At its core, Muscadine is about empowering financial independence and resilience in a changing world.
           </p>
           
           <h2 className="text-2xl font-semibold text-stone-900 mt-8 mb-4">Services</h2>
@@ -52,15 +55,15 @@ export default function AboutMuscadine({ onNavigate }: AboutMuscadineProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <button
               onClick={() => onNavigate('bitcoin')}
-              className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 text-center"
+              className="bg-orange-100 hover:bg-orange-200 text-orange-800 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 text-center"
             >
-              Secure Your Assets
+              Control Your Bitcoin
             </button>
             <button
               onClick={() => onNavigate('defi')}
-              className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 text-center"
+              className="bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 text-center"
             >
-              Start Your DeFi Journey
+              Explore DeFi
             </button>
           </div>
         </div>

@@ -39,19 +39,19 @@ export default function BitcoinPage() {
       <div className="flex border-b border-gray-200 mb-8 overflow-x-auto">
         <button 
           onClick={() => setBitcoinTab('about')} 
-          className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'about' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'about' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
         >
           About
         </button>
         <button 
           onClick={() => setBitcoinTab('explore')} 
-          className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'explore' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'explore' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
         >
           Explore
         </button>
         <button 
           onClick={() => setBitcoinTab('wallet')} 
-          className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'wallet' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'wallet' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
         >
           Wallet
         </button>
@@ -107,7 +107,7 @@ export default function BitcoinPage() {
               <p className="text-gray-600 mb-4">Explore the Bitcoin blockchain and mempool in real-time</p>
               <button 
                 onClick={openMempool}
-                className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="w-full bg-blue-100 text-blue-800 px-4 py-2 rounded-lg hover:bg-blue-200 transition-colors"
               >
                 Open Mempool.space
               </button>
@@ -139,13 +139,13 @@ export default function BitcoinPage() {
               <div className="mt-4 space-y-2">
                 <button 
                   onClick={openSparrowWallet}
-                  className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                  className="w-full bg-green-100 text-green-800 px-4 py-2 rounded-lg hover:bg-green-200 transition-colors"
                 >
                   Download Sparrow
                 </button>
                 <button 
                   onClick={openSparrowDocs}
-                  className="w-full bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+                  className="w-full bg-gray-100 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors"
                 >
                   View Documentation
                 </button>
@@ -164,13 +164,13 @@ export default function BitcoinPage() {
               <div className="mt-4 space-y-2">
                 <button 
                   onClick={openSeedsigner}
-                  className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                  className="w-full bg-purple-100 text-purple-800 px-4 py-2 rounded-lg hover:bg-purple-200 transition-colors"
                 >
                   Seedsigner
                 </button>
                 <button 
                   onClick={openColdcard}
-                  className="w-full bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+                  className="w-full bg-gray-100 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors"
                 >
                   Coldcard
                 </button>

@@ -49,25 +49,25 @@ export default function DeFiPage() {
       <div className="flex border-b border-gray-200 mb-8 overflow-x-auto">
         <button 
           onClick={() => setDefiTab('about')} 
-          className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${defiTab === 'about' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${defiTab === 'about' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
         >
           About
         </button>
         <button 
           onClick={() => setDefiTab('lending')} 
-          className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${defiTab === 'lending' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${defiTab === 'lending' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
         >
           Lending & Borrowing
         </button>
         <button 
           onClick={() => setDefiTab('swap')} 
-          className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${defiTab === 'swap' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${defiTab === 'swap' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
         >
           Token Swap
         </button>
         <button 
           onClick={() => setDefiTab('wallet')} 
-          className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${defiTab === 'wallet' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${defiTab === 'wallet' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
         >
           Wallet
         </button>
@@ -168,7 +168,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openAave}
-                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="w-full mt-4 bg-blue-100 text-blue-800 px-4 py-2 rounded-lg hover:bg-blue-200 transition-colors"
               >
                 Open Aave
               </button>
@@ -184,7 +184,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openMoonwell}
-                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="w-full mt-4 bg-purple-100 text-purple-800 px-4 py-2 rounded-lg hover:bg-purple-200 transition-colors"
               >
                 Open Moonwell
               </button>
@@ -200,7 +200,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openMorpho}
-                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="w-full mt-4 bg-green-100 text-green-800 px-4 py-2 rounded-lg hover:bg-green-200 transition-colors"
               >
                 Open Morpho
               </button>
@@ -230,7 +230,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openAerodrome}
-                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="w-full mt-4 bg-cyan-100 text-cyan-800 px-4 py-2 rounded-lg hover:bg-cyan-200 transition-colors"
               >
                 Open Aerodrome
               </button>
@@ -246,7 +246,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openUniswap}
-                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="w-full mt-4 bg-pink-100 text-pink-800 px-4 py-2 rounded-lg hover:bg-pink-200 transition-colors"
               >
                 Open Uniswap
               </button>
@@ -277,7 +277,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openRabby}
-                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="w-full mt-4 bg-blue-100 text-blue-800 px-4 py-2 rounded-lg hover:bg-blue-200 transition-colors"
               >
                 Open Rabby
               </button>
@@ -294,7 +294,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openPhantom}
-                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="w-full mt-4 bg-purple-100 text-purple-800 px-4 py-2 rounded-lg hover:bg-purple-200 transition-colors"
               >
                 Open Phantom
               </button>
@@ -311,7 +311,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openZerion}
-                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="w-full mt-4 bg-green-100 text-green-800 px-4 py-2 rounded-lg hover:bg-green-200 transition-colors"
               >
                 Open Zerion
               </button>
