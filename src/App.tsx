@@ -17,44 +17,64 @@ const MuscadineBanner = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 p-4 bg-white shadow-sm">
-      <div className="w-full flex justify-between items-center max-w-6xl mx-auto">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100/50 shadow-sm">
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
         {/* Logo */}
-        <div className="text-2xl font-medium text-gray-800">
-          <Link to="/" className="hover:text-gray-600 transition-colors">
+        <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">
+          <Link to="/" className="hover:from-amber-600 hover:via-amber-500 hover:to-amber-400 transition-all duration-300">
             Muscadine
           </Link>
         </div>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center space-x-1">
           <Link 
             to="/"
-            className={`text-lg font-medium transition-colors ${location.pathname === '/' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-700'}`}
+            className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+              location.pathname === '/' 
+                ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/25' 
+                : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+            }`}
           >
             Home
           </Link>
           <Link 
             to="/bitcoin"
-            className={`text-lg font-medium transition-colors ${location.pathname === '/bitcoin' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-700'}`}
+            className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+              location.pathname === '/bitcoin' 
+                ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/25' 
+                : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+            }`}
           >
             Bitcoin
           </Link>
           <Link 
             to="/defi"
-            className={`text-lg font-medium transition-colors ${location.pathname === '/defi' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-700'}`}
+            className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+              location.pathname === '/defi' 
+                ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/25' 
+                : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+            }`}
           >
             DeFi
           </Link>
           <Link 
             to="/solutions"
-            className={`text-lg font-medium transition-colors ${location.pathname === '/solutions' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-700'}`}
+            className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+              location.pathname === '/solutions' 
+                ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/25' 
+                : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+            }`}
           >
             Solutions
           </Link>
           <Link 
             to="/contact"
-            className={`text-lg font-medium transition-colors ${location.pathname === '/contact' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-700'}`}
+            className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+              location.pathname === '/contact' 
+                ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/25' 
+                : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+            }`}
           >
             Contact
           </Link>
@@ -65,10 +85,10 @@ const MuscadineBanner = () => {
           type="button"
           aria-label="Toggle menu"
           aria-expanded={isOpen}
-          className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100"
+          className="md:hidden inline-flex items-center justify-center rounded-xl p-3 text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-all duration-200"
           onClick={() => setIsOpen((v) => !v)}
         >
-          <svg className="h-6 w-6 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg className="h-6 w-6 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             {isOpen ? (
               <path d="M18 6L6 18M6 6l12 12" />
             ) : (
@@ -80,40 +100,60 @@ const MuscadineBanner = () => {
       
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden mt-3 border-t border-gray-200 bg-white/95 backdrop-blur-lg">
-          <div className="max-w-6xl mx-auto px-4 py-3 space-y-3">
+        <div className="md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-100/50">
+          <div className="max-w-7xl mx-auto px-6 py-4 space-y-2">
             <Link 
               to="/"
               onClick={() => setIsOpen(false)}
-              className={`block text-base font-medium transition-colors duration-200 w-full text-left ${location.pathname === '/' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-all duration-200 ${
+                location.pathname === '/' 
+                  ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/25' 
+                  : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+              }`}
             >
               Home
             </Link>
             <Link 
               to="/bitcoin"
               onClick={() => setIsOpen(false)}
-              className={`block text-base font-medium transition-colors duration-200 w-full text-left ${location.pathname === '/bitcoin' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-all duration-200 ${
+                location.pathname === '/bitcoin' 
+                  ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/25' 
+                  : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+              }`}
             >
               Bitcoin
             </Link>
             <Link 
               to="/defi"
               onClick={() => setIsOpen(false)}
-              className={`block text-base font-medium transition-colors duration-200 w-full text-left ${location.pathname === '/defi' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-all duration-200 ${
+                location.pathname === '/defi' 
+                  ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/25' 
+                  : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+              }`}
             >
               DeFi
             </Link>
             <Link 
               to="/solutions"
               onClick={() => setIsOpen(false)}
-              className={`block text-base font-medium transition-colors duration-200 w-full text-left ${location.pathname === '/solutions' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-all duration-200 ${
+                location.pathname === '/solutions' 
+                  ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/25' 
+                  : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+              }`}
             >
               Solutions
             </Link>
             <Link 
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className={`block text-base font-medium transition-colors duration-200 w-full text-left ${location.pathname === '/contact' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+              className={`block px-4 py-3 rounded-xl text-base font-semibold transition-all duration-200 ${
+                location.pathname === '/contact' 
+                  ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/25' 
+                  : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
+              }`}
             >
               Contact
             </Link>
@@ -164,8 +204,8 @@ const ContactMuscadine = () => (
 
 const MuscadineHome = () => {
   return (
-    <section className="mb-20">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold text-gray-900 mb-8">Muscadine</h1>
           <p className="text-2xl text-gray-600 mb-12 leading-relaxed">
@@ -173,7 +213,96 @@ const MuscadineHome = () => {
           </p>
         </div>
         
-        <AboutMuscadine onNavigate={() => {}} />
+        {/* Main Cards - Bitcoin and DeFi */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          {/* Bitcoin Card */}
+          <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+                  <text x="12" y="16" textAnchor="middle" fontSize="12" fontWeight="bold" fill="currentColor">₿</text>
+                </svg>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Bitcoin</h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Secure your financial future with Bitcoin. Learn about self-custody, hardware wallets, and building long-term wealth through the world's first decentralized digital currency.
+              </p>
+              <Link 
+                to="/bitcoin" 
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                Explore Bitcoin →
+              </Link>
+            </div>
+          </div>
+
+          {/* DeFi Card */}
+          <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">DeFi</h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Access decentralized finance protocols and yield farming opportunities. Maximize your crypto assets through lending, borrowing, and automated strategies on Base and other networks.
+              </p>
+              <Link 
+                to="/defi" 
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                View DeFi Dashboard →
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Secondary Cards - Solutions and Contact */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Solutions Card */}
+          <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-100">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full flex items-center justify-center mb-4 shadow-md">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Solutions</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Comprehensive crypto security and DeFi strategies tailored to your financial goals and risk tolerance.
+              </p>
+              <Link 
+                to="/solutions" 
+                className="inline-flex items-center px-4 py-2 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-900 transition-all duration-200"
+              >
+                View Solutions →
+              </Link>
+            </div>
+          </div>
+
+          {/* Contact Card */}
+          <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-100">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full flex items-center justify-center mb-4 shadow-md">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Contact</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Get in touch for personalized crypto guidance, security audits, or DeFi strategy consultations.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center px-4 py-2 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-900 transition-all duration-200"
+              >
+                Get In Touch →
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -186,7 +315,7 @@ function App() {
       <Router>
         <div className="min-h-screen bg-white flex flex-col">
           <MuscadineBanner />
-          <main className="flex-1 max-w-6xl mx-auto px-4 pb-20 mt-16">
+          <main className="flex-1 max-w-7xl mx-auto px-6 pb-20 pt-24">
             <Routes>
               <Route path="/" element={<MuscadineHome />} />
               <Route path="/bitcoin" element={<BitcoinPage />} />
