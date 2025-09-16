@@ -7,31 +7,48 @@ export default {
   theme: {
     extend: {
       colors: {
-        'roman-gold': '#D4AF37',
-        'roman-red': '#8B0000',
-        'roman-bronze': '#CD7F32',
-        'roman-marble': '#F5F5DC',
-        'roman-stone': '#696969',
-        gold: {
-          50: '#fdf6e3',
-          100: '#f9eec2',
-          200: '#f5e49a',
-          300: '#f1d96e',
-          400: '#ecc94b',
-          500: '#d4af37',
-          600: '#bfa12f',
-          700: '#a68c28',
-          800: '#8c7621',
-          900: '#6e5a17',
-        },
+        'gold': {
+          50: '#fefce8',
+          100: '#fef9c3',
+          200: '#fef08a',
+          300: '#fde047',
+          400: '#facc15',
+          500: '#eab308',
+          600: '#ca8a04',
+          700: '#a16207',
+          800: '#854d0e',
+          900: '#713f12',
+        }
       },
       fontFamily: {
-        'serif': ['Georgia', 'serif'],
-        'display': ['Playfair Display', 'serif'],
+        'serif': ['Playfair Display', 'serif'],
+        'sans': ['Inter', 'sans-serif'],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'bounce-slow': 'bounce 2s infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'shimmer': 'shimmer 2s infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
       },
     },
   },
