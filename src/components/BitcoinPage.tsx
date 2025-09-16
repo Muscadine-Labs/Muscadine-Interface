@@ -63,32 +63,53 @@ export default function BitcoinPage() {
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">What is Bitcoin?</h2>
           <p className="text-gray-700 mb-6">
             Bitcoin is a decentralized digital currency that enables peer-to-peer transactions 
-            without the need for intermediaries like banks. Created in 2009 by the pseudonymous 
-            Satoshi Nakamoto, Bitcoin operates on a blockchain technology that ensures security, 
-            transparency, and immutability.
+            without intermediaries, secured by cryptography and maintained on a distributed ledger (the blockchain).
           </p>
           
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Key Features</h2>
-          <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-            <li><strong>Decentralized:</strong> No single entity controls Bitcoin</li>
-            <li><strong>Secure:</strong> Cryptographically protected transactions</li>
-            <li><strong>Transparent:</strong> All transactions are publicly recorded</li>
-            <li><strong>Limited Supply:</strong> Only 21 million Bitcoin will ever exist</li>
-            <li><strong>Borderless:</strong> Send and receive Bitcoin anywhere in the world</li>
-          </ul>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Getting Started with Bitcoin</h2>
           
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Why Bitcoin Matters</h2>
-          <p className="text-gray-700 mb-6">
-            Bitcoin represents a fundamental shift in how we think about money and value. 
-            It offers an alternative to traditional financial systems, providing individuals 
-            with greater control over their wealth and the ability to transact freely 
-            without censorship or restrictions.
-          </p>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">1. Buy Bitcoin on an Exchange</h3>
+              <p className="text-gray-700 mb-4">
+                Choose a reputable exchange—Coinbase is user-friendly—and purchase Bitcoin there, then transfer it to your self-hosted wallet. Peer-to-peer platforms are another great way to stack sats.
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">2. Set Up Your Wallet</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-medium text-gray-800 mb-2">Cold Wallet:</h4>
+                  <p className="text-gray-700 mb-2">
+                    Use a SeedSigner (for paper-wallet setups; record every seed word carefully) or a Coldcard hardware wallet.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-medium text-gray-800 mb-2">Hot Wallet:</h4>
+                  <p className="text-gray-700 mb-2">
+                    Sparrow Wallet works well for both watch-only (cold) setups and live transactions. Mobile options like BlueWallet are convenient too.
+                  </p>
+                </div>
+                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                  <p className="text-yellow-800 font-medium">
+                    Always write down your seed phrase on paper and store it securely.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">3. Connect to a Node</h3>
+              <p className="text-gray-700 mb-4">
+                Point Sparrow Wallet (or your chosen wallet) to our self-hosted Electrum Server (details on the next page).
+              </p>
+            </div>
+          </div>
           
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-            <p className="text-yellow-800">
-              <strong>Note:</strong> Bitcoin is a volatile asset and investing in it carries risks. 
-              Always do your own research and only invest what you can afford to lose.
+          <div className="bg-red-50 border-l-4 border-red-400 p-4 mt-8">
+            <p className="text-red-800 font-bold text-lg">
+              Not your keys, not your coins.
             </p>
           </div>
         </div>
