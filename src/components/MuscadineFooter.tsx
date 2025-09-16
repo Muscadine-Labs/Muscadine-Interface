@@ -21,7 +21,7 @@ export default function MuscadineFooter() {
                 to="/"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                Muscadine
+                Home
               </Link>
               <Link 
                 to="/bitcoin"
@@ -34,6 +34,18 @@ export default function MuscadineFooter() {
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 DeFi
+              </Link>
+              <Link 
+                to="/solutions"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Solutions
+              </Link>
+              <Link 
+                to="/contact"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Contact
               </Link>
             </nav>
           </div>
@@ -71,18 +83,6 @@ export default function MuscadineFooter() {
           <div>
             <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Resources</h4>
             <div className="space-y-2">
-              <Link 
-                to="/node"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Node
-              </Link>
-              <Link 
-                to="/cryptoguide"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Crypto Guide
-              </Link>
               <a 
                 href="https://www.nicholasconnelly.box" 
                 target="_blank" 

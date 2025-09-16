@@ -166,9 +166,9 @@ const MuscadineHome = () => {
   return (
     <section className="mb-20">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Muscadine</h1>
-          <p className="text-xl text-gray-600 mb-8">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-gray-900 mb-8">Muscadine</h1>
+          <p className="text-2xl text-gray-600 mb-12 leading-relaxed">
             Empowering financial freedom through Bitcoin security and decentralized finance
           </p>
         </div>
