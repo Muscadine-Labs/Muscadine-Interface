@@ -168,7 +168,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openAave}
-                className="w-full mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
               >
                 Open Aave
               </button>
@@ -184,7 +184,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openMoonwell}
-                className="w-full mt-4 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
+                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
               >
                 Open Moonwell
               </button>
@@ -200,7 +200,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openMorpho}
-                className="w-full mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
               >
                 Open Morpho
               </button>
@@ -230,7 +230,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openAerodrome}
-                className="w-full mt-4 bg-cyan-600 text-white px-4 py-2 rounded-lg hover:bg-cyan-700 transition-colors"
+                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
               >
                 Open Aerodrome
               </button>
@@ -246,7 +246,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openUniswap}
-                className="w-full mt-4 bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors"
+                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
               >
                 Open Uniswap
               </button>
@@ -277,7 +277,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openRabby}
-                className="w-full mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
               >
                 Open Rabby
               </button>
@@ -294,7 +294,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openPhantom}
-                className="w-full mt-4 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
+                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
               >
                 Open Phantom
               </button>
@@ -311,7 +311,7 @@ export default function DeFiPage() {
               </div>
               <button 
                 onClick={openZerion}
-                className="w-full mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                className="w-full mt-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
               >
                 Open Zerion
               </button>
@@ -323,7 +323,6 @@ export default function DeFiPage() {
               <div className="space-y-2">
                 <p className="text-sm text-gray-500">• Ledger (supports most DeFi)</p>
                 <p className="text-sm text-gray-500">• Trezor (limited DeFi support)</p>
-                <p className="text-sm text-gray-500">• Keystone (air-gapped security)</p>
                 <p className="text-sm text-gray-500">• Works with software wallets</p>
               </div>
               <div className="mt-4 p-3 bg-yellow-50 rounded-lg">

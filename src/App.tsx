@@ -131,7 +131,7 @@ const ContactMuscadine = () => (
             href="mailto:nickconnelly10@gmail.com"
             className="block text-gray-600 hover:text-gray-900 transition-colors duration-200"
           >
-            📧 nickconnelly10@gmail.com
+            nickconnelly10@gmail.com
           </a>
           <a 
             href="https://www.linkedin.com/in/nicholas-connelly"
@@ -139,12 +139,12 @@ const ContactMuscadine = () => (
             rel="noopener noreferrer"
             className="block text-gray-600 hover:text-gray-900 transition-colors duration-200"
           >
-            💼 LinkedIn Profile
+            LinkedIn Profile
           </a>
         </div>
         <div className="mt-6 p-4 bg-gray-50 rounded-lg">
           <p className="text-sm text-gray-600">
-            <strong>Response Time:</strong> Usually within 24 hours<br/>
+            <strong>Response Time:</strong> within 24 hours<br/>
             <strong>Consultation:</strong> Free initial consultation<br/>
             <strong>Services:</strong> Custom pricing based on complexity
           </p>

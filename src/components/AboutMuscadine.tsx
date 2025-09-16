@@ -37,24 +37,18 @@ export default function AboutMuscadine({ onNavigate }: AboutMuscadineProps) {
             Real-time data and insights on DeFi protocols, helping you identify opportunities and manage risks.
           </p>
           
-          <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg mt-8">
-            <p className="text-blue-800 font-medium text-center text-lg">
-              <strong>Built on Bitcoin • Secure • Transparent • Professional</strong>
-            </p>
-          </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <button
               onClick={() => onNavigate('bitcoin')}
-              className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 text-center"
+              className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 text-center"
             >
-              Learn About Bitcoin
+              Bitcoin page
             </button>
             <button
               onClick={() => onNavigate('defi')}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 text-center"
+              className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 text-center"
             >
-              Explore DeFi
+              DeFi page
             </button>
           </div>
         </div>

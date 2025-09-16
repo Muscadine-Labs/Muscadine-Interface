@@ -2,23 +2,9 @@
 import { useState } from 'react';
 
 export default function BitcoinPage() {
-  const [bitcoinTab, setBitcoinTab] = useState<'about' | 'node' | 'explore' | 'wallet'>('about');
+  const [bitcoinTab, setBitcoinTab] = useState<'about' | 'explore' | 'wallet'>('about');
 
-  const nodeExplanation = "A node is a computer that participates in the Bitcoin network by validating transactions and blocks. Running your own node gives you full control and privacy over your Bitcoin experience.";
   const mempoolExplanation = "The mempool (memory pool) is where unconfirmed Bitcoin transactions wait before being added to a block. It helps the network manage and prioritize pending transactions.";
-
-  const copyToClipboard = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch (err) {
-      const textArea = document.createElement('textarea');
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-    }
-  };
 
   const openMempool = () => {
     window.open('https://mempool.space', '_blank', 'noopener,noreferrer');
@@ -30,6 +16,14 @@ export default function BitcoinPage() {
 
   const openSparrowDocs = () => {
     window.open('https://sparrowwallet.com/docs/', '_blank', 'noopener,noreferrer');
+  };
+
+  const openSeedsigner = () => {
+    window.open('https://seedsigner.com/', '_blank', 'noopener,noreferrer');
+  };
+
+  const openColdcard = () => {
+    window.open('https://coldcard.com/', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -48,12 +42,6 @@ export default function BitcoinPage() {
           className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'about' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
         >
           About
-        </button>
-        <button 
-          onClick={() => setBitcoinTab('node')} 
-          className={`px-6 py-3 font-medium text-sm transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'node' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
-        >
-          Node
         </button>
         <button 
           onClick={() => setBitcoinTab('explore')} 
@@ -106,42 +94,6 @@ export default function BitcoinPage() {
         </div>
       )}
 
-      {bitcoinTab === 'node' && (
-        <div>
-          <div className="mb-4 p-4 bg-stone-50 rounded-lg">
-            <p className="text-stone-700 font-sans">{nodeExplanation}</p>
-          </div>
-          <div className="bg-white border border-stone-200 rounded-lg p-6">
-            <h3 className="text-xl font-semibold text-stone-800 mb-4 font-serif">Node Connection Details</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="text-sm text-stone-600 mb-2 font-sans">Electrum Server Hostname:</p>
-                <div className="flex items-center gap-2">
-                  <code className="bg-stone-100 px-3 py-2 rounded text-sm flex-1 break-all">lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion</code>
-                  <button 
-                    className="bg-stone-600 text-white px-3 py-2 rounded text-sm hover:bg-stone-700 transition-colors" 
-                    onClick={() => copyToClipboard('lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion')}
-                  >
-                    Copy
-                  </button>
-                </div>
-              </div>
-              <div>
-                <p className="text-sm text-stone-600 mb-2 font-sans">Port:</p>
-                <div className="flex items-center gap-2">
-                  <span className="bg-stone-100 px-3 py-2 rounded text-sm">50001</span>
-                  <button 
-                    className="bg-stone-600 text-white px-3 py-2 rounded text-sm hover:bg-stone-700 transition-colors" 
-                    onClick={() => copyToClipboard('50001')}
-                  >
-                    Copy
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {bitcoinTab === 'explore' && (
         <div>
@@ -155,7 +107,7 @@ export default function BitcoinPage() {
               <p className="text-gray-600 mb-4">Explore the Bitcoin blockchain and mempool in real-time</p>
               <button 
                 onClick={openMempool}
-                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
               >
                 Open Mempool.space
               </button>
@@ -187,13 +139,13 @@ export default function BitcoinPage() {
               <div className="mt-4 space-y-2">
                 <button 
                   onClick={openSparrowWallet}
-                  className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                  className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
                 >
                   Download Sparrow
                 </button>
                 <button 
                   onClick={openSparrowDocs}
-                  className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                  className="w-full bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors"
                 >
                   View Documentation
                 </button>
@@ -206,7 +158,22 @@ export default function BitcoinPage() {
               <div className="space-y-2">
                 <p className="text-sm text-gray-500">• Trezor Model T or One</p>
                 <p className="text-sm text-gray-500">• Ledger Nano S Plus or X</p>
+                <p className="text-sm text-gray-500">• Seedsigner (DIY air-gapped)</p>
                 <p className="text-sm text-gray-500">• Coldcard (Bitcoin-only)</p>
+              </div>
+              <div className="mt-4 space-y-2">
+                <button 
+                  onClick={openSeedsigner}
+                  className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                >
+                  Seedsigner
+                </button>
+                <button 
+                  onClick={openColdcard}
+                  className="w-full bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+                >
+                  Coldcard
+                </button>
               </div>
               <div className="mt-4 p-3 bg-yellow-50 rounded-lg">
                 <p className="text-sm text-yellow-800">
