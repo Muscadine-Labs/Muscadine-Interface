@@ -100,7 +100,7 @@ const MuscadineBanner = () => {
 
 const ContactMuscadine = () => (
   <div className="p-6">
-    <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact & Services</h2>
+    <h2 className="text-3xl font-bold text-gray-900 mb-6">Book a Consultation</h2>
     <p className="text-lg text-gray-600 mb-8 leading-relaxed">
       Need help setting up your DeFi infrastructure or want professional advice on Bitcoin and DeFi strategies? I'm here to help.
     </p>

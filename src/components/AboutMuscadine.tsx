@@ -12,43 +12,55 @@ export default function AboutMuscadine({ onNavigate }: AboutMuscadineProps) {
         
         <div className="prose prose-lg max-w-none text-stone-700 space-y-6">
           <p>
-            Muscadine is a comprehensive DeFi analytics platform designed to help users navigate the decentralized finance ecosystem with data-driven insights and educational resources.
+            I founded Muscadine to help individuals secure and manage their digital assets with confidence. From Bitcoin node deployment to DeFi onboarding, I specialize in building safe, privacy-focused systems that put people in control of their wealth. At its core, Muscadine is about empowering financial independence in a changing economy.
           </p>
           
-          <h2 className="text-2xl font-semibold text-stone-900 mt-8 mb-4">Our Mission</h2>
-          <p>
-            We believe in financial sovereignty and the power of decentralized technologies. Muscadine provides the tools and knowledge needed to safely participate in the DeFi ecosystem while maintaining full control over your digital assets.
-          </p>
+          <h2 className="text-2xl font-semibold text-stone-900 mt-8 mb-4">Services</h2>
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">Bitcoin Node Deployment</h3>
+              <p className="text-blue-800 text-sm">
+                Run your own node for privacy and sovereignty
+              </p>
+            </div>
+            <div className="bg-green-50 p-4 rounded-lg">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">Secure Self-Custody Tools</h3>
+              <p className="text-green-800 text-sm">
+                Wallet setups with institutional-grade protection
+              </p>
+            </div>
+            <div className="bg-purple-50 p-4 rounded-lg">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">DeFi Onboarding</h3>
+              <p className="text-purple-800 text-sm">
+                Lending, borrowing, and navigating decentralized finance
+              </p>
+            </div>
+            <div className="bg-orange-50 p-4 rounded-lg">
+              <h3 className="text-lg font-semibold text-orange-900 mb-2">Asset Security Management</h3>
+              <p className="text-orange-800 text-sm">
+                Helping secure and manage large crypto holdings
+              </p>
+            </div>
+          </div>
           
-          <h2 className="text-2xl font-semibold text-stone-900 mt-8 mb-4">What We Offer</h2>
-          
-          <h3 className="text-xl font-semibold text-stone-800 mt-6 mb-3">Educational Resources</h3>
-          <p>
-            Comprehensive guides on Bitcoin, DeFi protocols, and wallet security to help you make informed decisions.
-          </p>
-          
-          <h3 className="text-xl font-semibold text-stone-800 mt-6 mb-3">Node Infrastructure</h3>
-          <p>
-            Self-hosted Bitcoin node and Electrum server for enhanced privacy and security in your Bitcoin transactions.
-          </p>
-          
-          <h3 className="text-xl font-semibold text-stone-800 mt-6 mb-3">DeFi Analytics</h3>
-          <p>
-            Real-time data and insights on DeFi protocols, helping you identify opportunities and manage risks.
-          </p>
+          <div className="bg-stone-100 p-4 rounded-lg mb-6">
+            <p className="text-stone-800 font-medium text-center">
+              Trusted with securing over $12 million in digital assets
+            </p>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <button
               onClick={() => onNavigate('bitcoin')}
               className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 text-center"
             >
-              Bitcoin page
+              Secure Your Assets
             </button>
             <button
               onClick={() => onNavigate('defi')}
               className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 text-center"
             >
-              DeFi page
+              Start Your DeFi Journey
             </button>
           </div>
         </div>
