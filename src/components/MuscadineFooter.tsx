@@ -1,10 +1,6 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
-interface MuscadineFooterProps {
-  onNavigate: (tab: 'bitcoin' | 'defi') => void;
-}
-
-export default function MuscadineFooter({ onNavigate }: MuscadineFooterProps) {
+export default function MuscadineFooter() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-8 py-16">
@@ -21,26 +17,24 @@ export default function MuscadineFooter({ onNavigate }: MuscadineFooterProps) {
           <div>
             <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Navigation</h4>
             <nav className="space-y-2">
-              <a 
-                href="https://muscadine.box/" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link 
+                to="/"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Home - muscadine.box
-              </a>
-              <button 
-                onClick={() => onNavigate('bitcoin')}
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 text-left"
+              </Link>
+              <Link 
+                to="/bitcoin"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Bitcoin
-              </button>
-              <button 
-                onClick={() => onNavigate('defi')}
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200 text-left"
+              </Link>
+              <Link 
+                to="/defi"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 DeFi
-              </button>
+              </Link>
             </nav>
           </div>
           
