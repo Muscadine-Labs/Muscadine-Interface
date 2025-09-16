@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Loader from './components/Loader';
 import ErrorBoundary from './components/ErrorBoundary';
 import MobileNav from './components/MobileNav';
@@ -6,28 +6,13 @@ import CryptoPlan from './components/CryptoPlan';
 import Analytics from './components/Analytics';
 
 const MuscadineBanner = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 0);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 p-4 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
-    }`}>
+    <nav className="fixed top-0 left-0 w-full z-50 p-4 bg-white shadow-sm">
       <div className="w-full flex justify-between items-center max-w-6xl mx-auto">
         {/* Logo */}
-        <div className={`text-xl font-medium transition-colors duration-300 ${
-          isScrolled ? 'text-gray-800' : 'text-white'
-        }`}>
+        <div className="text-xl font-medium text-gray-800">
           <a href="https://muscadine.box" target="_blank" rel="noopener noreferrer">
             Muscadine
           </a>
@@ -37,9 +22,7 @@ const MuscadineBanner = () => {
         <div className="hidden md:flex space-x-8">
           <a 
             href="https://nicholasconnelly.box" 
-            className={`nav-link ${
-              isScrolled ? 'text-gray-600' : 'text-white hover:text-gray-200'
-            }`}
+            className="nav-link text-gray-600"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -47,9 +30,7 @@ const MuscadineBanner = () => {
           </a>
           <a 
             href="https://health.nicholasconnelly.box" 
-            className={`nav-link ${
-              isScrolled ? 'text-gray-600' : 'text-white hover:text-gray-200'
-            }`}
+            className="nav-link text-gray-600"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -62,9 +43,7 @@ const MuscadineBanner = () => {
           type="button"
           aria-label="Toggle menu"
           aria-expanded={isOpen}
-          className={`md:hidden inline-flex items-center justify-center rounded-lg p-2 transition-all duration-200 ${
-            isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
-          }`}
+          className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100"
           onClick={() => setIsOpen((v) => !v)}
         >
           <svg className="h-6 w-6 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
