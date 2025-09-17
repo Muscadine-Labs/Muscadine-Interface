@@ -282,10 +282,6 @@ const MuscadineHome = () => {
             buttonBgColor="from-blue-500 to-blue-600"
             className="h-full"
           />
-        </div>
-
-        {/* Infrastructure & Resources */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <UICard
             icon={
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

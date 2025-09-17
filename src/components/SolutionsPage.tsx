@@ -9,7 +9,7 @@ export default function SolutionsPage() {
       subtitle="A collection of my work in Bitcoin security, DeFi solutions, and comprehensive crypto resources."
       className="py-12"
     >
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <UICard
           icon={
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -17,15 +17,7 @@ export default function SolutionsPage() {
             </svg>
           }
             title="Bitcoin Node Deployment"
-            description={
-              <div>
-                <p className="mb-4">Operate a dedicated Bitcoin node for improved privacy, verification, and sovereignty. Learn how to deploy and maintain a hardened node securely.</p>
-                <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                  <h5 className="font-semibold text-green-900 mb-2">Bitcoin Node Deployment</h5>
-                  <p className="text-green-800 text-sm">Run your own node for privacy and sovereignty</p>
-                </div>
-              </div>
-            }
+            description="Operate a dedicated Bitcoin node for improved privacy, verification, and sovereignty. Learn how to deploy and maintain a hardened node securely."
             buttonText="Review Node Options"
           buttonLink="/node"
           iconBgColor="from-green-500 to-green-600"
@@ -40,15 +32,7 @@ export default function SolutionsPage() {
             </svg>
           }
             title="Knowledge Base"
-            description={
-              <div>
-                <p className="mb-4">Concise resources and checklists for navigating self-custody, wallets, DeFi, and digital asset security.</p>
-                <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
-                  <h5 className="font-semibold text-purple-900 mb-2">Asset Security Management</h5>
-                  <p className="text-purple-800 text-sm">Helping secure and manage large crypto holdings</p>
-                </div>
-              </div>
-            }
+            description="Concise resources and checklists for navigating self-custody, wallets, DeFi, and digital asset security."
             buttonText="Open Knowledge Base"
           buttonLink="/cryptoguide"
           iconBgColor="from-purple-500 to-purple-600"

@@ -135,7 +135,7 @@ export default function MuscadineFooter() {
                 Legal
               </a>
               <a 
-                href="https://github.com/nickconnelly10" 
+                href="https://github.com/nickconnelly10/muscadine.box" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
