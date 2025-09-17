@@ -12,6 +12,7 @@ import CryptoGuidePage from './components/CryptoGuidePage';
 import SolutionsPage from './components/SolutionsPage';
 import MuscadineFooter from './components/MuscadineFooter';
 import UICard from './components/UICard';
+import ScrollToTop from './components/ScrollToTop';
 
 const MuscadineBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -187,7 +188,15 @@ const MuscadineHome = () => {
               </svg>
             }
             title="Bitcoin Security & Self-Custody"
-            description="Set up hardware wallets, recovery plans, and multi-sig setups the right way—clear steps, no jargon. Learn wallet hardening, recovery drills, and secure your Bitcoin with institutional-grade protection."
+            description={
+              <div>
+                <p className="mb-4">Set up hardware wallets, recovery plans, and multi-sig setups the right way—clear steps, no jargon. Learn wallet hardening, recovery drills, and secure your Bitcoin with institutional-grade protection.</p>
+                <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                  <h5 className="font-semibold text-orange-900 mb-2">Secure Self-Custody Tools</h5>
+                  <p className="text-orange-800 text-sm">Wallet setups with institutional-grade protection</p>
+                </div>
+              </div>
+            }
             buttonText="Secure my Bitcoin"
             buttonLink="/bitcoin"
             iconBgColor="from-orange-500 to-orange-600"
@@ -202,7 +211,15 @@ const MuscadineHome = () => {
               </svg>
             }
             title="DeFi Onboarding & Safety"
-            description="Learn borrowing, lending, and yield farming with a risk-first approach. Master position sizing, stop rules, and monitoring routines to navigate DeFi safely without the overwhelm."
+            description={
+              <div>
+                <p className="mb-4">Learn borrowing, lending, and yield farming with a risk-first approach. Master position sizing, stop rules, and monitoring routines to navigate DeFi safely without the overwhelm.</p>
+                <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                  <h5 className="font-semibold text-blue-900 mb-2">DeFi Onboarding</h5>
+                  <p className="text-blue-800 text-sm">Lending, borrowing, and navigating decentralized finance</p>
+                </div>
+              </div>
+            }
             buttonText="Explore DeFi safely"
             buttonLink="/defi"
             iconBgColor="from-blue-500 to-blue-600"
@@ -220,7 +237,15 @@ const MuscadineHome = () => {
               </svg>
             }
             title="Connect to My Self-Hosted Bitcoin Node"
-            description="Access our secure, self-hosted Bitcoin node for complete privacy and sovereignty. Validate your own transactions, run Electrum server, and maintain full control over your Bitcoin infrastructure without trusting third parties."
+            description={
+              <div>
+                <p className="mb-4">Access our secure, self-hosted Bitcoin node for complete privacy and sovereignty. Validate your own transactions, run Electrum server, and maintain full control over your Bitcoin infrastructure without trusting third parties.</p>
+                <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                  <h5 className="font-semibold text-green-900 mb-2">Bitcoin Node Deployment</h5>
+                  <p className="text-green-800 text-sm">Run your own node for privacy and sovereignty</p>
+                </div>
+              </div>
+            }
             buttonText="Access Bitcoin Node"
             buttonLink="/node"
             iconBgColor="from-green-500 to-green-600"
@@ -235,7 +260,15 @@ const MuscadineHome = () => {
               </svg>
             }
             title="Comprehensive Crypto Guide"
-            description="Master the crypto ecosystem with our comprehensive resource library. From Bitcoin basics to advanced DeFi strategies, learn wallet security, recovery planning, multi-sig setups, and risk management—all in plain English."
+            description={
+              <div>
+                <p className="mb-4">Master the crypto ecosystem with our comprehensive resource library. From Bitcoin basics to advanced DeFi strategies, learn wallet security, recovery planning, multi-sig setups, and risk management—all in plain English.</p>
+                <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                  <h5 className="font-semibold text-purple-900 mb-2">Asset Security Management</h5>
+                  <p className="text-purple-800 text-sm">Helping secure and manage large crypto holdings</p>
+                </div>
+              </div>
+            }
             buttonText="Open Crypto Guide"
             buttonLink="/cryptoguide"
             iconBgColor="from-purple-500 to-purple-600"
@@ -245,19 +278,16 @@ const MuscadineHome = () => {
         </div>
 
         {/* Why Muscadine Section */}
-        <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-12 mb-16">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Muscadine</h2>
-            <p className="text-xl text-gray-700 leading-relaxed mb-8">
+        <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-8 mb-12">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Muscadine</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Plain English. Real guidance. Your keys, your coins.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              I make crypto security approachable—step-by-step, no hype, and no asset custody. You leave with a setup you understand and can maintain.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-              <span className="bg-white px-4 py-2 rounded-full border">No investment advice</span>
-              <span className="bg-white px-4 py-2 rounded-full border">Education only</span>
-              <span className="bg-white px-4 py-2 rounded-full border">Your custody, always</span>
+            <div className="flex flex-wrap justify-center gap-3 text-sm text-gray-500">
+              <span className="bg-white px-3 py-1.5 rounded-full border">No investment advice</span>
+              <span className="bg-white px-3 py-1.5 rounded-full border">Education only</span>
+              <span className="bg-white px-3 py-1.5 rounded-full border">Your custody, always</span>
             </div>
           </div>
         </div>
@@ -302,15 +332,15 @@ const MuscadineHome = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-              <a 
-                href="mailto:nickconnelly10@gmail.com"
+              <Link 
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200 text-lg"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
-                Send Email
-              </a>
+                Contact
+              </Link>
             </div>
           </div>
         </div>
@@ -324,6 +354,7 @@ function App() {
     <ErrorBoundary>
       <Analytics pageName="defi-dashboard" />
       <Router>
+        <ScrollToTop />
         <div className="min-h-screen bg-white flex flex-col">
           <MuscadineBanner />
           <main className="flex-1 max-w-6xl mx-auto px-4 pb-20 pt-20">

@@ -31,36 +31,6 @@ export default function AboutMuscadine({ onNavigate }: AboutMuscadineProps) {
         </div>
       </div>
       
-      <div className="text-center">
-        <h3 className="text-3xl font-semibold text-gray-900 mb-10">Services</h3>
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-blue-50 p-8 rounded-lg">
-            <h4 className="text-xl font-semibold text-blue-900 mb-3">Bitcoin Node Deployment</h4>
-            <p className="text-blue-800">
-              Run your own node for privacy and sovereignty
-            </p>
-          </div>
-          <div className="bg-green-50 p-8 rounded-lg">
-            <h4 className="text-xl font-semibold text-green-900 mb-3">Secure Self-Custody Tools</h4>
-            <p className="text-green-800">
-              Wallet setups with institutional-grade protection
-            </p>
-          </div>
-          <div className="bg-purple-50 p-8 rounded-lg">
-            <h4 className="text-xl font-semibold text-purple-900 mb-3">DeFi Onboarding</h4>
-            <p className="text-purple-800">
-              Lending, borrowing, and navigating decentralized finance
-            </p>
-          </div>
-          <div className="bg-orange-50 p-8 rounded-lg">
-            <h4 className="text-xl font-semibold text-orange-900 mb-3">Asset Security Management</h4>
-            <p className="text-orange-800">
-              Helping secure and manage large crypto holdings
-            </p>
-          </div>
-        </div>
-        
-      </div>
     </div>
   );
 }
