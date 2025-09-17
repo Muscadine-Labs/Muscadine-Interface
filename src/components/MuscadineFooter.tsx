@@ -4,7 +4,7 @@ export default function MuscadineFooter() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-8 py-16">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
           {/* Brand */}
           <div>
             <h3 className="text-lg font-medium text-white mb-4">Muscadine</h3>
@@ -111,6 +111,29 @@ export default function MuscadineFooter() {
               >
                 Crypto Guide
               </Link>
+            </div>
+          </div>
+          
+          {/* Legal */}
+          <div>
+            <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Legal</h4>
+            <div className="space-y-2">
+              <a 
+                href="/privacy.html" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Privacy Policy
+              </a>
+              <a 
+                href="/legal.html" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Legal
+              </a>
             </div>
           </div>
         </div>
