@@ -36,12 +36,6 @@ export default function MuscadineFooter() {
                 DeFi
               </Link>
               <Link 
-                to="/solutions"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Solutions
-              </Link>
-              <Link 
                 to="/contact"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
@@ -133,6 +127,14 @@ export default function MuscadineFooter() {
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Legal
+              </a>
+              <a 
+                href="/disclaimer.html" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Disclaimer
               </a>
               <a 
                 href="https://github.com/nickconnelly10/muscadine.box" 

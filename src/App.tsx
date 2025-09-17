@@ -9,7 +9,6 @@ import AboutMuscadine from './components/AboutMuscadine';
 import ContactPage from './components/ContactPage';
 import NodePage from './components/NodePage';
 import CryptoGuidePage from './components/CryptoGuidePage';
-import SolutionsPage from './components/SolutionsPage';
 import MuscadineFooter from './components/MuscadineFooter';
 import UICard from './components/UICard';
 import ScrollToTop from './components/ScrollToTop';
@@ -62,6 +61,26 @@ const MuscadineBanner = () => {
               DeFi
             </Link>
             <Link 
+              to="/node"
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === '/node' 
+                  ? 'text-gray-900' 
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Bitcoin Node
+            </Link>
+            <Link 
+              to="/cryptoguide"
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === '/cryptoguide' 
+                  ? 'text-gray-900' 
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Crypto Guide
+            </Link>
+            <Link 
               to="/contact"
               className={`text-sm font-medium transition-colors ${
                 location.pathname === '/contact' 
@@ -71,70 +90,6 @@ const MuscadineBanner = () => {
             >
               Contact
             </Link>
-            
-            {/* Solutions Dropdown */}
-            <div className="relative group">
-              <button className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors flex items-center">
-                Solutions
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-1">
-                  <Link 
-                    to="/node"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    Bitcoin Node
-                  </Link>
-                  <Link 
-                    to="/cryptoguide"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    Crypto Guide
-                  </Link>
-                </div>
-              </div>
-            </div>
-            
-            {/* Legal Dropdown */}
-            <div className="relative group">
-              <button className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors flex items-center">
-                Legal
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-1">
-                  <a 
-                    href="/privacy.html" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    Privacy Policy
-                  </a>
-                  <a 
-                    href="/terms.html" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    Terms of Service
-                  </a>
-                  <a 
-                    href="/disclaimer.html" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    Disclaimer
-                  </a>
-                </div>
-              </div>
-            </div>
           </nav>
 
           {/* Mobile menu button */}
@@ -192,26 +147,28 @@ const MuscadineBanner = () => {
               >
                 DeFi
               </Link>
-              {/* Mobile Solutions Section */}
-              <div className="px-3 py-2">
-                <div className="text-sm font-medium text-gray-900 mb-2">Solutions</div>
-                <div className="ml-4 space-y-1">
-                  <Link 
-                    to="/node"
-                    className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Bitcoin Node
-                  </Link>
-                  <Link 
-                    to="/cryptoguide"
-                    className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Crypto Guide
-                  </Link>
-                </div>
-              </div>
+              <Link 
+                to="/node"
+                onClick={() => setIsOpen(false)}
+                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  location.pathname === '/node' 
+                    ? 'bg-gray-100 text-gray-900' 
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                }`}
+              >
+                Bitcoin Node
+              </Link>
+              <Link 
+                to="/cryptoguide"
+                onClick={() => setIsOpen(false)}
+                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  location.pathname === '/cryptoguide' 
+                    ? 'bg-gray-100 text-gray-900' 
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                }`}
+              >
+                Crypto Guide
+              </Link>
               <Link 
                 to="/contact"
                 onClick={() => setIsOpen(false)}
@@ -223,40 +180,6 @@ const MuscadineBanner = () => {
               >
                 Contact
               </Link>
-              
-              {/* Mobile Legal Section */}
-              <div className="px-3 py-2">
-                <div className="text-sm font-medium text-gray-900 mb-2">Legal</div>
-                <div className="ml-4 space-y-1">
-                  <a 
-                    href="/privacy.html" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Privacy Policy
-                  </a>
-                  <a 
-                    href="/terms.html" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Terms of Service
-                  </a>
-                  <a 
-                    href="/disclaimer.html" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Disclaimer
-                  </a>
-                </div>
-              </div>
             </nav>
           </div>
         )}
@@ -422,7 +345,6 @@ function App() {
               <Route path="/" element={<MuscadineHome />} />
               <Route path="/bitcoin" element={<BitcoinPage />} />
               <Route path="/defi" element={<DeFiPage />} />
-              <Route path="/solutions" element={<SolutionsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/node" element={<NodePage />} />
               <Route path="/cryptoguide" element={<CryptoGuidePage />} />
