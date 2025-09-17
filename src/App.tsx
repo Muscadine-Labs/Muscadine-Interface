@@ -11,6 +11,7 @@ import NodePage from './components/NodePage';
 import CryptoGuidePage from './components/CryptoGuidePage';
 import SolutionsPage from './components/SolutionsPage';
 import MuscadineFooter from './components/MuscadineFooter';
+import UICard from './components/UICard';
 
 const MuscadineBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -179,140 +180,110 @@ const MuscadineHome = () => {
         
         {/* Quick Value Blocks */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {/* Self-Custody */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-6 mx-auto shadow-md">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Self-Custody</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Set up hardware wallets and recovery the right way—clear steps, no jargon.
-              </p>
-              <Link 
-                to="/bitcoin" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Start self-custody →
-              </Link>
-            </div>
-          </div>
-
-          {/* DeFi Done Safely */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 mx-auto shadow-md">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">DeFi, done safely</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Learn borrowing/lending with a risk-first plan and simple monitoring.
-              </p>
-              <Link 
-                to="/defi" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Explore DeFi guide →
-              </Link>
-            </div>
-          </div>
-
-          {/* Run Your Own Node */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-6 mx-auto shadow-md">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Run your own node</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Improve privacy and sovereignty with a guided node setup.
-              </p>
-              <Link 
-                to="/node" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Node options →
-              </Link>
-            </div>
-          </div>
+          <UICard
+            icon={
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            }
+            title="Self-Custody"
+            description="Set up hardware wallets and recovery the right way—clear steps, no jargon."
+            buttonText="Start self-custody"
+            buttonLink="/bitcoin"
+            iconBgColor="from-orange-500 to-orange-600"
+            buttonBgColor="from-orange-500 to-orange-600"
+          />
+          
+          <UICard
+            icon={
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            }
+            title="DeFi, done safely"
+            description="Learn borrowing/lending with a risk-first plan and simple monitoring."
+            buttonText="Explore DeFi guide"
+            buttonLink="/defi"
+            iconBgColor="from-blue-500 to-blue-600"
+            buttonBgColor="from-blue-500 to-blue-600"
+          />
+          
+          <UICard
+            icon={
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+              </svg>
+            }
+            title="Run your own node"
+            description="Improve privacy and sovereignty with a guided node setup."
+            buttonText="Node options"
+            buttonLink="/node"
+            iconBgColor="from-green-500 to-green-600"
+            buttonBgColor="from-green-500 to-green-600"
+          />
         </div>
 
         {/* Services Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {/* Self-Custody & Wallet Hardening */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-6 mx-auto shadow-md">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Self-Custody & Wallet Hardening</h3>
-              <ul className="text-gray-600 mb-6 text-left space-y-2">
+          <UICard
+            icon={
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            }
+            title="Self-Custody & Wallet Hardening"
+            description={
+              <ul className="text-left space-y-2">
                 <li>• Hardware wallet setup (or multi-sig)</li>
                 <li>• Recovery plan and drill</li>
                 <li>• Simple, printable checklist</li>
               </ul>
-              <Link 
-                to="/bitcoin" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Secure my wallet →
-              </Link>
-            </div>
-          </div>
-
-          {/* DeFi Onboarding (Safety-First) */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 mx-auto shadow-md">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">DeFi Onboarding (Safety-First)</h3>
-              <ul className="text-gray-600 mb-6 text-left space-y-2">
+            }
+            buttonText="Secure my wallet"
+            buttonLink="/bitcoin"
+            iconBgColor="from-orange-500 to-orange-600"
+            buttonBgColor="from-orange-500 to-orange-600"
+          />
+          
+          <UICard
+            icon={
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            }
+            title="DeFi Onboarding (Safety-First)"
+            description={
+              <ul className="text-left space-y-2">
                 <li>• Walkthrough of lending/borrowing basics</li>
                 <li>• Position sizing + stop rules</li>
                 <li>• Weekly check routine you can follow</li>
               </ul>
-              <Link 
-                to="/defi" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Learn DeFi safely →
-              </Link>
-            </div>
-          </div>
-
-          {/* Bitcoin Node Deployment */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-6 mx-auto shadow-md">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Bitcoin Node Deployment</h3>
-              <ul className="text-gray-600 mb-6 text-left space-y-2">
+            }
+            buttonText="Learn DeFi safely"
+            buttonLink="/defi"
+            iconBgColor="from-blue-500 to-blue-600"
+            buttonBgColor="from-blue-500 to-blue-600"
+          />
+          
+          <UICard
+            icon={
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+              </svg>
+            }
+            title="Bitcoin Node Deployment"
+            description={
+              <ul className="text-left space-y-2">
                 <li>• Recommended hardware/cloud</li>
                 <li>• Privacy settings and monitoring basics</li>
                 <li>• Update/backup runbook</li>
               </ul>
-              <Link 
-                to="/node" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Run my node →
-              </Link>
-            </div>
-          </div>
+            }
+            buttonText="Run my node"
+            buttonLink="/node"
+            iconBgColor="from-green-500 to-green-600"
+            buttonBgColor="from-green-500 to-green-600"
+          />
         </div>
 
         {/* Why Muscadine Section */}
@@ -335,47 +306,33 @@ const MuscadineHome = () => {
 
         {/* Resources and Contact */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Resources / Crypto Guide */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-6 mx-auto shadow-md">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Resources / "Crypto Guide"</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Short, practical explainers on wallets, recovery, multi-sig, and DeFi risks—no hype.
-              </p>
-              <Link 
-                to="/cryptoguide" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Open the guide →
-              </Link>
-            </div>
-          </div>
-
-          {/* Contact */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg flex items-center justify-center mb-6 mx-auto shadow-md">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Book a free consult or send a note—I'll help you pick the right path and secure your setup.
-              </p>
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white font-semibold rounded-lg hover:from-gray-800 hover:to-gray-900 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                Book a free consult →
-              </Link>
-            </div>
-          </div>
+          <UICard
+            icon={
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            }
+            title="Resources / Crypto Guide"
+            description="Short, practical explainers on wallets, recovery, multi-sig, and DeFi risks—no hype."
+            buttonText="Open the guide"
+            buttonLink="/cryptoguide"
+            iconBgColor="from-purple-500 to-purple-600"
+            buttonBgColor="from-purple-500 to-purple-600"
+          />
+          
+          <UICard
+            icon={
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            }
+            title="Contact"
+            description="Book a free consult or send a note—I'll help you pick the right path and secure your setup."
+            buttonText="Book a free consult"
+            buttonLink="/contact"
+            iconBgColor="from-gray-700 to-gray-800"
+            buttonBgColor="from-gray-700 to-gray-800"
+          />
         </div>
       </div>
     </section>

@@ -56,20 +56,6 @@ export default function AboutMuscadine({ onNavigate }: AboutMuscadineProps) {
           </div>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <Link
-            to="/bitcoin"
-            className="bg-orange-100 hover:bg-orange-200 text-orange-800 font-semibold py-4 px-10 rounded-lg transition-colors duration-200 text-center text-lg"
-          >
-            Control Your Bitcoin
-          </Link>
-          <Link
-            to="/defi"
-            className="bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold py-4 px-10 rounded-lg transition-colors duration-200 text-center text-lg"
-          >
-            Explore DeFi
-          </Link>
-        </div>
       </div>
     </div>
   );
