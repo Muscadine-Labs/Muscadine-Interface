@@ -97,7 +97,7 @@ export default function NodePage() {
                 <li>1. Open Sparrow wallet</li>
                 <li>2. Go to Settings → Server</li>
                 <li>3. Enter the hostname and port above</li>
-                <li>4. Click Test connection than close.</li>
+                <li>4. Click Test connection then close.</li>
               </ol>
             </div>
           </div>

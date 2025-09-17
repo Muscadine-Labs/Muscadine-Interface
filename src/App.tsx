@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
-import MobileNav from './components/MobileNav';
 import Analytics from './components/Analytics';
 import BitcoinPage from './components/BitcoinPage';
 import DeFiPage from './components/DeFiPage';
@@ -336,7 +335,7 @@ function App() {
         <ScrollToTop />
         <div className="min-h-screen bg-white flex flex-col">
           <MuscadineBanner />
-          <main className="flex-1 max-w-6xl mx-auto px-4 pb-20 pt-20">
+          <main className="flex-1 max-w-6xl mx-auto px-4 pt-20">
             <Routes>
               <Route path="/" element={<MuscadineHome />} />
               <Route path="/bitcoin" element={<BitcoinPage />} />
@@ -347,7 +346,6 @@ function App() {
             </Routes>
           </main>
           <MuscadineFooter />
-          <MobileNav />
         </div>
       </Router>
     </ErrorBoundary>

@@ -90,20 +90,12 @@ export default function MuscadineFooter() {
             <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Resources</h4>
             <div className="space-y-2">
               <a 
-                href="https://www.nicholasconnelly.box" 
+                href="https://nicholasconnelly.box" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 nicholasconnelly.box
-              </a>
-              <a 
-                href="https://health.nicholasconnelly.box" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Health & Wellness
               </a>
             </div>
           </div>
