@@ -1,6 +1,5 @@
 
 export default function NodePage() {
-  const nodeExplanation = "This is my self-hosted Bitcoin node that participates in the Bitcoin network by validating transactions and blocks. You can connect to it to send and receive Bitcoin transactions with enhanced privacy and security.";
 
   // Copy to clipboard function
   const copyToClipboard = async (text: string) => {

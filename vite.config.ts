@@ -12,8 +12,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'framer-motion': ['framer-motion']
+          'react-vendor': ['react', 'react-dom']
         }
       }
     },
@@ -24,7 +23,7 @@ export default defineConfig({
     host: true
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion']
+    include: ['react', 'react-dom']
   },
   esbuild: {
     target: 'esnext',

@@ -1,11 +1,9 @@
 
-import { Link } from 'react-router-dom';
-
 interface AboutMuscadineProps {
   onNavigate: (tab: 'bitcoin' | 'defi') => void;
 }
 
-export default function AboutMuscadine({ onNavigate }: AboutMuscadineProps) {
+export default function AboutMuscadine({ onNavigate: _onNavigate }: AboutMuscadineProps) {
   return (
     <div className="max-w-none text-gray-700 space-y-12">
       <div className="flex flex-col md:flex-row items-center justify-between mb-16">

@@ -212,7 +212,6 @@ const MuscadineHome = () => {
             buttonText="Explore Self-Custody"
             buttonLink="/bitcoin"
             iconBgColor="from-orange-500 to-orange-600"
-            buttonBgColor="from-orange-500 to-orange-600"
             className="h-full"
           />
           
@@ -227,7 +226,6 @@ const MuscadineHome = () => {
             buttonText="Explore DeFi Onboarding"
             buttonLink="/defi"
             iconBgColor="from-blue-500 to-blue-600"
-            buttonBgColor="from-blue-500 to-blue-600"
             className="h-full"
           />
           <UICard
@@ -241,7 +239,6 @@ const MuscadineHome = () => {
             buttonText="Review Node Options"
             buttonLink="/node"
             iconBgColor="from-green-500 to-green-600"
-            buttonBgColor="from-green-500 to-green-600"
             className="h-full"
           />
           
@@ -256,7 +253,6 @@ const MuscadineHome = () => {
             buttonText="Open Knowledge Base"
             buttonLink="/cryptoguide"
             iconBgColor="from-purple-500 to-purple-600"
-            buttonBgColor="from-purple-500 to-purple-600"
             className="h-full"
           />
         </div>

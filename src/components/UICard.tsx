@@ -9,7 +9,6 @@ interface UICardProps {
   buttonLink?: string;
   buttonOnClick?: () => void;
   iconBgColor?: string;
-  buttonBgColor?: string;
   className?: string;
 }
 
@@ -21,7 +20,6 @@ export default function UICard({
   buttonLink,
   buttonOnClick,
   iconBgColor = "from-gray-500 to-gray-600",
-  buttonBgColor = "from-gray-500 to-gray-600",
   className = ""
 }: UICardProps) {
   const buttonClasses = `text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium text-sm`;
