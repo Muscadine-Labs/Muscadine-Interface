@@ -21,7 +21,7 @@ export default function NodePage() {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Bitcoin Node</h1>
+        <h1 className="text-4xl font-light text-gray-900 mb-4 font-serif">Bitcoin Node</h1>
         <p className="text-xl text-gray-600">
           Connect to my self-hosted Bitcoin node for secure transactions
         </p>

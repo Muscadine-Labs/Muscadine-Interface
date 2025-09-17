@@ -29,7 +29,7 @@ export default function UISection({
         {(title || subtitle) && (
           <div className="text-center mb-16">
             {title && (
-              <h2 className="font-light text-gray-800 leading-tight mb-8">{title}</h2>
+              <h2 className="font-light text-gray-800 leading-tight mb-8 font-serif">{title}</h2>
             )}
             {subtitle && (
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">

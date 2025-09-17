@@ -29,7 +29,7 @@ export default function BitcoinPage() {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Bitcoin</h1>
+        <h1 className="text-4xl font-light text-gray-900 mb-4 font-serif">Bitcoin</h1>
         <p className="text-xl text-gray-600">
           The world's first and most secure digital currency
         </p>

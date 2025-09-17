@@ -7,7 +7,7 @@ export default function MuscadineFooter() {
         <div className="grid md:grid-cols-5 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-lg font-medium text-white mb-4">Muscadine</h3>
+            <h3 className="text-lg font-light text-white mb-4 font-serif">Muscadine</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               A small business dedicated to helping individuals take control of their financial future through Bitcoin security, self-custody, and DeFi solutions.
             </p>
@@ -133,6 +133,14 @@ export default function MuscadineFooter() {
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Legal
+              </a>
+              <a 
+                href="https://github.com/nickconnelly10" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Open Source
               </a>
             </div>
           </div>

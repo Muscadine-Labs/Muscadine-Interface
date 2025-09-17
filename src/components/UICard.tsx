@@ -48,7 +48,7 @@ export default function UICard({
         <div className={`w-20 h-20 bg-gradient-to-br ${iconBgColor} rounded-2xl flex items-center justify-center mb-8 mx-auto shadow-lg`}>
           {icon}
         </div>
-        <h3 className="text-3xl font-bold text-gray-900 mb-6">{title}</h3>
+        <h3 className="text-3xl font-light text-gray-900 mb-6 font-serif">{title}</h3>
         <div className="text-gray-700 mb-8 leading-relaxed text-lg">
           {typeof description === 'string' ? (
             <p>{description}</p>

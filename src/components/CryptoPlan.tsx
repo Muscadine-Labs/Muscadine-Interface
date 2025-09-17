@@ -5,7 +5,7 @@ const CryptoPlan = () => {
       <div className="max-w-4xl mx-auto px-4">
         <div className="bg-white rounded-2xl shadow-xl border border-stone-200 p-8">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-stone-900 font-serif mb-4">
+            <h1 className="text-4xl font-light text-stone-900 font-serif mb-4">
               Crypto Guide
             </h1>
             <p className="text-stone-600 text-lg">
@@ -17,7 +17,7 @@ const CryptoPlan = () => {
             <div className="space-y-8">
               {/* System Setup & Access Guide */}
               <section className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
-                <h2 className="text-3xl font-bold text-stone-800 mb-6 font-serif">System Setup & Access Guide</h2>
+                <h2 className="text-3xl font-light text-stone-800 mb-6 font-serif">System Setup & Access Guide</h2>
                 <p className="text-stone-700 leading-relaxed mb-6">
                   This comprehensive guide provides clear, step-by-step instructions for setting up your Start9 server, Bitcoin node, Lightning network, Electrum, and related tools. Designed for easy following by you and family members to achieve full infrastructure setup and management.
                 </p>
@@ -38,7 +38,7 @@ const CryptoPlan = () => {
 
               {/* Credentials & Security */}
               <section className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
-                <h2 className="text-3xl font-bold text-stone-800 mb-6 font-serif">Credentials & Security</h2>
+                <h2 className="text-3xl font-light text-stone-800 mb-6 font-serif">Credentials & Security</h2>
                 <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
                   <p className="text-red-800 font-semibold">⚠️ Store These Credentials Securely</p>
                 </div>
@@ -68,7 +68,7 @@ const CryptoPlan = () => {
 
               {/* Master/Child Key Strategy */}
               <section className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
-                <h2 className="text-3xl font-bold text-stone-800 mb-6 font-serif">Master/Child Key Strategy (BIP-85)</h2>
+                <h2 className="text-3xl font-light text-stone-800 mb-6 font-serif">Master/Child Key Strategy (BIP-85)</h2>
                 <p className="text-stone-700 leading-relaxed mb-6">
                   Implement a hierarchical key structure for enhanced security and family management. Each family member gets their own derived wallet while maintaining centralized control.
                 </p>
@@ -98,7 +98,7 @@ const CryptoPlan = () => {
 
               {/* Security Checklist */}
               <section className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 border border-purple-200">
-                <h2 className="text-3xl font-bold text-stone-800 mb-6 font-serif">Quick Security Checklist</h2>
+                <h2 className="text-3xl font-light text-stone-800 mb-6 font-serif">Quick Security Checklist</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-white rounded-lg p-4 border border-purple-200">
                     <h3 className="text-xl font-semibold text-stone-800 mb-3">Storage & Backup</h3>
@@ -124,7 +124,7 @@ const CryptoPlan = () => {
 
               {/* Device & Software Setup */}
               <section className="bg-gradient-to-br from-stone-50 to-gray-50 rounded-xl p-6 border border-stone-200">
-                <h2 className="text-3xl font-bold text-stone-800 mb-6 font-serif">Device & Software Setup</h2>
+                <h2 className="text-3xl font-light text-stone-800 mb-6 font-serif">Device & Software Setup</h2>
                 
                 <div className="space-y-6">
                   {/* SeedSigner */}
@@ -255,7 +255,7 @@ const CryptoPlan = () => {
 
               {/* Bitcoin Paper/Hardware Wallet */}
               <section className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl p-6 border border-yellow-200">
-                <h2 className="text-3xl font-bold text-stone-800 mb-6 font-serif">Bitcoin Paper/Hardware Wallet (Cold)</h2>
+                <h2 className="text-3xl font-light text-stone-800 mb-6 font-serif">Bitcoin Paper/Hardware Wallet (Cold)</h2>
                 <p className="text-stone-700 leading-relaxed mb-6">
                   Purpose: Generational, set-and-forget Bitcoin storage with maximum security.
                 </p>
@@ -325,7 +325,7 @@ const CryptoPlan = () => {
 
               {/* DeFi Cold & Hot Wallets */}
               <section className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border border-cyan-200">
-                <h2 className="text-3xl font-bold text-stone-800 mb-6 font-serif">DeFi Cold & Hot Wallets (Base Network)</h2>
+                <h2 className="text-3xl font-light text-stone-800 mb-6 font-serif">DeFi Cold & Hot Wallets (Base Network)</h2>
                 
                 <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
                   <p className="text-blue-800 font-semibold">🌐 General Rule: Use Base (BASE CHAIN) - a layer 2 network on Ethereum for all EVM activity. Always confirm your wallet address (starts with 0x…) matches across dApps and explorers before transacting.</p>
@@ -401,7 +401,7 @@ const CryptoPlan = () => {
 
               {/* Cold Wallet (Ledger-backed) */}
               <section className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-200">
-                <h2 className="text-3xl font-bold text-stone-800 mb-6 font-serif">Cold Wallet (Ledger-backed)</h2>
+                <h2 className="text-3xl font-light text-stone-800 mb-6 font-serif">Cold Wallet (Ledger-backed)</h2>
                 <p className="text-stone-700 leading-relaxed mb-6">
                   Purpose: Larger positions; lending/borrowing with strict risk limits for enhanced security.
                 </p>
@@ -462,7 +462,7 @@ const CryptoPlan = () => {
 
               {/* Hot Wallet (Rabby software wallet) */}
               <section className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-200">
-                <h2 className="text-3xl font-bold text-stone-800 mb-6 font-serif">Hot Wallet (Rabby software wallet)</h2>
+                <h2 className="text-3xl font-light text-stone-800 mb-6 font-serif">Hot Wallet (Rabby software wallet)</h2>
                 <p className="text-stone-700 leading-relaxed mb-6">
                   Purpose: Day-to-day swaps, payments, repayments with convenient access.
                 </p>

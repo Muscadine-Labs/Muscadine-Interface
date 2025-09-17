@@ -262,14 +262,14 @@ const MuscadineHome = () => {
             title="Bitcoin Security & Self-Custody"
             description={
               <div>
-                <p className="mb-4">Set up hardware wallets, recovery plans, and multi-sig setups the right way—clear steps, no jargon. Learn wallet hardening, recovery drills, and secure your Bitcoin with institutional-grade protection.</p>
+                <p className="mb-4">Establish secure self-custody with Bitcoin. Learn the fundamentals of hardware wallets, recovery planning, and long-term asset protection with the world's first decentralized currency.</p>
                 <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
                   <h5 className="font-semibold text-orange-900 mb-2">Secure Self-Custody Tools</h5>
                   <p className="text-orange-800 text-sm">Wallet setups with institutional-grade protection</p>
                 </div>
               </div>
             }
-            buttonText="Secure my Bitcoin"
+            buttonText="Explore Self-Custody"
             buttonLink="/bitcoin"
             iconBgColor="from-orange-500 to-orange-600"
             buttonBgColor="from-orange-500 to-orange-600"
@@ -282,17 +282,17 @@ const MuscadineHome = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             }
-            title="DeFi Onboarding & Safety"
+            title="Decentralized Finance (DeFi)"
             description={
               <div>
-                <p className="mb-4">Learn borrowing, lending, and yield farming with a risk-first approach. Master position sizing, stop rules, and monitoring routines to navigate DeFi safely without the overwhelm.</p>
+                <p className="mb-4">Access lending and borrowing protocols with a structured, risk-aware approach. Learn how to optimize capital while maintaining security on Base and other networks.</p>
                 <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
                   <h5 className="font-semibold text-blue-900 mb-2">DeFi Onboarding</h5>
                   <p className="text-blue-800 text-sm">Lending, borrowing, and navigating decentralized finance</p>
                 </div>
               </div>
             }
-            buttonText="Explore DeFi safely"
+            buttonText="Explore DeFi Onboarding"
             buttonLink="/defi"
             iconBgColor="from-blue-500 to-blue-600"
             buttonBgColor="from-blue-500 to-blue-600"
@@ -308,17 +308,17 @@ const MuscadineHome = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
               </svg>
             }
-            title="Connect to My Self-Hosted Bitcoin Node"
+            title="Bitcoin Node Deployment"
             description={
               <div>
-                <p className="mb-4">Access our secure, self-hosted Bitcoin node for complete privacy and sovereignty. Validate your own transactions, run Electrum server, and maintain full control over your Bitcoin infrastructure without trusting third parties.</p>
+                <p className="mb-4">Operate a dedicated Bitcoin node for improved privacy, verification, and sovereignty. Learn how to deploy and maintain a hardened node securely.</p>
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <h5 className="font-semibold text-green-900 mb-2">Bitcoin Node Deployment</h5>
                   <p className="text-green-800 text-sm">Run your own node for privacy and sovereignty</p>
                 </div>
               </div>
             }
-            buttonText="Access Bitcoin Node"
+            buttonText="Review Node Options"
             buttonLink="/node"
             iconBgColor="from-green-500 to-green-600"
             buttonBgColor="from-green-500 to-green-600"
@@ -331,17 +331,17 @@ const MuscadineHome = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             }
-            title="Comprehensive Crypto Guide"
+            title="Knowledge Base"
             description={
               <div>
-                <p className="mb-4">Master the crypto ecosystem with our comprehensive resource library. From Bitcoin basics to advanced DeFi strategies, learn wallet security, recovery planning, multi-sig setups, and risk management—all in plain English.</p>
+                <p className="mb-4">Concise resources and checklists for navigating self-custody, wallets, DeFi, and digital asset security.</p>
                 <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
                   <h5 className="font-semibold text-purple-900 mb-2">Asset Security Management</h5>
                   <p className="text-purple-800 text-sm">Helping secure and manage large crypto holdings</p>
                 </div>
               </div>
             }
-            buttonText="Open Crypto Guide"
+            buttonText="Open Knowledge Base"
             buttonLink="/cryptoguide"
             iconBgColor="from-purple-500 to-purple-600"
             buttonBgColor="from-purple-500 to-purple-600"
@@ -352,7 +352,7 @@ const MuscadineHome = () => {
         {/* Why Muscadine Section */}
         <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-8 mb-12">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-light text-gray-800 leading-tight mb-4">Why Muscadine</h2>
+            <h2 className="font-light text-gray-800 leading-tight mb-4 font-serif">Why Muscadine</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Plain English. Real guidance. Your keys, your coins.
             </p>
@@ -373,10 +373,9 @@ const MuscadineHome = () => {
               </svg>
             </div>
             
-            <h2 className="font-light text-white leading-tight mb-6">Ready to Take Control?</h2>
+            <h2 className="font-light text-white leading-tight mb-6 font-serif">Ready to Take Control?</h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Book a free consultation to discuss your Bitcoin security, DeFi strategy, or node deployment. 
-              I'll help you create a personalized plan that fits your risk tolerance and technical comfort level.
+              Request a consultation for security architecture, wallet hardening, Bitcoin node deployment, or DeFi onboarding. I typically respond within one business day.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
