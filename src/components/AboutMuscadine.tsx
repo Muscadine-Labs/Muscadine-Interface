@@ -8,11 +8,15 @@ interface AboutMuscadineProps {
 export default function AboutMuscadine({ onNavigate }: AboutMuscadineProps) {
   return (
     <div className="max-w-none text-gray-700 space-y-12">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8">About Muscadine</h2>
-        <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          Learn self-custody, run a node, and use DeFi safely—without the overwhelm.
-        </p>
+      <div className="flex flex-col md:flex-row items-center justify-between mb-16">
+        <div className="text-left mb-8 md:mb-0">
+          <h2 className="text-6xl font-bold text-gray-900">Muscadine</h2>
+        </div>
+        <div className="text-right">
+          <p className="text-2xl text-gray-600 leading-relaxed max-w-2xl">
+            Financial self-sovereignty
+          </p>
+        </div>
       </div>
       
       <div className="bg-gray-50 p-10 rounded-lg">

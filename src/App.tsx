@@ -178,20 +178,21 @@ const MuscadineHome = () => {
         {/* About Section */}
         <AboutMuscadine onNavigate={() => {}} />
         
-        {/* Quick Value Blocks */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        {/* Main Value Blocks */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <UICard
             icon={
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
             }
-            title="Self-Custody"
-            description="Set up hardware wallets and recovery the right way—clear steps, no jargon."
-            buttonText="Start self-custody"
+            title="Bitcoin Security & Self-Custody"
+            description="Set up hardware wallets, recovery plans, and multi-sig setups the right way—clear steps, no jargon. Learn wallet hardening, recovery drills, and secure your Bitcoin with institutional-grade protection."
+            buttonText="Secure my Bitcoin"
             buttonLink="/bitcoin"
             iconBgColor="from-orange-500 to-orange-600"
             buttonBgColor="from-orange-500 to-orange-600"
+            className="h-full"
           />
           
           <UICard
@@ -200,89 +201,46 @@ const MuscadineHome = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             }
-            title="DeFi, done safely"
-            description="Learn borrowing/lending with a risk-first plan and simple monitoring."
-            buttonText="Explore DeFi guide"
+            title="DeFi Onboarding & Safety"
+            description="Learn borrowing, lending, and yield farming with a risk-first approach. Master position sizing, stop rules, and monitoring routines to navigate DeFi safely without the overwhelm."
+            buttonText="Explore DeFi safely"
             buttonLink="/defi"
             iconBgColor="from-blue-500 to-blue-600"
             buttonBgColor="from-blue-500 to-blue-600"
-          />
-          
-          <UICard
-            icon={
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
-              </svg>
-            }
-            title="Run your own node"
-            description="Improve privacy and sovereignty with a guided node setup."
-            buttonText="Node options"
-            buttonLink="/node"
-            iconBgColor="from-green-500 to-green-600"
-            buttonBgColor="from-green-500 to-green-600"
+            className="h-full"
           />
         </div>
 
-        {/* Services Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <UICard
-            icon={
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
-            }
-            title="Self-Custody & Wallet Hardening"
-            description={
-              <ul className="text-left space-y-2">
-                <li>• Hardware wallet setup (or multi-sig)</li>
-                <li>• Recovery plan and drill</li>
-                <li>• Simple, printable checklist</li>
-              </ul>
-            }
-            buttonText="Secure my wallet"
-            buttonLink="/bitcoin"
-            iconBgColor="from-orange-500 to-orange-600"
-            buttonBgColor="from-orange-500 to-orange-600"
-          />
-          
-          <UICard
-            icon={
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            }
-            title="DeFi Onboarding (Safety-First)"
-            description={
-              <ul className="text-left space-y-2">
-                <li>• Walkthrough of lending/borrowing basics</li>
-                <li>• Position sizing + stop rules</li>
-                <li>• Weekly check routine you can follow</li>
-              </ul>
-            }
-            buttonText="Learn DeFi safely"
-            buttonLink="/defi"
-            iconBgColor="from-blue-500 to-blue-600"
-            buttonBgColor="from-blue-500 to-blue-600"
-          />
-          
+        {/* Infrastructure & Resources */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <UICard
             icon={
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
               </svg>
             }
-            title="Bitcoin Node Deployment"
-            description={
-              <ul className="text-left space-y-2">
-                <li>• Recommended hardware/cloud</li>
-                <li>• Privacy settings and monitoring basics</li>
-                <li>• Update/backup runbook</li>
-              </ul>
-            }
-            buttonText="Run my node"
+            title="Connect to My Self-Hosted Bitcoin Node"
+            description="Access our secure, self-hosted Bitcoin node for complete privacy and sovereignty. Validate your own transactions, run Electrum server, and maintain full control over your Bitcoin infrastructure without trusting third parties."
+            buttonText="Access Bitcoin Node"
             buttonLink="/node"
             iconBgColor="from-green-500 to-green-600"
             buttonBgColor="from-green-500 to-green-600"
+            className="h-full"
+          />
+          
+          <UICard
+            icon={
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            }
+            title="Comprehensive Crypto Guide"
+            description="Master the crypto ecosystem with our comprehensive resource library. From Bitcoin basics to advanced DeFi strategies, learn wallet security, recovery planning, multi-sig setups, and risk management—all in plain English."
+            buttonText="Open Crypto Guide"
+            buttonLink="/cryptoguide"
+            iconBgColor="from-purple-500 to-purple-600"
+            buttonBgColor="from-purple-500 to-purple-600"
+            className="h-full"
           />
         </div>
 
@@ -304,35 +262,57 @@ const MuscadineHome = () => {
           </div>
         </div>
 
-        {/* Resources and Contact */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <UICard
-            icon={
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-            }
-            title="Resources / Crypto Guide"
-            description="Short, practical explainers on wallets, recovery, multi-sig, and DeFi risks—no hype."
-            buttonText="Open the guide"
-            buttonLink="/cryptoguide"
-            iconBgColor="from-purple-500 to-purple-600"
-            buttonBgColor="from-purple-500 to-purple-600"
-          />
-          
-          <UICard
-            icon={
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        {/* Contact Section */}
+        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-16 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mb-8 mx-auto">
+              <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
-            }
-            title="Contact"
-            description="Book a free consult or send a note—I'll help you pick the right path and secure your setup."
-            buttonText="Book a free consult"
-            buttonLink="/contact"
-            iconBgColor="from-gray-700 to-gray-800"
-            buttonBgColor="from-gray-700 to-gray-800"
-          />
+            </div>
+            
+            <h2 className="text-4xl font-bold mb-6">Ready to Take Control?</h2>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+              Book a free consultation to discuss your Bitcoin security, DeFi strategy, or node deployment. 
+              I'll help you create a personalized plan that fits your risk tolerance and technical comfort level.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                <span className="text-gray-300">Free 30-minute consultation</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                <span className="text-gray-300">No commitment required</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                <span className="text-gray-300">Personalized recommendations</span>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl text-lg"
+              >
+                Schedule Free Consultation
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <a 
+                href="mailto:nickconnelly10@gmail.com"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200 text-lg"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Send Email
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
