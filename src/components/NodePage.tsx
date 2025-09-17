@@ -93,19 +93,13 @@ export default function NodePage() {
           <h3 className="text-xl font-semibold text-blue-900 mb-4">How to Connect</h3>
           <div className="space-y-4">
             <div>
-              <h4 className="font-semibold text-blue-800 mb-2">For Electrum Users:</h4>
+              <h4 className="font-semibold text-blue-800 mb-2">For Sparrow Wallet:</h4>
               <ol className="text-blue-700 space-y-1 ml-4">
-                <li>1. Open Electrum wallet</li>
-                <li>2. Go to Network → Server</li>
+                <li>1. Open Sparrow wallet</li>
+                <li>2. Go to Settings → Server</li>
                 <li>3. Enter the hostname and port above</li>
-                <li>4. Click "Close" to save settings</li>
+                <li>4. Click Test connection than close.</li>
               </ol>
-            </div>
-            <div>
-              <h4 className="font-semibold text-blue-800 mb-2">For Other Wallets:</h4>
-              <p className="text-blue-700">
-                Most Bitcoin wallets allow you to specify a custom Electrum server. Look for "Custom Server" or "Advanced Settings" in your wallet's network configuration.
-              </p>
             </div>
           </div>
         </div>

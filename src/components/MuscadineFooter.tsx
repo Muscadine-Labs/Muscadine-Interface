@@ -120,7 +120,7 @@ export default function MuscadineFooter() {
             Education & security guidance only—no investment advice, no asset custody.
           </p>
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Nicholas Connelly. All rights reserved.
+            © {new Date().getFullYear()} Muscadine. All rights reserved.
           </p>
         </div>
       </div>

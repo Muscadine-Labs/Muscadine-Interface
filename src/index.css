@@ -80,7 +80,6 @@ body {
   .nav-link-active {
     @apply text-gray-900 font-semibold;
   }
-
 }
 
 @layer utilities {

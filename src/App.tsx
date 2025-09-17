@@ -81,6 +81,44 @@ const MuscadineBanner = () => {
             >
               Contact
             </Link>
+            
+            {/* Legal Dropdown */}
+            <div className="relative group">
+              <button className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors flex items-center">
+                Legal
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-1">
+                  <a 
+                    href="/privacy.html" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                  >
+                    Privacy Policy
+                  </a>
+                  <a 
+                    href="/terms.html" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                  >
+                    Terms of Service
+                  </a>
+                  <a 
+                    href="/disclaimer.html" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                  >
+                    Disclaimer
+                  </a>
+                </div>
+              </div>
+            </div>
           </nav>
 
           {/* Mobile menu button */}
@@ -160,6 +198,40 @@ const MuscadineBanner = () => {
               >
                 Contact
               </Link>
+              
+              {/* Mobile Legal Section */}
+              <div className="px-3 py-2">
+                <div className="text-sm font-medium text-gray-900 mb-2">Legal</div>
+                <div className="ml-4 space-y-1">
+                  <a 
+                    href="/privacy.html" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Privacy Policy
+                  </a>
+                  <a 
+                    href="/terms.html" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Terms of Service
+                  </a>
+                  <a 
+                    href="/disclaimer.html" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Disclaimer
+                  </a>
+                </div>
+              </div>
             </nav>
           </div>
         )}
@@ -280,7 +352,7 @@ const MuscadineHome = () => {
         {/* Why Muscadine Section */}
         <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-8 mb-12">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Muscadine</h2>
+            <h2 className="font-light text-gray-800 leading-tight mb-4">Why Muscadine</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Plain English. Real guidance. Your keys, your coins.
             </p>
@@ -301,7 +373,7 @@ const MuscadineHome = () => {
               </svg>
             </div>
             
-            <h2 className="text-4xl font-bold mb-6">Ready to Take Control?</h2>
+            <h2 className="font-light text-white leading-tight mb-6">Ready to Take Control?</h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
               Book a free consultation to discuss your Bitcoin security, DeFi strategy, or node deployment. 
               I'll help you create a personalized plan that fits your risk tolerance and technical comfort level.

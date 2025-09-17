@@ -10,10 +10,10 @@ export default function AboutMuscadine({ onNavigate }: AboutMuscadineProps) {
     <div className="max-w-none text-gray-700 space-y-12">
       <div className="flex flex-col md:flex-row items-center justify-between mb-16">
         <div className="text-left mb-8 md:mb-0">
-          <h2 className="text-6xl font-bold text-gray-900">Muscadine</h2>
+          <h1 className="font-light text-gray-900 leading-tight">Muscadine</h1>
         </div>
         <div className="text-right">
-          <p className="text-2xl text-gray-600 leading-relaxed max-w-2xl">
+          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
             Financial self-sovereignty
           </p>
         </div>

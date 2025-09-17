@@ -3,14 +3,14 @@ export default function ContactPage() {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-16">
-        <h1 className="text-6xl font-bold text-gray-900 mb-8">Contact</h1>
-        <p className="text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+        <h1 className="font-light text-gray-900 leading-tight mb-8">Contact</h1>
+        <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
           Whether it's Bitcoin, DeFi, or anything else in between, I enjoy connecting with others who share a passion for financial independence and growth.
         </p>
       </div>
       
       <div className="bg-gray-50 rounded-xl p-12 shadow-lg">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Get in touch</h2>
+        <h2 className="font-light text-gray-800 leading-tight mb-12 text-center">Get in touch</h2>
         
         <div className="space-y-4">
           {/* Email */}
