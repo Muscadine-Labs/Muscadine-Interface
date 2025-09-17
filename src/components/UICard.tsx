@@ -24,7 +24,7 @@ export default function UICard({
   buttonBgColor = "from-gray-500 to-gray-600",
   className = ""
 }: UICardProps) {
-  const buttonClasses = `inline-flex items-center px-8 py-4 bg-gradient-to-r ${buttonBgColor} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl text-lg`;
+  const buttonClasses = `text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium text-sm`;
 
   const buttonElement = buttonText && (
     buttonLink ? (
@@ -43,13 +43,13 @@ export default function UICard({
   );
 
   return (
-    <div className={`bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-10 border border-gray-200 ${className}`}>
+    <div className={`bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 p-6 ${className}`}>
       <div className="text-center">
-        <div className={`w-20 h-20 bg-gradient-to-br ${iconBgColor} rounded-2xl flex items-center justify-center mb-8 mx-auto shadow-lg`}>
+        <div className={`w-16 h-16 bg-gradient-to-br ${iconBgColor} rounded-lg flex items-center justify-center mb-6 mx-auto`}>
           {icon}
         </div>
-        <h3 className="text-3xl font-light text-gray-900 mb-6 font-serif">{title}</h3>
-        <div className="text-gray-700 mb-8 leading-relaxed text-lg">
+        <h3 className="text-xl font-semibold text-gray-900 mb-4">{title}</h3>
+        <div className="text-gray-600 mb-6 leading-relaxed text-sm">
           {typeof description === 'string' ? (
             <p>{description}</p>
           ) : (

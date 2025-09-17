@@ -252,7 +252,7 @@ const MuscadineHome = () => {
         <AboutMuscadine onNavigate={() => {}} />
         
         {/* Main Value Blocks */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <UICard
             icon={
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,15 +260,7 @@ const MuscadineHome = () => {
               </svg>
             }
             title="Bitcoin Security & Self-Custody"
-            description={
-              <div>
-                <p className="mb-4">Establish secure self-custody with Bitcoin. Learn the fundamentals of hardware wallets, recovery planning, and long-term asset protection with the world's first decentralized currency.</p>
-                <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                  <h5 className="font-semibold text-orange-900 mb-2">Secure Self-Custody Tools</h5>
-                  <p className="text-orange-800 text-sm">Wallet setups with institutional-grade protection</p>
-                </div>
-              </div>
-            }
+            description="Establish secure self-custody with Bitcoin. Learn the fundamentals of hardware wallets, recovery planning, and long-term asset protection with the world's first decentralized currency."
             buttonText="Explore Self-Custody"
             buttonLink="/bitcoin"
             iconBgColor="from-orange-500 to-orange-600"
@@ -283,15 +275,7 @@ const MuscadineHome = () => {
               </svg>
             }
             title="Decentralized Finance (DeFi)"
-            description={
-              <div>
-                <p className="mb-4">Access lending and borrowing protocols with a structured, risk-aware approach. Learn how to optimize capital while maintaining security on Base and other networks.</p>
-                <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                  <h5 className="font-semibold text-blue-900 mb-2">DeFi Onboarding</h5>
-                  <p className="text-blue-800 text-sm">Lending, borrowing, and navigating decentralized finance</p>
-                </div>
-              </div>
-            }
+            description="Access lending and borrowing protocols with a structured, risk-aware approach. Learn how to optimize capital while maintaining security on Base and other networks."
             buttonText="Explore DeFi Onboarding"
             buttonLink="/defi"
             iconBgColor="from-blue-500 to-blue-600"
@@ -301,7 +285,7 @@ const MuscadineHome = () => {
         </div>
 
         {/* Infrastructure & Resources */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <UICard
             icon={
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -309,15 +293,7 @@ const MuscadineHome = () => {
               </svg>
             }
             title="Bitcoin Node Deployment"
-            description={
-              <div>
-                <p className="mb-4">Operate a dedicated Bitcoin node for improved privacy, verification, and sovereignty. Learn how to deploy and maintain a hardened node securely.</p>
-                <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                  <h5 className="font-semibold text-green-900 mb-2">Bitcoin Node Deployment</h5>
-                  <p className="text-green-800 text-sm">Run your own node for privacy and sovereignty</p>
-                </div>
-              </div>
-            }
+            description="Operate a dedicated Bitcoin node for improved privacy, verification, and sovereignty. Learn how to deploy and maintain a hardened node securely."
             buttonText="Review Node Options"
             buttonLink="/node"
             iconBgColor="from-green-500 to-green-600"
@@ -332,15 +308,7 @@ const MuscadineHome = () => {
               </svg>
             }
             title="Knowledge Base"
-            description={
-              <div>
-                <p className="mb-4">Concise resources and checklists for navigating self-custody, wallets, DeFi, and digital asset security.</p>
-                <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
-                  <h5 className="font-semibold text-purple-900 mb-2">Asset Security Management</h5>
-                  <p className="text-purple-800 text-sm">Helping secure and manage large crypto holdings</p>
-                </div>
-              </div>
-            }
+            description="Concise resources and checklists for navigating self-custody, wallets, DeFi, and digital asset security."
             buttonText="Open Knowledge Base"
             buttonLink="/cryptoguide"
             iconBgColor="from-purple-500 to-purple-600"

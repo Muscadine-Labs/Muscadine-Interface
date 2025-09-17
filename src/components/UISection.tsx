@@ -15,7 +15,7 @@ export default function UISection({
   children,
   className = "",
   containerClassName = "max-w-6xl mx-auto",
-  background = 'white'
+  background = 'gray'
 }: UISectionProps) {
   const backgroundClasses = {
     white: "bg-white",
