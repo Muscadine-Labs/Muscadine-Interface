@@ -36,6 +36,18 @@ export default function MuscadineFooter() {
                 DeFi
               </Link>
               <Link 
+                to="/node"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Bitcoin Node
+              </Link>
+              <Link 
+                to="/cryptoguide"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Crypto Guide
+              </Link>
+              <Link 
                 to="/contact"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
@@ -93,18 +105,6 @@ export default function MuscadineFooter() {
               >
                 Health & Wellness
               </a>
-              <Link 
-                to="/node"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Bitcoin Node
-              </Link>
-              <Link 
-                to="/cryptoguide"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Crypto Guide
-              </Link>
             </div>
           </div>
           
