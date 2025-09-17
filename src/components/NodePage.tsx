@@ -1,6 +1,6 @@
 
 export default function NodePage() {
-  const nodeExplanation = "A node is a computer that participates in the Bitcoin network by validating transactions and blocks. Running your own node gives you full control and privacy over your Bitcoin experience.";
+  const nodeExplanation = "This is my self-hosted Bitcoin node that participates in the Bitcoin network by validating transactions and blocks. You can connect to it to send and receive Bitcoin transactions with enhanced privacy and security.";
 
   // Copy to clipboard function
   const copyToClipboard = async (text: string) => {
@@ -21,24 +21,50 @@ export default function NodePage() {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Node</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Bitcoin Node</h1>
         <p className="text-xl text-gray-600">
-          Bitcoin node connection details
+          Connect to my self-hosted Bitcoin node for secure transactions
         </p>
       </div>
       
-      <div className="max-w-2xl mx-auto">
-        <div className="mb-4 p-4 bg-stone-50 rounded-lg">
-          <p className="text-stone-700 font-sans">{nodeExplanation}</p>
+      <div className="max-w-4xl mx-auto space-y-8">
+        {/* Node Information */}
+        <div className="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-lg border border-orange-200">
+          <h2 className="text-2xl font-bold text-orange-900 mb-4">About This Node</h2>
+          <p className="text-orange-800 text-lg leading-relaxed mb-4">
+            This is my personal Bitcoin node running 24/7 to support the Bitcoin network. By connecting to my node, you can:
+          </p>
+          <ul className="text-orange-800 space-y-2 ml-4">
+            <li className="flex items-start">
+              <span className="text-orange-600 mr-2">•</span>
+              <span>Send and receive Bitcoin transactions with enhanced privacy</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-orange-600 mr-2">•</span>
+              <span>Validate your own transactions without trusting third parties</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-orange-600 mr-2">•</span>
+              <span>Access the Bitcoin network through a trusted, non-custodial service</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-orange-600 mr-2">•</span>
+              <span>Reduce reliance on centralized Bitcoin services</span>
+            </li>
+          </ul>
         </div>
-        
-        <div className="bg-white border border-stone-200 rounded-lg p-6">
-          <h3 className="text-xl font-semibold text-stone-800 mb-4 font-serif">Node Connection Details</h3>
+
+        {/* Connection Details */}
+        <div className="bg-white border border-gray-200 rounded-lg p-6">
+          <h3 className="text-xl font-semibold text-gray-800 mb-4">Connection Details</h3>
+          <p className="text-gray-600 mb-6">
+            Use these details to connect your Bitcoin wallet or Electrum client to my node:
+          </p>
           <div className="space-y-4">
             <div>
-              <p className="text-sm text-stone-600 mb-2 font-sans">Electrum Server Hostname:</p>
+              <p className="text-sm text-gray-600 mb-2 font-medium">Electrum Server Hostname:</p>
               <div className="flex items-center gap-2">
-                <code className="bg-stone-100 px-3 py-2 rounded text-sm flex-1 break-all">lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion</code>
+                <code className="bg-gray-100 px-3 py-2 rounded text-sm flex-1 break-all font-mono">lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion</code>
                 <button 
                   className="bg-blue-600 text-white px-3 py-2 rounded text-sm hover:bg-blue-700 transition-colors" 
                   onClick={() => copyToClipboard('lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion')}
@@ -48,9 +74,9 @@ export default function NodePage() {
               </div>
             </div>
             <div>
-              <p className="text-sm text-stone-600 mb-2 font-sans">Port:</p>
+              <p className="text-sm text-gray-600 mb-2 font-medium">Port:</p>
               <div className="flex items-center gap-2">
-                <span className="bg-stone-100 px-3 py-2 rounded text-sm">50001</span>
+                <span className="bg-gray-100 px-3 py-2 rounded text-sm font-mono">50001</span>
                 <button 
                   className="bg-green-600 text-white px-3 py-2 rounded text-sm hover:bg-green-700 transition-colors" 
                   onClick={() => copyToClipboard('50001')}
@@ -60,6 +86,38 @@ export default function NodePage() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* How to Connect */}
+        <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+          <h3 className="text-xl font-semibold text-blue-900 mb-4">How to Connect</h3>
+          <div className="space-y-4">
+            <div>
+              <h4 className="font-semibold text-blue-800 mb-2">For Electrum Users:</h4>
+              <ol className="text-blue-700 space-y-1 ml-4">
+                <li>1. Open Electrum wallet</li>
+                <li>2. Go to Network → Server</li>
+                <li>3. Enter the hostname and port above</li>
+                <li>4. Click "Close" to save settings</li>
+              </ol>
+            </div>
+            <div>
+              <h4 className="font-semibold text-blue-800 mb-2">For Other Wallets:</h4>
+              <p className="text-blue-700">
+                Most Bitcoin wallets allow you to specify a custom Electrum server. Look for "Custom Server" or "Advanced Settings" in your wallet's network configuration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Security Note */}
+        <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+          <h3 className="text-xl font-semibold text-yellow-900 mb-4">Security & Privacy</h3>
+          <p className="text-yellow-800 leading-relaxed">
+            This node operates with privacy in mind. Your transaction data is not logged or stored. 
+            However, for maximum security, consider running your own Bitcoin node. 
+            This service is provided as a convenience for those who cannot run their own node.
+          </p>
         </div>
       </div>
     </div>
