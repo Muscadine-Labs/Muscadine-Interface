@@ -11,7 +11,7 @@ export default function AboutMuscadine({ onNavigate }: AboutMuscadineProps) {
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-gray-900 mb-8">About Muscadine</h2>
         <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          I founded Muscadine to help individuals secure and manage their digital assets with confidence. From Bitcoin node deployment to DeFi onboarding, I specialize in building safe, privacy-focused systems that put people in control of their wealth. At its core, Muscadine is about financial independence in a changing economy.
+          Learn self-custody, run a node, and use DeFi safely—without the overwhelm.
         </p>
       </div>
       
