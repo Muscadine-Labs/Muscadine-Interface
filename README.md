@@ -1,19 +1,19 @@
-# 🚀 Muscadine DeFi Information Site
+# Muscadine - Financial Self-Sovereignty
 
-A clean, informative DeFi and Bitcoin resource site for the Muscadine ecosystem. Built as a static React app with educational content about Bitcoin and DeFi protocols.
+A professional platform dedicated to helping individuals take control of their financial future through Bitcoin security, self-custody, and DeFi solutions. Built as a modern React application with clean, formal design.
 
-## ✨ Features
+## Features
 
-- **💰 Bitcoin Education**: Comprehensive guides on Bitcoin basics, wallet setup, and node connection details
-- **🔄 DeFi Information**: Educational content about DeFi protocols, lending platforms, and token swapping
-- **🎨 Clean UI**: Modern, responsive design with consistent styling and smooth animations
-- **⚡ Fast Performance**: Optimized static site with global CDN delivery
-- **🔒 Secure**: HTTPS-only with comprehensive security headers
-- **📱 Responsive**: Works perfectly on desktop and mobile devices
-- **🛡️ Error Handling**: Global error boundaries and Sentry integration for robust error logging
-- **🌙 Dark Mode**: Built-in dark/light mode support
+- **Bitcoin Security & Self-Custody**: Comprehensive guides on hardware wallets, recovery planning, and long-term asset protection
+- **Decentralized Finance (DeFi)**: Educational content about lending protocols, borrowing strategies, and Base network optimization
+- **Bitcoin Node Access**: Connect to self-hosted Bitcoin node for secure transactions and privacy
+- **Knowledge Base**: Concise resources and checklists for navigating self-custody, wallets, and digital asset security
+- **Professional Design**: Clean, formal UI with consistent typography and subtle styling
+- **Responsive Layout**: Optimized for desktop and mobile devices
+- **Fast Performance**: Static site with global CDN delivery
+- **Secure**: HTTPS-only with comprehensive security headers
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone & Install
 
@@ -75,27 +75,33 @@ npm run preview
 
 ## Content Sections
 
-### Bitcoin
-- **About**: Introduction to Bitcoin and getting started guide
-- **Node**: Information about Bitcoin nodes and connection details
-- **Mempool**: Bitcoin transaction pool information and external links
+### Home Page
+- **About Muscadine**: Introduction to the platform and services
+- **Bitcoin Security & Self-Custody**: Hardware wallet setup and recovery planning
+- **Decentralized Finance (DeFi)**: Lending and borrowing protocols on Base network
+- **Bitcoin Node**: Connect to self-hosted node for secure transactions
+- **Knowledge Base**: Comprehensive crypto resources and checklists
 
-### DeFi
-- **About**: Introduction to DeFi and getting started guide
-- **Earn & Borrow**: Links to lending platforms (Aave, Moonwell, Morpho)
-- **Token Swap**: Links to decentralized exchanges (Aerodrome, Uniswap)
+### Solutions Page
+- **Bitcoin Node**: Access to self-hosted Bitcoin node
+- **Knowledge Base**: Digital asset security resources
+
+### Individual Pages
+- **Bitcoin**: Comprehensive Bitcoin education and wallet setup
+- **DeFi**: Decentralized finance protocols and strategies
+- **Contact**: Consultation and support information
 
 ## Error Logging
 
 - Sentry is integrated for front-end error monitoring (optional, set DSN in `.env`)
 
-## 🧪 Testing
+## Testing
 
 - **Build Test**: Run `npm run build` to ensure the project builds successfully
 - **Linting**: Run `npm run lint` to check code quality
 - **Note:** There are currently no automated tests or test script in this project. If you add tests, update the README accordingly.
 
-## 📦 Deployment Hygiene: What to Commit
+## Deployment Hygiene: What to Commit
 
 | File/Folder         | Required for Deployment? | Commit to Repo? | Notes                                 |
 |---------------------|-------------------------|-----------------|---------------------------------------|
@@ -112,29 +118,29 @@ npm run preview
 - `dist/` (never commit)
 - Any backup files like `package-lock 2.json`, `vercel 2.json`, etc.
 
-## 🤝 Contributing
+## Contributing
 
 - PRs welcome! Please open an issue for feature requests or bugs.
 - Follow the existing code style and conventions.
 - Ensure all builds pass before submitting.
 
-## 📄 License
+## License
 
 MIT License - see LICENSE file for details.
 
 ---
 
-*Built on BITCOIN • Secure • Transparent • Professional • Strava Club*
+*Built on BITCOIN • Secure • Transparent • Professional*
 
-## 🔗 Related Projects
+## Related Projects
 
 - **Health Dashboard**: `https://health.nicholasconnelly.box`
 - **Main Site**: `https://nicholasconnelly.box`
 
-## 🌐 Domain Configuration
+## Domain Configuration
 
 This repository serves the following domains:
-- **Primary**: `https://muscadine.box` ⭐
+- **Primary**: `https://muscadine.box`
 - **Muscadine WWW**: `https://www.muscadine.box`
 - **Muscadine DeFi**: `https://defi.muscadine.box`
 - **Legacy**: `https://defi.nicholasconnelly.box`
