@@ -92,13 +92,25 @@ export default function MuscadineFooter() {
                 nicholasconnelly.box
               </a>
               <a 
-                href="https://health.muscadine.box" 
+                href="https://health.nicholasconnelly.box" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Health & Wellness
               </a>
+              <Link 
+                to="/node"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Bitcoin Node
+              </Link>
+              <Link 
+                to="/cryptoguide"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Crypto Guide
+              </Link>
             </div>
           </div>
         </div>
