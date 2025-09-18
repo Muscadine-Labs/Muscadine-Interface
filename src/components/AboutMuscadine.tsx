@@ -19,7 +19,7 @@ export default function AboutMuscadine({ onNavigate: _onNavigate }: AboutMuscadi
       
       <div className="bg-gray-50 p-10 rounded-lg">
         <p className="text-xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto text-center">
-          Muscadine is a small business dedicated to helping individuals take control of their financial future through Bitcoin security, self-custody, and DeFi solutions. I provide support with Bitcoin node deployment, secure asset management, and onboarding into decentralized finance, ensuring people can navigate the new financial system.
+          Muscadine, founded by a university student, is dedicated to helping individuals take control of their financial future through Bitcoin security, self-custody, and DeFi solutions. I provide support with Bitcoin node deployment, secure asset management, and onboarding into decentralized finance, ensuring people can navigate the new financial system.
         </p>
         
         <div className="bg-white p-8 rounded-lg border border-gray-200 max-w-2xl mx-auto">

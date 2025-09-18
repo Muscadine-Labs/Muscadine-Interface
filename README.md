@@ -61,7 +61,8 @@ npm run preview
 
 ## Favicon
 
-- The favicon should be placed in `public/favicon.svg`.
+- The favicon is located at `public/favicon.png` (1024x1024 high-quality PNG)
+- Source logo: `public/muscadinelogo.jpg`
 - Do not edit or commit any favicon in the `dist/` directory; it is generated automatically during build.
 
 ## Deployment
@@ -110,9 +111,11 @@ npm run preview
 
 - **Build Test**: Run `npm run build` to ensure the project builds successfully
 - **Linting**: No linting errors detected - clean codebase
-- **Development Server**: Run `npm run dev` to start local development server
+- **Development Server**: Run `npm run dev` to start local development server (port 3002)
 - **Production Build**: Optimized build with no errors
-- **Note:** There are currently no automated tests or test script in this project. If you add tests, update the README accordingly.
+- **Production Preview**: Run `npm run preview` to test production build locally
+- **All Routes Tested**: All 7 routes working correctly
+- **Assets Verified**: All static assets properly linked and accessible
 
 ## Deployment Hygiene: What to Commit
 
@@ -155,7 +158,5 @@ MIT License - see LICENSE file for details.
 This repository serves the following domains:
 - **Primary**: `https://muscadine.box`
 - **Muscadine WWW**: `https://www.muscadine.box`
-- **Muscadine DeFi**: `https://defi.muscadine.box`
-- **Legacy**: `https://defi.nicholasconnelly.box`
 
 All domains point to the same Muscadine platform for financial self-sovereignty. 
