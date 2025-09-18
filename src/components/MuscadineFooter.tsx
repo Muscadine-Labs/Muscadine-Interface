@@ -24,28 +24,10 @@ export default function MuscadineFooter() {
                 Home
               </Link>
               <Link 
-                to="/bitcoin"
+                to="/solutions"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                Bitcoin
-              </Link>
-              <Link 
-                to="/defi"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                DeFi
-              </Link>
-              <Link 
-                to="/node"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Bitcoin Node
-              </Link>
-              <Link 
-                to="/cryptoguide"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Crypto Guide
+                Solutions
               </Link>
               <Link 
                 to="/contact"
@@ -75,21 +57,6 @@ export default function MuscadineFooter() {
                 LinkedIn
               </a>
               <a 
-                href="https://nicholasconnelly.substack.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Substack
-              </a>
-            </div>
-          </div>
-          
-          {/* Resources */}
-          <div>
-            <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Resources</h4>
-            <div className="space-y-2">
-              <a 
                 href="https://nicholasconnelly.box" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -105,6 +72,37 @@ export default function MuscadineFooter() {
               >
                 Health & Wellness
               </a>
+            </div>
+          </div>
+          
+          {/* Resources */}
+          <div>
+            <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Resources</h4>
+            <div className="space-y-2">
+              <Link 
+                to="/bitcoin"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Bitcoin
+              </Link>
+              <Link 
+                to="/defi"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                DeFi
+              </Link>
+              <Link 
+                to="/node"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Bitcoin Node
+              </Link>
+              <Link 
+                to="/cryptoguide"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Crypto Guide
+              </Link>
             </div>
           </div>
           

@@ -5,7 +5,8 @@ export default function ContactPage() {
       <div className="text-center mb-16">
         <h1 className="font-light text-gray-900 leading-tight mb-8 font-serif">Contact</h1>
         <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          Whether it's Bitcoin, DeFi, or anything else in between, I enjoy connecting with others who share a passion for financial independence and growth.
+          Have a question about Muscadine or want to discuss a partnership? Reach out to our team and we'll get back to you as soon as possible.
+          Whether it's feedback, collaboration, or support, we're here to connect.
         </p>
       </div>
       
@@ -93,35 +94,38 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* Personal Website */}
-          <a 
-            href="https://nicholasconnelly.box"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-purple-50 hover:bg-purple-100 rounded-lg p-4 flex items-center space-x-3 transition-colors duration-200 w-full"
-          >
-            <div className="w-6 h-6 flex items-center justify-center">
-              <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
-              </svg>
-            </div>
-            <span className="text-gray-900 font-medium">Personal Website</span>
-          </a>
+          {/* Personal Website and Substack Row */}
+          <div className="grid grid-cols-2 gap-4">
+            {/* Personal Website */}
+            <a 
+              href="https://nicholasconnelly.box"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-purple-50 hover:bg-purple-100 rounded-lg p-4 flex items-center space-x-3 transition-colors duration-200"
+            >
+              <div className="w-6 h-6 flex items-center justify-center">
+                <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
+                </svg>
+              </div>
+              <span className="text-gray-900 font-medium">Personal Website</span>
+            </a>
 
-          {/* Substack - Full Width */}
-          <a 
-            href="https://nicholasconnelly.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-orange-50 hover:bg-orange-100 rounded-lg p-4 flex items-center space-x-3 transition-colors duration-200 w-full"
-          >
-            <div className="w-6 h-6 flex items-center justify-center">
-              <svg className="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
-              </svg>
-            </div>
-            <span className="text-gray-900 font-medium">Substack</span>
-          </a>
+            {/* Substack */}
+            <a 
+              href="https://nicholasconnelly.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-50 hover:bg-orange-100 rounded-lg p-4 flex items-center space-x-3 transition-colors duration-200"
+            >
+              <div className="w-6 h-6 flex items-center justify-center">
+                <svg className="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+                </svg>
+              </div>
+              <span className="text-gray-900 font-medium">Substack</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@ import AboutMuscadine from './components/AboutMuscadine';
 import ContactPage from './components/ContactPage';
 import NodePage from './components/NodePage';
 import CryptoGuidePage from './components/CryptoGuidePage';
+import SolutionsPage from './components/SolutionsPage';
 import MuscadineFooter from './components/MuscadineFooter';
 import UICard from './components/UICard';
 import ScrollToTop from './components/ScrollToTop';
@@ -40,44 +41,14 @@ const MuscadineBanner = () => {
               Home
             </Link>
             <Link 
-              to="/bitcoin"
+              to="/solutions"
               className={`text-sm font-medium transition-colors ${
-                location.pathname === '/bitcoin' 
+                location.pathname === '/solutions' 
                   ? 'text-gray-900' 
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Bitcoin
-            </Link>
-            <Link 
-              to="/defi"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === '/defi' 
-                  ? 'text-gray-900' 
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              DeFi
-            </Link>
-            <Link 
-              to="/node"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === '/node' 
-                  ? 'text-gray-900' 
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              Bitcoin Node
-            </Link>
-            <Link 
-              to="/cryptoguide"
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === '/cryptoguide' 
-                  ? 'text-gray-900' 
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              Crypto Guide
+              Solutions
             </Link>
             <Link 
               to="/contact"
@@ -125,48 +96,15 @@ const MuscadineBanner = () => {
                 Home
               </Link>
               <Link 
-                to="/bitcoin"
+                to="/solutions"
                 onClick={() => setIsOpen(false)}
                 className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  location.pathname === '/bitcoin' 
+                  location.pathname === '/solutions' 
                     ? 'bg-gray-100 text-gray-900' 
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`}
               >
-                Bitcoin
-              </Link>
-              <Link 
-                to="/defi"
-                onClick={() => setIsOpen(false)}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  location.pathname === '/defi' 
-                    ? 'bg-gray-100 text-gray-900' 
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                }`}
-              >
-                DeFi
-              </Link>
-              <Link 
-                to="/node"
-                onClick={() => setIsOpen(false)}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  location.pathname === '/node' 
-                    ? 'bg-gray-100 text-gray-900' 
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                }`}
-              >
-                Bitcoin Node
-              </Link>
-              <Link 
-                to="/cryptoguide"
-                onClick={() => setIsOpen(false)}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  location.pathname === '/cryptoguide' 
-                    ? 'bg-gray-100 text-gray-900' 
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                }`}
-              >
-                Crypto Guide
+                Solutions
               </Link>
               <Link 
                 to="/contact"
@@ -207,8 +145,8 @@ const MuscadineHome = () => {
               </svg>
             }
             title="Bitcoin Security & Self-Custody"
-            description="Establish secure self-custody with Bitcoin. Learn the fundamentals of hardware wallets, recovery planning, and long-term asset protection with the world's first decentralized currency."
-            buttonText="Explore Self-Custody"
+            description="Establish secure self-custody with Bitcoin. Learn the fundamentals of hardware wallets, recovery planning, and long-term asset protection"
+            buttonText="Explore Bitcoin"
             buttonLink="/bitcoin"
             iconBgColor="from-orange-500 to-orange-600"
             className="h-full"
@@ -222,7 +160,7 @@ const MuscadineHome = () => {
             }
             title="Decentralized Finance (DeFi)"
             description="Access lending and borrowing protocols with a structured, risk-aware approach. Learn how to optimize capital while maintaining security on Base and other networks."
-            buttonText="Explore DeFi Onboarding"
+            buttonText="Explore DeFi"
             buttonLink="/defi"
             iconBgColor="from-blue-500 to-blue-600"
             className="h-full"
@@ -234,8 +172,8 @@ const MuscadineHome = () => {
               </svg>
             }
             title="Bitcoin Node"
-            description="Connect to my self-hosted Bitcoin node for secure transactions"
-            buttonText="Review Node Options"
+            description="Connect to my self-hosted Bitcoin node for secure transactions and enhanced privacy. Access a full Bitcoin node for verification and transaction broadcasting."
+            buttonText="Connect to my Bitcoin Node"
             buttonLink="/node"
             iconBgColor="from-green-500 to-green-600"
             className="h-full"
@@ -248,8 +186,8 @@ const MuscadineHome = () => {
               </svg>
             }
             title="Knowledge Base"
-            description="Concise resources and checklists for navigating self-custody, wallets, DeFi, and digital asset security."
-            buttonText="Open Knowledge Base"
+            description="Concise resources and checklists for navigating self-custody, wallets, DeFi, and digital asset security. Comprehensive guides for all skill levels."
+            buttonText="Open Crypto Resource"
             buttonLink="/cryptoguide"
             iconBgColor="from-purple-500 to-purple-600"
             className="h-full"
@@ -338,6 +276,7 @@ function App() {
           <main className="flex-1 max-w-6xl mx-auto px-4 pt-20">
             <Routes>
               <Route path="/" element={<MuscadineHome />} />
+              <Route path="/solutions" element={<SolutionsPage />} />
               <Route path="/bitcoin" element={<BitcoinPage />} />
               <Route path="/defi" element={<DeFiPage />} />
               <Route path="/contact" element={<ContactPage />} />
