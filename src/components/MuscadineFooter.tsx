@@ -9,7 +9,7 @@ export default function MuscadineFooter() {
           <div>
             <h3 className="text-lg font-light text-white mb-4 font-serif">Muscadine</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Muscadine is dedicated to helping individuals take control of their financial future through Bitcoin security, self-custody, and DeFi solutions. I provide support with Bitcoin node deployment, secure asset management, and onboarding into decentralized finance, ensuring people can navigate the new financial system.
+              Muscadine is dedicated to helping individuals take control of their financial future through Bitcoin, self-custody, and DeFi solutions.
             </p>
           </div>
           
