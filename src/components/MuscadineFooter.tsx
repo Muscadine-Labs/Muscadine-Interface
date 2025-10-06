@@ -35,6 +35,14 @@ export default function MuscadineFooter() {
               >
                 Contact
               </Link>
+              <a 
+                href="https://app.muscadine.box/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                APP
+              </a>
             </nav>
           </div>
           
