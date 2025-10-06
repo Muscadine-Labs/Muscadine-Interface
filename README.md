@@ -100,7 +100,7 @@ npm run preview
 
 ### Navigation Structure
 - **Header**: Home, Solutions, Contact
-- **Footer**: Resources (Bitcoin, DeFi, Bitcoin Node, Crypto Guide), Connect (LinkedIn, Personal Site, Health), Legal
+- **Footer**: Navigation (Home, Solutions, Contact, APP), Resources (Bitcoin, DeFi, Bitcoin Node, Crypto Guide), Connect (LinkedIn, Personal Site, Health), Legal
 - **Mobile**: Responsive navigation with same page structure
 
 ## Error Logging
@@ -147,6 +147,13 @@ MIT License - see LICENSE file for details.
 ---
 
 *Built on BITCOIN • Secure • Transparent • Professional*
+
+## Muscadine App
+
+- **Web App**: `https://app.muscadine.box/` - Access the full Muscadine application with portfolio management, lending, swapping, and transaction features
+- **Connect Wallet**: Secure wallet integration for managing your digital assets
+- **Portfolio Management**: Track and manage your cryptocurrency portfolio
+- **DeFi Integration**: Access lending protocols and swap functionality
 
 ## Related Projects
 
