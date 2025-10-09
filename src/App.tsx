@@ -12,6 +12,10 @@ import SolutionsPage from './components/SolutionsPage';
 import MuscadineFooter from './components/MuscadineFooter';
 import UICard from './components/UICard';
 import ScrollToTop from './components/ScrollToTop';
+import LegalPage from './components/LegalPage';
+import PrivacyPage from './components/PrivacyPage';
+import TermsPage from './components/TermsPage';
+import DisclaimerPage from './components/DisclaimerPage';
 
 const MuscadineBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -282,6 +286,10 @@ function App() {
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/node" element={<NodePage />} />
               <Route path="/cryptoguide" element={<CryptoGuidePage />} />
+              <Route path="/legal" element={<LegalPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/disclaimer" element={<DisclaimerPage />} />
             </Routes>
           </main>
           <MuscadineFooter />

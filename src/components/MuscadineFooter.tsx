@@ -118,30 +118,30 @@ export default function MuscadineFooter() {
           <div>
             <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Legal</h4>
             <div className="space-y-2">
-              <a 
-                href="/privacy.html" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link 
+                to="/privacy"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Privacy Policy
-              </a>
-              <a 
-                href="/legal.html" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              </Link>
+              <Link 
+                to="/legal"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                Legal
-              </a>
-              <a 
-                href="/disclaimer.html" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                Legal Disclaimer
+              </Link>
+              <Link 
+                to="/terms"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Terms of Service
+              </Link>
+              <Link 
+                to="/disclaimer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Disclaimer
-              </a>
+              </Link>
               <a 
                 href="https://github.com/nickconnelly10/muscadine.box" 
                 target="_blank" 
