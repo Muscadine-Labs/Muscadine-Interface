@@ -177,7 +177,7 @@ const MuscadineHome = () => {
             }
             title="Bitcoin Node"
             description="Connect to my self-hosted Bitcoin node for secure transactions and enhanced privacy. Access a full Bitcoin node for verification and transaction broadcasting."
-            buttonText="Connect to my Bitcoin Node"
+            buttonText="Connect to our Bitcoin Node"
             buttonLink="/node"
             iconBgColor="from-green-500 to-green-600"
             className="h-full"
