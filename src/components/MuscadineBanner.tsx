@@ -6,7 +6,7 @@ const MuscadineBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200">
+    <header className="fixed top-0 left-0 w-full z-50 bg-gray-50 border-b border-gray-200">
       <div className="w-full px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}

@@ -91,8 +91,27 @@ const MuscadineHome = () => {
   return (
     <>
       {/* Hero Section - Full Width Background */}
-      <div className="py-20 px-20 mb-8 rounded-lg mx-4 border-2 border-black">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mt-20 mb-8">
+        {/* Nested rectangles effect */}
+        <div className="absolute inset-0 flex items-center justify-center z-0">
+          
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          {/* Rectangle 4 */}
+          <div className="w-full max-w-[81rem] h-[780px] border-2 border-black rounded-lg"></div>
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center z-20">
+          {/* Rectangle 3 */}
+          <div className="w-full max-w-[78rem] h-[740px] border-2 border-black rounded-lg"></div>
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center z-30">
+          {/* Rectangle 2 */}
+          <div className="w-full max-w-[75rem] h-[700px] border-2 border-black rounded-lg"></div>
+        </div>
+        
+        {/* Main hero container */}
+        <div className="relative py-20 px-20 mx-auto max-w-6xl border-2 border-black rounded-lg bg-white z-40">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <div className="space-y-6 text-center lg:text-left">
             <h1 className="text-4xl lg:text-5xl font-light text-gray-900 leading-tight font-serif">
@@ -128,6 +147,7 @@ const MuscadineHome = () => {
               <IsometricNodes />
             </div>
           </div>
+        </div>
         </div>
       </div>
 
@@ -325,7 +345,7 @@ const MuscadineHome = () => {
           </div>
         </div>
         
-        <div className="relative py-40 pt-44 mt-16">
+        <div className="relative py-60 mt-16">
           <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-5xl lg:text-6xl font-light text-white mb-8 font-serif">
             Introducing Our Crypto Vault
@@ -333,9 +353,7 @@ const MuscadineHome = () => {
           <p className="text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto mb-8">
             Store your digital assets securely while earning competitive interest rates. Our new crypto vault, built on Morphio's robust infrastructure, provides institutional-grade security with the convenience of DeFi yield farming. Your assets are protected by advanced smart contracts and multi-signature wallets, ensuring both security and growth potential.
           </p>
-          <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mb-12">
-            Support for major cryptocurrencies including Bitcoin, Ethereum, and stablecoins. Automated yield optimization and compound interest calculations help maximize your returns while maintaining full transparency and control over your funds.
-          </p>
+          
           <a 
             href="https://app.muscadine.box" 
             target="_blank" 
