@@ -4,6 +4,7 @@ import PolyhedronShape from './3DShapes/PolyhedronShape';
 import StarShape from './3DShapes/StarShape';
 import TorusShape from './3DShapes/TorusShape';
 import PyramidShape from './3DShapes/PyramidShape';
+import PixelBlast from './PixelBlast';
 
 // Count-up animation component
 const CountUpAnimation = ({ target, duration = 2000, suffix = '', prefix = '' }: { 
@@ -105,7 +106,7 @@ const MuscadineHome = () => {
                 href="https://app.muscadine.box" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-900 hover:border-gray-800 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
               >
                 Open App
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,7 +115,7 @@ const MuscadineHome = () => {
               </a>
               <a 
                 href="/about" 
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:border-gray-400 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300"
               >
                 About Us
               </a>
@@ -186,7 +187,7 @@ const MuscadineHome = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* Service 1 - Bitcoin Security */}
-            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 transition-colors">
+            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="space-y-6">
                 {/* 3D Shape Container */}
                 <div className="w-full h-48 bg-gray-50 rounded-lg border border-gray-200">
@@ -212,7 +213,7 @@ const MuscadineHome = () => {
             </div>
 
             {/* Service 2 - DeFi */}
-            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 transition-colors">
+            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="space-y-6">
                 {/* 3D Shape Container */}
                 <div className="w-full h-48 bg-gray-50 rounded-lg border border-gray-200">
@@ -238,7 +239,7 @@ const MuscadineHome = () => {
             </div>
 
             {/* Service 3 - Bitcoin Node */}
-            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 transition-colors">
+            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="space-y-6">
                 {/* 3D Shape Container */}
                 <div className="w-full h-48 bg-gray-50 rounded-lg border border-gray-200">
@@ -264,7 +265,7 @@ const MuscadineHome = () => {
             </div>
 
             {/* Service 4 - Knowledge Base */}
-            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 transition-colors">
+            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="space-y-6">
                 {/* 3D Shape Container */}
                 <div className="w-full h-48 bg-gray-50 rounded-lg border border-gray-200">
@@ -304,13 +305,49 @@ const MuscadineHome = () => {
           </p>
           <a 
             href="/about" 
-            className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:border-gray-400 transition-colors"
+            className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300"
           >
             Learn More About Us
             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
+        </div>
+      </div>
+
+      {/* Crypto Vault Section - Full Width Dark Blue Background with Slanted Top */}
+      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
+        {/* PixelBlast OGL background with slanted top */}
+        <div className="absolute inset-0 bg-gray-900" 
+             style={{ clipPath: 'polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)' }}>
+          <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+            <PixelBlast />
+          </div>
+        </div>
+        
+        <div className="relative py-40 pt-44 mt-16">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-5xl lg:text-6xl font-light text-white mb-8 font-serif">
+            Introducing Our Crypto Vault
+          </h2>
+          <p className="text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto mb-8">
+            Store your digital assets securely while earning competitive interest rates. Our new crypto vault, built on Morphio's robust infrastructure, provides institutional-grade security with the convenience of DeFi yield farming. Your assets are protected by advanced smart contracts and multi-signature wallets, ensuring both security and growth potential.
+          </p>
+          <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mb-12">
+            Support for major cryptocurrencies including Bitcoin, Ethereum, and stablecoins. Automated yield optimization and compound interest calculations help maximize your returns while maintaining full transparency and control over your funds.
+          </p>
+          <a 
+            href="https://app.muscadine.box" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-12 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-lg"
+          >
+            Try Out Our App
+            <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          </div>
         </div>
       </div>
     </>

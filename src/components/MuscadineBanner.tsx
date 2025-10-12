@@ -1,12 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import NavLink from './NavLink';
 import HamburgerIcon from './HamburgerIcon';
-
-const navigationItems = [
-  
-  { to: '/contact', label: 'Contact' }
-];
 
 const MuscadineBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,18 +21,19 @@ const MuscadineBanner = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <NavLink key={item.to} to={item.to}>
-                {item.label}
-              </NavLink>
-            ))}
+            <Link
+              to="/contact"
+              className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+            >
+              Connect With Us
+            </Link>
             
             {/* Try Our App Button */}
             <a
               href="https://app.muscadine.box"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-sm font-medium px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center text-sm font-medium px-4 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
             >
               Try Our App
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,23 +58,20 @@ const MuscadineBanner = () => {
         {isOpen && (
           <div className="md:hidden mt-4 pt-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-2">
-              {navigationItems.map((item) => (
-                <NavLink 
-                  key={item.to} 
-                  to={item.to} 
-                  variant="mobile"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </NavLink>
-              ))}
+              <Link
+                to="/contact"
+                className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Connect With Us
+              </Link>
               
               {/* Mobile Try Our App Button */}
               <a
                 href="https://app.muscadine.box"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 mt-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
+                className="inline-flex items-center justify-center px-4 py-2.5 mt-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Try Our App
