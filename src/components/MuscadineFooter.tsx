@@ -151,7 +151,7 @@ export default function MuscadineFooter() {
             Education & security guidance only—no investment advice, no asset custody.
           </p>
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Muscadine. All rights reserved.
+            © 2025 Muscadine Labs LLC. All rights reserved.
           </p>
         </div>
       </div>

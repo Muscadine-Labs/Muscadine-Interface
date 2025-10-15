@@ -97,7 +97,7 @@ const PrivacyPage: React.FC = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Contact Us</h2>
             <div className="bg-gray-50 p-6 rounded-lg mb-4">
               <p className="text-gray-700 mb-2">If you have questions about this Privacy Policy, please contact us:</p>
-              <p className="text-gray-700"><strong>Email:</strong> nickconnelly10@gmail.com</p>
+              <p className="text-gray-700"><strong>Email:</strong> contact@muscadine.box</p>
               <p className="text-gray-700"><strong>Website:</strong> muscadine.box</p>
             </div>
           </section>

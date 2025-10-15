@@ -55,6 +55,11 @@ Output will be in the `dist/` directory.
 - **Health Dashboard**: `https://health.nicholasconnelly.box`
 - **Main Site**: `https://nicholasconnelly.box`
 
+## Company Information
+
+- **Company**: Muscadine Labs LLC (Wyoming)
+- **Contact**: contact@muscadine.box
+
 ## License
 
 MIT License

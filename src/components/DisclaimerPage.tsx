@@ -165,7 +165,7 @@ const DisclaimerPage: React.FC = () => {
 
           <div className="mt-12 pt-8 border-t border-gray-200 text-gray-500 text-sm">
             <p className="mb-2">This disclaimer is subject to change without notice. Users are responsible for reviewing this page periodically for updates.</p>
-            <p>© 2025 Muscadine. All rights reserved.</p>
+            <p>© 2025 Muscadine Labs LLC. All rights reserved.</p>
           </div>
 
           <div className="mt-8 pt-4">
