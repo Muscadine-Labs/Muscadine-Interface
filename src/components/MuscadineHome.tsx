@@ -353,7 +353,7 @@ const MuscadineHome = () => {
             Introducing Our Crypto Vault
           </h2>
           <p className="text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto mb-8">
-            Store your digital assets securely while earning competitive interest rates. Our new crypto vault, built on Morphio's robust infrastructure, provides institutional-grade security with the convenience of DeFi yield farming. Your assets are protected by advanced smart contracts and multi-signature wallets, ensuring both security and growth potential.
+            Store your digital assets securely while earning competitive interest rates. Our new crypto vault, built on Morpho's robust infrastructure, provides institutional-grade security with the convenience of DeFi yield farming. Your assets are protected by advanced smart contracts and multi-signature wallets, ensuring both security and growth potential.
           </p>
           
           <a 
