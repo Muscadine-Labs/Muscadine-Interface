@@ -49,6 +49,16 @@ const LegalPage: React.FC = () => {
               <strong>We do not hold, store, or custody any digital assets or cryptocurrencies.</strong> 
               We provide educational guidance only. Users are responsible for their own asset security and custody.
             </p>
+            <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-4">
+              <p className="text-red-800 font-semibold mb-2">VAULT SERVICES DISCLAIMER:</p>
+              <ul className="text-red-700 list-disc list-inside space-y-1">
+                <li>Our vault services are provided through third-party protocols (Morpho)</li>
+                <li>Smart contract vulnerabilities may result in total loss of funds</li>
+                <li>Liquidation events can cause immediate loss of collateral</li>
+                <li>We are not responsible for protocol failures or exploits</li>
+                <li>Frontend attacks may compromise user interactions with vaults</li>
+              </ul>
+            </div>
           </section>
 
           <section className="mb-8">
@@ -64,7 +74,25 @@ const LegalPage: React.FC = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. No Guarantees</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Seed Phrase and Security Risks</h2>
+            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-4">
+              <p className="text-yellow-800 font-semibold mb-2">CRITICAL SECURITY WARNING:</p>
+              <p className="text-yellow-700 mb-2">
+                Seed phrase compromise can result in permanent loss of all cryptocurrency holdings. Users must understand these risks:
+              </p>
+              <ul className="text-yellow-700 list-disc list-inside space-y-1">
+                <li>Seed phrases provide complete access to wallet funds</li>
+                <li>Compromise through phishing, malware, or social engineering</li>
+                <li>Physical theft of hardware wallets or written seed phrases</li>
+                <li>User error in seed phrase storage or backup</li>
+                <li>We are not responsible for lost or compromised seed phrases</li>
+                <li>Users must implement their own security measures</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. No Guarantees</h2>
             <p className="text-gray-700 mb-4">We make no guarantees, warranties, or representations regarding:</p>
             <ul className="text-gray-700 list-disc list-inside space-y-2 mb-4">
               <li>The accuracy, completeness, or reliability of any information</li>
@@ -75,7 +103,7 @@ const LegalPage: React.FC = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Risk Disclosure</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Risk Disclosure</h2>
             <p className="text-gray-700 mb-4">Bitcoin and cryptocurrency investments involve significant risks, including but not limited to:</p>
             <ul className="text-gray-700 list-disc list-inside space-y-2 mb-4">
               <li>Volatility and potential loss of principal</li>
@@ -87,7 +115,7 @@ const LegalPage: React.FC = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Limitation of Liability</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Limitation of Liability</h2>
             <p className="text-gray-700 font-semibold mb-4">
               TO THE MAXIMUM EXTENT PERMITTED BY LAW, MUSCADINE SHALL NOT BE LIABLE FOR:
             </p>
@@ -101,7 +129,7 @@ const LegalPage: React.FC = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. No Professional Relationship</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. No Professional Relationship</h2>
             <p className="text-gray-700 mb-4">
               No professional relationship (financial advisor, investment advisor, attorney, or other) is created 
               between you and Muscadine through the use of our services.
@@ -109,7 +137,7 @@ const LegalPage: React.FC = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Third-Party Content</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Third-Party Content</h2>
             <p className="text-gray-700 mb-4">
               Our website may contain links to third-party websites or content. We are not responsible for the 
               accuracy, completeness, or reliability of such third-party content.
@@ -117,7 +145,7 @@ const LegalPage: React.FC = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Regulatory Compliance</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Regulatory Compliance</h2>
             <p className="text-gray-700 mb-4">
               Users are responsible for ensuring compliance with all applicable laws and regulations in their 
               jurisdiction. We do not provide legal advice regarding regulatory compliance.
@@ -125,7 +153,7 @@ const LegalPage: React.FC = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Indemnification</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Indemnification</h2>
             <p className="text-gray-700 mb-4">
               You agree to indemnify and hold harmless Muscadine from any claims, damages, or expenses arising 
               from your use of our services or violation of these terms.
@@ -133,7 +161,7 @@ const LegalPage: React.FC = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Governing Law</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">13. Governing Law</h2>
             <p className="text-gray-700 mb-4">
               This disclaimer is governed by the laws of the United States. Any disputes shall be resolved 
               in the courts of the United States.
@@ -141,7 +169,7 @@ const LegalPage: React.FC = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">13. Severability</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">14. Severability</h2>
             <p className="text-gray-700 mb-4">
               If any provision of this disclaimer is found to be unenforceable, the remaining provisions 
               shall remain in full force and effect.
@@ -149,7 +177,7 @@ const LegalPage: React.FC = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">14. Contact Information</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">15. Contact Information</h2>
             <div className="bg-gray-50 p-6 rounded-lg mb-4">
               <p className="text-gray-700 mb-2">If you have questions about this legal disclaimer, please contact us:</p>
               <p className="text-gray-700"><strong>Email:</strong> contact@muscadine.box</p>
@@ -166,7 +194,7 @@ const LegalPage: React.FC = () => {
           </div>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">15. Open Source</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">16. Open Source</h2>
             <p className="text-gray-700 mb-4">
               This website and its educational content are open source. You can view the source code and contribute to the project:
             </p>

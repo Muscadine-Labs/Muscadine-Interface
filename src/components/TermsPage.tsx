@@ -9,7 +9,7 @@ const TermsPage: React.FC = () => {
           <h1 className="text-4xl font-semibold text-gray-900 mb-4 text-center font-serif">
             Terms of Service
           </h1>
-          <p className="text-gray-600 mb-8 text-center"><strong>Last updated:</strong> January 2025</p>
+          <p className="text-gray-600 mb-8 text-center"><strong>Last updated:</strong> October 2025</p>
 
           <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-8 rounded">
             <p className="text-yellow-800 font-semibold">
@@ -39,63 +39,83 @@ const TermsPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              3. Health Resources Services Disclaimer
+              3. Vault Services and Asset Custody Disclaimer
             </h2>
-            <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-4 rounded">
-              <p className="text-yellow-800 font-semibold">
-                <strong>MEDICAL DISCLAIMER:</strong> Our health recommendations are based on peer-reviewed research but are NOT medical advice. 
-                They should never replace professional medical consultation, diagnosis, or treatment.
+            <div className="bg-red-100 border-l-4 border-red-500 p-6 mb-4 rounded">
+              <p className="text-red-800 font-semibold">
+                <strong>CRITICAL VAULT DISCLAIMER:</strong> Our vault services involve significant risks including potential total loss of assets.
+                We do not custody your assets and are not responsible for vault-related losses.
               </p>
             </div>
             <ul className="text-gray-700 list-disc list-inside space-y-2 mb-4">
-              <li>Health recommendations are for educational purposes only</li>
-              <li>We do not provide medical diagnosis, treatment, or cure</li>
-              <li>Individual health outcomes may vary significantly</li>
-              <li>Always consult qualified healthcare professionals for medical decisions</li>
-              <li>We are not responsible for any health outcomes from following our recommendations</li>
-              <li>Users assume all risks associated with health-related decisions</li>
+              <li>We do not custody, hold, or store your digital assets</li>
+              <li>Vault services are provided through third-party protocols (Morpho)</li>
+              <li>Smart contract vulnerabilities may result in total loss of funds</li>
+              <li>Liquidation risks exist in lending protocols</li>
+              <li>Frontend attacks may compromise user interactions</li>
+              <li>We are not responsible for protocol failures or exploits</li>
+              <li>Users must understand DeFi risks before participating</li>
             </ul>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              4. Cryptocurrency and DeFi Disclaimer
+              4. Bitcoin Security and Self-Custody Risks
             </h2>
             <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-4 rounded">
               <p className="text-yellow-800 font-semibold">
-                <strong>FINANCIAL DISCLAIMER:</strong> Cryptocurrency and DeFi information is for educational purposes only. 
-                We are not financial advisors, and this is not financial advice.
+                <strong>SECURITY DISCLAIMER:</strong> Bitcoin self-custody involves significant security risks. 
+                We provide educational guidance only and are not responsible for security failures.
               </p>
             </div>
             <ul className="text-gray-700 list-disc list-inside space-y-2 mb-4">
-              <li>Not financial advice or investment recommendations</li>
-              <li>Cryptocurrency investments are highly speculative and risky</li>
-              <li>You can lose all or part of your investment</li>
-              <li>Past performance does not guarantee future results</li>
-              <li>Consult qualified financial advisors for investment decisions</li>
-              <li>We are not responsible for any financial losses</li>
-              <li>Users assume all risks associated with cryptocurrency activities</li>
+              <li>Seed phrase compromise can result in total loss of funds</li>
+              <li>Hardware wallet failures or damage may cause asset loss</li>
+              <li>User error in transaction execution is irreversible</li>
+              <li>Social engineering attacks target cryptocurrency holders</li>
+              <li>Physical security risks exist for hardware wallets</li>
+              <li>We are not responsible for lost or stolen seed phrases</li>
+              <li>Users must implement their own security measures</li>
             </ul>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              5. No Professional Relationship
+              5. Frontend and Interface Risks
+            </h2>
+            <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-4 rounded">
+              <p className="text-yellow-800 font-semibold">
+                <strong>INTERFACE DISCLAIMER:</strong> Our frontend interfaces may be vulnerable to attacks that could compromise user funds.
+              </p>
+            </div>
+            <ul className="text-gray-700 list-disc list-inside space-y-2 mb-4">
+              <li>Frontend applications may be subject to phishing attacks</li>
+              <li>Malicious browser extensions can intercept transactions</li>
+              <li>DNS hijacking may redirect users to fake interfaces</li>
+              <li>Man-in-the-middle attacks can compromise wallet connections</li>
+              <li>Users must verify all URLs and transaction details</li>
+              <li>We are not responsible for frontend-based security breaches</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
+              6. No Professional Relationship
             </h2>
             <p className="text-gray-700 mb-4">
               Use of our services does not create any professional relationship between you and Muscadine. 
-              We are not your doctors, financial advisors, or legal counsel.
+              We are not your financial advisors or legal counsel.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              6. User Responsibilities
+              7. User Responsibilities
             </h2>
             <p className="text-gray-700 mb-4">You agree to:</p>
             <ul className="text-gray-700 list-disc list-inside space-y-2 mb-4">
               <li>Use our services for educational purposes only</li>
-              <li>Consult appropriate professionals for medical, financial, or legal decisions</li>
+              <li>Consult appropriate professionals for financial or legal decisions</li>
               <li>Not rely solely on our content for critical life decisions</li>
               <li>Understand that all information is provided "as is" without warranties</li>
               <li>Accept responsibility for your own decisions and actions</li>
@@ -104,13 +124,13 @@ const TermsPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              7. Limitation of Liability
+              8. Limitation of Liability
             </h2>
             <p className="text-gray-700 mb-4">To the maximum extent permitted by law, Muscadine shall not be liable for any:</p>
             <ul className="text-gray-700 list-disc list-inside space-y-2 mb-4">
               <li>Direct, indirect, incidental, or consequential damages</li>
-              <li>Health outcomes from following our recommendations</li>
-              <li>Financial losses from cryptocurrency activities</li>
+              <li>Loss of digital assets or cryptocurrency holdings</li>
+              <li>Vault liquidation events or protocol failures</li>
               <li>Decisions made based on our educational content</li>
               <li>Interruption or cessation of service</li>
             </ul>
@@ -118,7 +138,7 @@ const TermsPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              8. Indemnification
+              9. Indemnification
             </h2>
             <p className="text-gray-700 mb-4">
               You agree to indemnify and hold harmless Muscadine from any claims, damages, or expenses arising from your use of our services or violation of these terms.
@@ -127,7 +147,7 @@ const TermsPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              9. Intellectual Property
+              10. Intellectual Property
             </h2>
             <p className="text-gray-700 mb-4">
               Our content is provided under open-source licenses. You may use, modify, and distribute our code according to the applicable license terms.
@@ -136,7 +156,7 @@ const TermsPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              10. Third-Party Links
+              11. Third-Party Links
             </h2>
             <p className="text-gray-700 mb-4">
               Our website may contain links to third-party websites. We are not responsible for the content, privacy policies, or practices of these external sites.
@@ -145,7 +165,7 @@ const TermsPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              11. Service Availability
+              12. Service Availability
             </h2>
             <p className="text-gray-700 mb-4">
               We strive to maintain service availability but do not guarantee uninterrupted access. We may modify, suspend, or discontinue services at any time.
@@ -154,7 +174,7 @@ const TermsPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              12. Changes to Terms
+              13. Changes to Terms
             </h2>
             <p className="text-gray-700 mb-4">
               We may update these terms from time to time. Continued use of our services constitutes acceptance of any changes.
@@ -163,7 +183,7 @@ const TermsPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              13. Governing Law
+              14. Governing Law
             </h2>
             <p className="text-gray-700 mb-4">
               These terms are governed by applicable laws. Any disputes shall be resolved in the appropriate jurisdiction.
@@ -172,7 +192,7 @@ const TermsPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              14. Contact Information
+              15. Contact Information
             </h2>
             <p className="text-gray-700 mb-4">
               For questions about these terms, contact us at:{' '}
@@ -184,7 +204,7 @@ const TermsPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
-              15. Severability
+              16. Severability
             </h2>
             <p className="text-gray-700 mb-4">
               If any provision of these terms is found to be unenforceable, the remaining provisions will continue in full force and effect.
