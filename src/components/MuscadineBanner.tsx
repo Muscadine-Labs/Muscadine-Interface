@@ -20,12 +20,26 @@ const MuscadineBanner = () => {
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-2">
+            <Link
+              to="/"
+              className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+            >
+              Home
+            </Link>
+            
+            <Link
+              to="/about"
+              className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+            >
+              About Us
+            </Link>
+            
             <Link
               to="/contact"
               className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
             >
-              Connect With Us
+              Contact
             </Link>
             
             <Link
@@ -66,11 +80,27 @@ const MuscadineBanner = () => {
           <div className="md:hidden mt-4 pt-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-2">
               <Link
+                to="/"
+                className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+              
+              <Link
+                to="/about"
+                className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                About Us
+              </Link>
+              
+              <Link
                 to="/contact"
                 className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                Connect With Us
+                Contact
               </Link>
               
               <Link

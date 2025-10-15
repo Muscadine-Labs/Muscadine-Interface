@@ -24,16 +24,22 @@ export default function MuscadineFooter() {
                 Home
               </Link>
               <Link 
-                to="/solutions"
+                to="/about"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                Solutions
+                About Us
               </Link>
               <Link 
                 to="/contact"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Contact
+              </Link>
+              <Link 
+                to="/solutions"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Solutions
               </Link>
               <a 
                 href="https://app.muscadine.box/" 

@@ -1,4 +1,6 @@
 
+import { Link } from 'react-router-dom';
+
 export default function ContactPage() {
   return (
     <div className="max-w-4xl mx-auto">
@@ -97,6 +99,25 @@ export default function ContactPage() {
               <span className="text-gray-900 font-medium">ignaspanavas.com</span>
             </a>
           </div>
+        </div>
+      </div>
+      
+      {/* About Us Section */}
+      <div className="mt-16 text-center">
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
+          <h3 className="text-xl font-light text-gray-900 mb-4 font-serif">Learn More About Us</h3>
+          <p className="text-gray-600 mb-6">
+            Want to know more about the team behind Muscadine and our mission?
+          </p>
+          <Link 
+            to="/about"
+            className="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium"
+          >
+            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            About Us
+          </Link>
         </div>
       </div>
     </div>
