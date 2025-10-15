@@ -2,13 +2,12 @@
 
 A professional platform dedicated to helping individuals take control of their financial future through Bitcoin security, self-custody, and DeFi solutions.
 
-## Features
+## Our Solutions
 
 - Bitcoin Security & Self-Custody
 - Decentralized Finance (DeFi) 
 - Bitcoin Node Access
 - Crypto Resources & Educational Content
-- Professional Design & Responsive Layout
 
 ## Quick Start
 
