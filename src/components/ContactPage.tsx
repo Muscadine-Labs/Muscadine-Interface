@@ -36,7 +36,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-2 gap-4">
             {/* LinkedIn */}
             <a 
-              href="https://www.linkedin.com/company/109231056"
+              href="https://www.linkedin.com/company/muscadinelabs"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-50 hover:bg-blue-100 rounded-lg p-4 flex items-center space-x-3 transition-colors duration-200"
