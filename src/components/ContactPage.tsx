@@ -23,11 +23,12 @@ export default function ContactPage() {
                 </svg>
               </div>
               <a 
-                href="mailto:nickconnelly10@gmail.com"
+                href="mailto:contact@muscadine.box"
                 className="text-lg text-gray-900 hover:text-gray-700 transition-colors duration-200 font-medium"
               >
-                nickconnelly10@gmail.com
+                contact@muscadine.box
               </a>
+              
             </div>
           </div>
           
@@ -35,7 +36,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-2 gap-4">
             {/* LinkedIn */}
             <a 
-              href="https://www.linkedin.com/in/nicholas-connelly"
+              href="https://www.linkedin.com/company/muscadinelabs"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-50 hover:bg-blue-100 rounded-lg p-4 flex items-center space-x-3 transition-colors duration-200"

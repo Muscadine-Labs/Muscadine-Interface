@@ -3,6 +3,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import Analytics from './components/Analytics';
 import MuscadineBanner from './components/MuscadineBanner';
 import MuscadineHome from './components/MuscadineHome';
+import AboutPage from './components/AboutPage';
 import BitcoinPage from './components/BitcoinPage';
 import DeFiPage from './components/DeFiPage';
 import ContactPage from './components/ContactPage';
@@ -28,6 +29,7 @@ function App() {
           <main className="flex-1 max-w-6xl mx-auto px-4 pt-20">
             <Routes>
               <Route path="/" element={<MuscadineHome />} />
+              <Route path="/about" element={<AboutPage />} />
               <Route path="/solutions" element={<SolutionsPage />} />
               <Route path="/bitcoin" element={<BitcoinPage />} />
               <Route path="/defi" element={<DeFiPage />} />

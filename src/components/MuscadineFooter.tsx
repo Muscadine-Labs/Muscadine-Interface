@@ -57,7 +57,7 @@ export default function MuscadineFooter() {
                 Connect
               </Link>
               <a 
-                href="https://linkedin.com/in/nicholas-connelly" 
+                href="https://linkedin.com/company/muscadinelabs" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"

@@ -91,7 +91,7 @@ const MuscadineHome = () => {
   return (
     <>
       {/* Hero Section - Full Width Background */}
-      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mt-20 mb-8">
+      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mt-20 mb-20">
         {/* Nested rectangles effect */}
         <div className="absolute inset-0 flex items-center justify-center z-0">
           
@@ -110,7 +110,7 @@ const MuscadineHome = () => {
         </div>
         
         {/* Main hero container */}
-        <div className="relative py-20 px-20 mx-auto max-w-6xl border-2 border-black rounded-lg bg-white z-40">
+        <div className="relative py-20 px-20 mx-auto max-w-6xl border-2 border-black rounded-lg z-40">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <div className="space-y-6 text-center lg:text-left">
@@ -118,7 +118,7 @@ const MuscadineHome = () => {
               Take the First Step. <span className=" underline">Confidently.</span>
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
-              We're here to make sure your crypto journey is safe and secure.
+              We're here to make sure your crypto journey is safe and secure. From Bitcoin self-custody to DeFi protocols, we provide expert guidance and institutional-grade security solutions that protect your digital assets through proper education and secure practices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start items-center lg:items-start">
               <a 
