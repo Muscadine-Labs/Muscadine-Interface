@@ -15,7 +15,7 @@ A professional platform dedicated to helping individuals take control of their f
 ### Installation
 
 ```bash
-git clone https://github.com/nickconnelly10/muscadine.box.git
+git clone https://github.com/Muscadine-Labs/muscadine.box.git
 cd muscadine.box
 npm install
 ```

@@ -51,7 +51,7 @@ export default function ContactPage() {
 
             {/* GitHub */}
             <a 
-              href="https://github.com/nickconnelly10"
+              href="https://github.com/Muscadine-Labs"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white hover:bg-gray-50 rounded-lg p-4 flex items-center space-x-3 transition-colors duration-200 border border-gray-200"

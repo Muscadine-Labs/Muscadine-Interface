@@ -119,12 +119,12 @@ const PrivacyPage: React.FC = () => {
             <p className="text-gray-700">
               <strong>GitHub Repository:</strong>{' '}
               <a 
-                href="https://github.com/nickconnelly10/muscadine.box" 
+                href="https://github.com/Muscadine-Labs" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-800 underline"
               >
-                https://github.com/nickconnelly10/muscadine.box
+                https://github.com/Muscadine-Labs
               </a>
             </p>
           </section>
