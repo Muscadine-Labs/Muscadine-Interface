@@ -28,14 +28,14 @@ const MuscadineBanner = () => {
               Connect With Us
             </Link>
             
-            {/* Try Our App Button */}
+            {/* Launch App Button */}
             <a
               href="https://app.muscadine.box"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-sm font-medium px-4 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
             >
-              Try Our App
+              Launch App
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
@@ -66,7 +66,7 @@ const MuscadineBanner = () => {
                 Connect With Us
               </Link>
               
-              {/* Mobile Try Our App Button */}
+              {/* Mobile Launch App Button */}
               <a
                 href="https://app.muscadine.box"
                 target="_blank"
@@ -74,7 +74,7 @@ const MuscadineBanner = () => {
                 className="inline-flex items-center justify-center px-4 py-2.5 mt-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Try Our App
+                Launch App
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>

@@ -22,13 +22,23 @@ const AboutPage = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                As university students passionate about financial freedom, we founded Muscadine to bridge the gap between traditional finance and the decentralized future. Our mission is to make Bitcoin security, self-custody, and DeFi accessible to everyone, regardless of their technical background.
+                We founded Muscadine with a clear belief: financial freedom should not be reserved for the few—it should be accessible to anyone willing to take control of their future. Today's financial system creates dependence and limits opportunity. We're building a new path—one powered by self-custody, transparency, and personal sovereignty.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Muscadine helps individuals and families move beyond traditional banking constraints by leveraging secure Bitcoin infrastructure and decentralized finance. We empower people to protect, grow, and control their wealth without relying on intermediaries.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                We provide hands-on support with Bitcoin node deployment, secure asset management, and seamless onboarding into decentralized finance, empowering individuals to navigate and thrive in the new financial system.
+                <strong>Our mission is simple:</strong><br />
+                Enable true financial independence—through education, technology, and disciplined on-chain systems. It's about ownership, security, and long-term freedom.
               </p>
             </div>
-           
+            <div className="flex items-center justify-center">
+              <img 
+                src="/IMG_6794.jpeg" 
+                alt="Muscadine Mission" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
 
@@ -88,7 +98,7 @@ const AboutPage = () => {
               <h3 className="text-2xl font-light text-gray-900 mb-2 font-serif">Nicholas Connelly</h3>
               <p className="text-blue-600 font-medium mb-4">Co-Founder & CEO</p>
               <p className="text-gray-600 leading-relaxed">
-                Bitcoin security expert with over 8 years of experience in digital asset protection. Specializes in self-custody solutions and institutional-grade security practices.
+                Bitcoin security expert with over 7 years of experience in digital asset protection. Specializes in self-custody solutions and institutional-grade security practices.
               </p>
             </div>
 

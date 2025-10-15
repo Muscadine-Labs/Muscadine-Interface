@@ -41,7 +41,7 @@ export default function MuscadineFooter() {
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                APP
+                App
               </a>
             </nav>
           </div>
@@ -57,14 +57,6 @@ export default function MuscadineFooter() {
                 Connect
               </Link>
               <a 
-                href="https://linkedin.com/company/muscadinelabs" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                LinkedIn
-              </a>
-              <a 
                 href="https://nicholasconnelly.box" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -73,12 +65,12 @@ export default function MuscadineFooter() {
                 nicholasconnelly.box
               </a>
               <a 
-                href="https://health.nicholasconnelly.box" 
+                href="https://ignaspanavas.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                Health & Wellness
+                ignaspanavas.com
               </a>
             </div>
           </div>
