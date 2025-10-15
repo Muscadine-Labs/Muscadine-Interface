@@ -49,11 +49,10 @@ Output will be in the `dist/` directory.
 - Vercel is pre-configured via `vercel.json`
 - Automatic deployments triggered by Git updates
 
-## Related Projects
+## Muscadine Platform
 
+- **Main Site**: `https://muscadine.box`
 - **Web App**: `https://app.muscadine.box/`
-- **Health Dashboard**: `https://health.nicholasconnelly.box`
-- **Main Site**: `https://nicholasconnelly.box`
 
 ## Company Information
 
