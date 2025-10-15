@@ -28,6 +28,13 @@ const MuscadineBanner = () => {
               Connect With Us
             </Link>
             
+            <Link
+              to="/solutions"
+              className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+            >
+              Solutions
+            </Link>
+            
             {/* Launch App Button */}
             <a
               href="https://app.muscadine.box"
@@ -64,6 +71,14 @@ const MuscadineBanner = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Connect With Us
+              </Link>
+              
+              <Link
+                to="/solutions"
+                className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Solutions
               </Link>
               
               {/* Mobile Launch App Button */}

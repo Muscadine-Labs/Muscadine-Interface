@@ -1,24 +1,18 @@
 # Muscadine - Financial Self-Sovereignty
 
-A professional platform dedicated to helping individuals take control of their financial future through Bitcoin security, self-custody, and DeFi solutions. Built as a modern React application with clean, formal design.
+A professional platform dedicated to helping individuals take control of their financial future through Bitcoin security, self-custody, and DeFi solutions.
 
 ## Features
 
-- **Solutions Hub**: Centralized access to all Muscadine services through a clean, professional interface
-- **Bitcoin Security & Self-Custody**: Comprehensive guides on hardware wallets, recovery planning, and long-term asset protection
-- **Decentralized Finance (DeFi)**: Educational content about lending protocols, borrowing strategies, and Base network optimization
-- **Bitcoin Node Access**: Connect to self-hosted Bitcoin node for secure transactions and enhanced privacy
-- **Crypto Resources**: Digital asset security resources and comprehensive checklists for all skill levels
-- **Professional Design**: Clean, formal UI with consistent typography using Playfair Display and Inter fonts
-- **Streamlined Navigation**: Simplified navigation with Home, Solutions, and Contact
-- **Responsive Layout**: Optimized for desktop and mobile devices
-- **Fast Performance**: Static site with global CDN delivery
-- **Secure**: HTTPS-only with comprehensive security headers
-- **Legal Compliance**: Privacy policy, terms of service, and comprehensive disclaimer
+- Bitcoin Security & Self-Custody
+- Decentralized Finance (DeFi) 
+- Bitcoin Node Access
+- Crypto Resources & Educational Content
+- Professional Design & Responsive Layout
 
 ## Quick Start
 
-### 1. Clone & Install
+### Installation
 
 ```bash
 git clone https://github.com/nickconnelly10/muscadine.box.git
@@ -26,144 +20,41 @@ cd muscadine.box
 npm install
 ```
 
-### 2. Environment Variables (Optional)
-
-Create a `.env` file in the root directory with:
-
-```
-VITE_SENTRY_DSN=your_sentry_dsn   # Optional, for error logging
-```
-
-- Get a Sentry DSN at https://sentry.io/ (optional)
-
-### 3. Run Locally
+### Development
 
 ```bash
 npm run dev
 ```
+
 Visit [http://localhost:3002](http://localhost:3002)
 
-### 4. Build for Production
-
-To generate a production build, run:
+### Production Build
 
 ```bash
 npm run build
 ```
 
-The output will be in the `dist/` directory. **Note:** The `dist/` directory is automatically ignored by git and should not be committed.
-
-### 5. Preview Production Build
-
-```bash
-npm run preview
-```
-
-## Favicon
-
-- The favicon is located at `public/favicon.png` (1024x1024 high-quality PNG)
-- Source logo: `public/muscadinelogo.jpg`
-- Do not edit or commit any favicon in the `dist/` directory; it is generated automatically during build.
-
-## Deployment
-
-- Deploys as a static site (e.g., Vercel, Netlify, S3, Cloudflare Pages)
-- Vercel is pre-configured via `vercel.json`
+Output will be in the `dist/` directory.
 
 ## Project Structure
 
-- `src/components/` — React UI components (SolutionsPage, UICard, ErrorBoundary, etc.)
+- `src/components/` — React UI components
 - `src/types/` — TypeScript type definitions
-- `public/` — Static assets (favicon, legal pages, PDF resources)
+- `public/` — Static assets
 - `index.html` — Main HTML entry point
 
-## Content Sections
+## Deployment
 
-### Home Page
-- **About Muscadine**: Introduction to the platform and services
-- **Service Cards**: Four main service offerings with professional card design
-- **Call-to-Action**: Consultation and contact information
-
-### Solutions Page
-- **Service Overview**: Comprehensive description of Muscadine's four solutions
-- **Bitcoin Security & Self-Custody**: Hardware wallet setup and recovery planning
-- **Decentralized Finance (DeFi)**: Lending and borrowing protocols on Base network
-- **Bitcoin Node**: Connect to self-hosted node for secure transactions and enhanced privacy
-- **Crypto Resources**: Digital asset security resources and comprehensive checklists
-
-### Individual Service Pages
-- **Bitcoin**: Comprehensive Bitcoin education and wallet setup
-- **DeFi**: Decentralized finance protocols and strategies
-- **Bitcoin Node**: Access to self-hosted Bitcoin node for secure transactions
-- **Crypto Guide**: Digital asset security resources and checklists
-- **Contact**: Consultation and support information
-
-### Navigation Structure
-- **Header**: Home, Solutions, Contact
-- **Footer**: Navigation (Home, Solutions, Contact, APP), Resources (Bitcoin, DeFi, Bitcoin Node, Crypto Guide), Connect (LinkedIn, Personal Site, Health), Legal
-- **Mobile**: Responsive navigation with same page structure
-
-## Error Logging
-
-- Sentry is integrated for front-end error monitoring (optional, set DSN in `.env`)
-
-## Testing
-
-- **Build Test**: Run `npm run build` to ensure the project builds successfully
-- **Linting**: No linting errors detected - clean codebase
-- **Development Server**: Run `npm run dev` to start local development server (port 3002)
-- **Production Build**: Optimized build with no errors
-- **Production Preview**: Run `npm run preview` to test production build locally
-- **All Routes Tested**: All 7 routes working correctly
-- **Assets Verified**: All static assets properly linked and accessible
-
-## Deployment Hygiene: What to Commit
-
-| File/Folder         | Required for Deployment? | Commit to Repo? | Notes                                 |
-|---------------------|-------------------------|-----------------|---------------------------------------|
-| `node_modules/`     | No                      | No              | Only for local dev/build. Should be in `.gitignore`. |
-| `package-lock.json` | Yes                     | Yes             | Ensures consistent dependency install |
-| `vercel.json`       | Yes (if using Vercel)   | Yes             | Custom Vercel config                  |
-| `dist/`             | No                      | No              | Build output, auto-generated          |
-| `public/`           | Yes                     | Yes             | Static assets (favicon, legal, etc)   |
-| `src/`              | Yes                     | Yes             | Source code                           |
-| `.gitignore`        | Yes                     | Yes             | Ensures build artifacts are ignored   |
-
-**Delete or do not commit:**
-- `node_modules/` (never commit)
-- `dist/` (never commit)
-- Any backup files like `package-lock 2.json`, `vercel 2.json`, etc.
-
-## Contributing
-
-- PRs welcome! Please open an issue for feature requests or bugs.
-- Follow the existing code style and conventions.
-- Ensure all builds pass before submitting.
-
-## License
-
-MIT License - see LICENSE file for details.
-
----
-
-*Built on BITCOIN • Secure • Transparent • Professional*
-
-## Muscadine App
-
-- **Web App**: `https://app.muscadine.box/` - Access the full Muscadine application with portfolio management, lending, swapping, and transaction features
-- **Connect Wallet**: Secure wallet integration for managing your digital assets
-- **Portfolio Management**: Track and manage your cryptocurrency portfolio
-- **DeFi Integration**: Access lending protocols and swap functionality
+- Deploys as a static site
+- Vercel is pre-configured via `vercel.json`
+- Automatic deployments triggered by Git updates
 
 ## Related Projects
 
+- **Web App**: `https://app.muscadine.box/`
 - **Health Dashboard**: `https://health.nicholasconnelly.box`
 - **Main Site**: `https://nicholasconnelly.box`
 
-## Domain Configuration
+## License
 
-This repository serves the following domains:
-- **Primary**: `https://muscadine.box`
-- **Muscadine WWW**: `https://www.muscadine.box`
-
-All domains point to the same Muscadine platform for financial self-sovereignty. 
+MIT License

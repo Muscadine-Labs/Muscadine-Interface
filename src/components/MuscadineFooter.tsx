@@ -54,7 +54,7 @@ export default function MuscadineFooter() {
                 to="/contact"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                Connect
+                Contact
               </Link>
               <a 
                 href="https://nicholasconnelly.box" 
