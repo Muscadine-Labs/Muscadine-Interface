@@ -39,7 +39,7 @@ const SolutionsPage = () => {
                 Access our Morpho vaults on Base for secure yield on USDC, Bitcoin, and Ethereum. Built for financial freedom with industry-low fees (1% performance fee) and flexible deposits/withdrawals of any amount, anytime.
               </p>
               <a 
-                href="https://app.muscadine.box"
+                href="https://app.muscadine.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"

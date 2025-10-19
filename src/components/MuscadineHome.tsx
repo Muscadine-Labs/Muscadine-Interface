@@ -122,7 +122,7 @@ const MuscadineHome = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start items-center lg:items-start">
               <a 
-                href="https://app.muscadine.box" 
+                href="https://app.muscadine.io" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-900 hover:border-gray-800 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
@@ -211,7 +211,7 @@ const MuscadineHome = () => {
               <div className="space-y-6">
                 {/* 3D Shape Container */}
                 <div className="w-full h-48 bg-gray-50 rounded-lg border border-gray-200">
-                  <PyramidShape path="https://app.muscadine.box" />
+                  <PyramidShape path="https://app.muscadine.io" />
                 </div>
                 
                 <h3 className="text-2xl font-light text-gray-900 font-serif">
@@ -221,7 +221,7 @@ const MuscadineHome = () => {
                   Access our Morpho vaults on Base for secure yield on USDC, Bitcoin, and Ethereum. Built for financial freedom with industry-low fees (1% performance fee) and flexible deposits/withdrawals of any amount, anytime.
                 </p>
                 <a 
-                  href="https://app.muscadine.box"
+                  href="https://app.muscadine.io"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
@@ -357,7 +357,7 @@ const MuscadineHome = () => {
           </p>
           
           <a 
-            href="https://app.muscadine.box" 
+            href="https://app.muscadine.io" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-12 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-lg"

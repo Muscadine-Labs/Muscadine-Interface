@@ -14,8 +14,8 @@ A professional platform dedicated to helping individuals take control of their f
 ### Installation
 
 ```bash
-git clone https://github.com/Muscadine-Labs/muscadine.box.git
-cd muscadine.box
+git clone https://github.com/Muscadine-Labs/Muscadine-Interface.git
+cd Muscadine-Interface
 npm install
 ```
 
@@ -50,13 +50,13 @@ Output will be in the `dist/` directory.
 
 ## Muscadine Platform
 
-- **Main Site**: `https://muscadine.box`
-- **Web App**: `https://app.muscadine.box/`
+- **Main Site**: `https://muscadine.io`
+- **Web App**: `https://app.muscadine.io/`
 
 ## Company Information
 
 - **Company**: Muscadine Labs LLC (Wyoming)
-- **Contact**: contact@muscadine.box
+- **Contact**: contact@muscadine.io
 
 ## License
 

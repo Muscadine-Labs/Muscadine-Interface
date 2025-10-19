@@ -25,10 +25,10 @@ export default function ContactPage() {
                 </svg>
               </div>
               <a 
-                href="mailto:contact@muscadine.box"
+                href="mailto:contact@muscadine.io"
                 className="text-lg text-gray-900 hover:text-gray-700 transition-colors duration-200 font-medium"
               >
-                contact@muscadine.box
+                contact@muscadine.io
               </a>
               
             </div>

@@ -42,7 +42,7 @@ export default function MuscadineFooter() {
                 Solutions
               </Link>
               <a 
-                href="https://app.muscadine.box/" 
+                href="https://app.muscadine.io/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
