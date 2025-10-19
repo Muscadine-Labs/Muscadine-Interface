@@ -196,8 +196,8 @@ const TermsPage: React.FC = () => {
             </h2>
             <p className="text-gray-700 mb-4">
               For questions about these terms, contact us at:{' '}
-              <a href="mailto:contact@muscadine.io" className="text-orange-600 hover:text-orange-800 underline">
-                contact@muscadine.io
+              <a href="mailto:muscadinelabs@gmail.com" className="text-orange-600 hover:text-orange-800 underline">
+                muscadinelabs@gmail.com
               </a>
             </p>
           </section>

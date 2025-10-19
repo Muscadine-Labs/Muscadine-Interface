@@ -56,7 +56,7 @@ Output will be in the `dist/` directory.
 ## Company Information
 
 - **Company**: Muscadine Labs LLC (Wyoming)
-- **Contact**: contact@muscadine.io
+- **Contact**: muscadinelabs@gmail.com
 
 ## License
 
