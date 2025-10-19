@@ -63,12 +63,12 @@ export default function MuscadineFooter() {
                 Contact
               </Link>
               <a 
-                href="https://nicholasconnelly.box" 
+                href="https://nickconnelly.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                nicholasconnelly.box
+                nickconnelly.com
               </a>
               <a 
                 href="https://ignaspanavas.com" 
