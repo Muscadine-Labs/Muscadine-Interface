@@ -1,19 +1,22 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Analytics from './components/Analytics';
 import MuscadineBanner from './components/MuscadineBanner';
-import MuscadineHome from './components/MuscadineHome';
-import AboutPage from './components/AboutPage';
-import BitcoinPage from './components/BitcoinPage';
-import DeFiPage from './components/DeFiPage';
-import ContactPage from './components/ContactPage';
-import NodePage from './components/NodePage';
-import SolutionsPage from './components/SolutionsPage';
 import MuscadineFooter from './components/MuscadineFooter';
 import ScrollToTop from './components/ScrollToTop';
-import LegalPage from './components/LegalPage';
-import PrivacyPage from './components/PrivacyPage';
-import TermsPage from './components/TermsPage';
+
+// Lazy load route components for code splitting
+const MuscadineHome = lazy(() => import('./components/MuscadineHome'));
+const AboutPage = lazy(() => import('./components/AboutPage'));
+const BitcoinPage = lazy(() => import('./components/BitcoinPage'));
+const DeFiPage = lazy(() => import('./components/DeFiPage'));
+const ContactPage = lazy(() => import('./components/ContactPage'));
+const NodePage = lazy(() => import('./components/NodePage'));
+const SolutionsPage = lazy(() => import('./components/SolutionsPage'));
+const LegalPage = lazy(() => import('./components/LegalPage'));
+const PrivacyPage = lazy(() => import('./components/PrivacyPage'));
+const TermsPage = lazy(() => import('./components/TermsPage'));
 
 
 function App() {
@@ -25,18 +28,24 @@ function App() {
         <div className="min-h-screen bg-gray-50 flex flex-col">
           <MuscadineBanner />
           <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8">
-            <Routes>
-              <Route path="/" element={<MuscadineHome />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/solutions" element={<SolutionsPage />} />
-              <Route path="/bitcoin" element={<BitcoinPage />} />
-              <Route path="/defi" element={<DeFiPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/node" element={<NodePage />} />
-              <Route path="/legal" element={<LegalPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-            </Routes>
+            <Suspense fallback={
+              <div className="flex items-center justify-center min-h-screen">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-stone-800"></div>
+              </div>
+            }>
+              <Routes>
+                <Route path="/" element={<MuscadineHome />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/solutions" element={<SolutionsPage />} />
+                <Route path="/bitcoin" element={<BitcoinPage />} />
+                <Route path="/defi" element={<DeFiPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/node" element={<NodePage />} />
+                <Route path="/legal" element={<LegalPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+              </Routes>
+            </Suspense>
           </main>
           <MuscadineFooter />
         </div>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'defi-dashboard-v1';
+const CACHE_NAME = 'muscadine-interface-v1';
 
 // Install event - cache resources
 self.addEventListener('install', (event) => {
