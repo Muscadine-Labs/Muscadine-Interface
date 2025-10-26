@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 export default function MuscadineFooter() {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto px-8 py-16">
-        <div className="grid md:grid-cols-5 gap-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
           {/* Brand */}
           <div>
             <h3 className="text-lg font-light text-white mb-4 font-serif">Muscadine</h3>
@@ -29,26 +29,20 @@ export default function MuscadineFooter() {
               >
                 About Us
               </Link>
-              <Link 
-                to="/contact"
+              <a 
+                href="https://docs.muscadine.io/" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                Contact
-              </Link>
+                Docs
+              </a>
               <Link 
                 to="/solutions"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Solutions
               </Link>
-              <a 
-                href="https://app.muscadine.io/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                App
-              </a>
             </nav>
           </div>
           
@@ -63,27 +57,25 @@ export default function MuscadineFooter() {
                 Contact
               </Link>
               <a 
-                href="https://nickconnelly.com" 
+                href="https://www.linkedin.com/company/muscadinelabs" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                nickconnelly.com
+                LinkedIn
               </a>
               <a 
-                href="https://ignaspanavas.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="mailto:muscadinelabs@gmail.com"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                ignaspanavas.com
+                muscadinelabs@gmail.com
               </a>
             </div>
           </div>
           
-          {/* Resources */}
+          {/* Solutions */}
           <div>
-            <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Resources</h4>
+            <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Solutions</h4>
             <div className="space-y-2">
               <Link 
                 to="/bitcoin"
@@ -103,12 +95,14 @@ export default function MuscadineFooter() {
               >
                 Bitcoin Node
               </Link>
-              <Link 
-                to="/cryptoguide"
+              <a 
+                href="https://app.muscadine.io/" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                Crypto Guide
-              </Link>
+                App
+              </a>
             </div>
           </div>
           
@@ -133,12 +127,6 @@ export default function MuscadineFooter() {
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Terms of Service
-              </Link>
-              <Link 
-                to="/disclaimer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Disclaimer
               </Link>
               <a 
                 href="https://github.com/Muscadine-Labs" 

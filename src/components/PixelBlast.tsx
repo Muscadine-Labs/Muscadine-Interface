@@ -332,7 +332,7 @@ const PixelBlast: React.FC<PixelBlastProps> = ({
   color = '#B19EEF',
   className,
   style,
-  antialias = true,
+  antialias = false, // Disable by default for performance
   patternScale = 2,
   patternDensity = 1,
   liquid = false,
@@ -415,13 +415,14 @@ const PixelBlast: React.FC<PixelBlastProps> = ({
         threeRef.current = null;
       }
       const canvas = document.createElement('canvas');
-      const gl = canvas.getContext('webgl2', { antialias, alpha: true });
+      const gl = canvas.getContext('webgl2', { antialias: false, alpha: true }); // Disable antialias for performance
       if (!gl) return;
       const renderer = new THREE.WebGLRenderer({
         canvas,
         context: gl as WebGL2RenderingContext,
-        antialias,
-        alpha: true
+        antialias: false, // Disable for performance
+        alpha: true,
+        powerPreference: 'high-performance'
       });
       renderer.domElement.style.width = '100%';
       renderer.domElement.style.height = '100%';

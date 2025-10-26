@@ -43,7 +43,7 @@ const SolutionsGlobes = () => {
 
     // Renderer with better quality settings
     const renderer = new THREE.WebGLRenderer({ 
-      antialias: true, 
+      antialias: false, // Disable for performance
       alpha: true,
       powerPreference: 'high-performance'
     });
@@ -103,8 +103,7 @@ const SolutionsGlobes = () => {
     const basePositions = [
       { x: 0, y: 7, z: 0, path: '/bitcoin' },    // Top - Bitcoin Security
       { x: 0, y: 2.25, z: 0, path: '/defi' },    // Second - DeFi
-      { x: 0, y: -2.25, z: 0, path: '/node' },   // Third - Bitcoin Node
-      { x: 0, y: -7, z: 0, path: '/cryptoguide' }    // Bottom - Knowledge Base
+      { x: 0, y: -2.25, z: 0, path: '/node' }     // Third - Bitcoin Node
     ];
 
     basePositions.forEach((pos, index) => {

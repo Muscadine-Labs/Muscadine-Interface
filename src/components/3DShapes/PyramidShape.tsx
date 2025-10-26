@@ -30,7 +30,7 @@ const PyramidShape = ({ path }: PyramidShapeProps) => {
     camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({
-      antialias: true,
+      antialias: false, // Disable for performance
       alpha: true,
       powerPreference: 'high-performance'
     });

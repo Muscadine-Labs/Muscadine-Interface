@@ -27,10 +27,14 @@ const IsometricNodes = () => {
     camera.position.set(10, 10, 10);
     camera.lookAt(0, 0, 0);
 
-    // Renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    // Renderer with performance optimizations
+    const renderer = new THREE.WebGLRenderer({ 
+      antialias: false, // Disable antialiasing for performance
+      alpha: true,
+      powerPreference: 'high-performance'
+    });
     renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Cap at 2 for performance
     containerRef.current.appendChild(renderer.domElement);
 
     // Lighting

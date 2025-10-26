@@ -115,26 +115,6 @@ const SolutionsPage = () => {
             </div>
           </div>
 
-          {/* Knowledge Base / Crypto Guide */}
-          <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-light text-gray-900 font-serif">
-                Knowledge Base
-              </h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Concise resources and checklists for navigating self-custody, wallets, DeFi, and digital asset security. Comprehensive guides for all skill levels.
-              </p>
-              <Link 
-                to="/cryptoguide"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
-              >
-                Open Crypto Resource
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
 

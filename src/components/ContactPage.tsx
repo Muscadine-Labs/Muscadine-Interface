@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 export default function ContactPage() {
   return (
     <div className="max-w-4xl mx-auto">
-      <div className="text-center mb-16">
-        <h1 className="font-light text-gray-900 leading-tight mb-8 font-serif">Contact</h1>
-        <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+      <div className="text-center mb-12 sm:mb-16">
+        <h1 className="font-light text-gray-900 leading-tight mb-6 sm:mb-8 font-serif text-3xl sm:text-4xl">Contact</h1>
+        <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-4">
           Have a question about Muscadine or want to discuss a partnership? Reach out to our team and we'll get back to you as soon as possible.
           Whether it's feedback, collaboration, or support, we're here to connect.
         </p>
       </div>
       
-      <div className="bg-gray-50 rounded-xl p-12 shadow-lg">
-        <h2 className="font-light text-gray-800 leading-tight mb-12 text-center font-serif">Get in touch</h2>
+      <div className="bg-gray-50 rounded-xl p-6 sm:p-8 lg:p-12 shadow-lg mx-4 sm:mx-0">
+        <h2 className="font-light text-gray-800 leading-tight mb-8 sm:mb-12 text-center font-serif text-2xl sm:text-3xl">Get in touch</h2>
         
         <div className="space-y-6">
           {/* Email */}
@@ -35,7 +35,7 @@ export default function ContactPage() {
           </div>
           
           {/* Social Media Grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* LinkedIn */}
             <a 
               href="https://www.linkedin.com/company/muscadinelabs"
@@ -68,7 +68,7 @@ export default function ContactPage() {
           </div>
 
           {/* Personal Websites Row */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Nicholas Personal Website */}
             <a 
               href="https://nickconnelly.com"
