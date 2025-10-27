@@ -65,6 +65,14 @@ export default function MuscadineFooter() {
                 LinkedIn
               </a>
               <a 
+                href="https://x.com/muscadinelabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                X
+              </a>
+              <a 
                 href="mailto:muscadinelabs@gmail.com"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
