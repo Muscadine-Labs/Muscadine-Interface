@@ -9,8 +9,7 @@ import ScrollToTop from './components/ScrollToTop';
 // Lazy load route components for code splitting
 const MuscadineHome = lazy(() => import('./components/MuscadineHome'));
 const AboutPage = lazy(() => import('./components/AboutPage'));
-const BitcoinPage = lazy(() => import('./components/BitcoinPage'));
-const DeFiPage = lazy(() => import('./components/DeFiPage'));
+const SelfCustodyPage = lazy(() => import('./components/SelfCustodyPage'));
 const ContactPage = lazy(() => import('./components/ContactPage'));
 const NodePage = lazy(() => import('./components/NodePage'));
 const SolutionsPage = lazy(() => import('./components/SolutionsPage'));
@@ -37,8 +36,7 @@ function App() {
                 <Route path="/" element={<MuscadineHome />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
-                <Route path="/bitcoin" element={<BitcoinPage />} />
-                <Route path="/defi" element={<DeFiPage />} />
+                <Route path="/self-custody" element={<SelfCustodyPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/node" element={<NodePage />} />
                 <Route path="/legal" element={<LegalPage />} />

@@ -118,15 +118,6 @@ export default function NodePage() {
           </div>
         </div>
 
-        {/* Security Note */}
-        <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
-          <h3 className="text-xl font-semibold text-yellow-900 mb-4">Security & Privacy</h3>
-          <p className="text-yellow-800 leading-relaxed">
-            This node operates with privacy in mind. Your transaction data is not logged or stored. 
-            However, for maximum security, consider running your own Bitcoin node. 
-            This service is provided as a convenience for those who cannot run their own node.
-          </p>
-        </div>
       </div>
     </div>
   );

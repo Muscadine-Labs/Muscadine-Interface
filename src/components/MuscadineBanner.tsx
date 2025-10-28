@@ -35,6 +35,13 @@ const MuscadineBanner = () => {
               About Us
             </Link>
             
+            <Link
+              to="/contact"
+              className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+            >
+              Contact
+            </Link>
+            
             <a
               href="https://docs.muscadine.io/"
               target="_blank"
@@ -85,6 +92,14 @@ const MuscadineBanner = () => {
                 onClick={() => setIsOpen(false)}
               >
                 About Us
+              </Link>
+              
+              <Link
+                to="/contact"
+                className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
               </Link>
               
               <a

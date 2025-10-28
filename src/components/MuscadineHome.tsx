@@ -229,7 +229,7 @@ const MuscadineHome = () => {
                   Our App
                 </h3>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  Access our Morpho vaults on Base for secure yield on USDC, Bitcoin, and Ethereum. Built for financial freedom with industry-low fees (1% performance fee) and flexible deposits/withdrawals of any amount, anytime.
+                  Access our Morpho vaults on Base for secure yield on USDC, Bitcoin, and Ethereum. Built for financial freedom with industry-low fees (2% performance fee) and flexible deposits/withdrawals of any amount, anytime.
                 </p>
                 <a 
                   href="https://app.muscadine.io"
@@ -271,25 +271,25 @@ const MuscadineHome = () => {
               </div>
             </div>
 
-            {/* Service 3 - DeFi (Bottom Left) */}
+            {/* Service 3 - Self Custody (Bottom Left) */}
             <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="space-y-6">
                 {/* 3D Shape Container */}
                 <div className="w-full h-48 bg-gray-50 rounded-lg border border-gray-200">
-                  <StarShape path="/defi" />
+                  <StarShape path="/self-custody" />
                 </div>
                 
                 <h3 className="text-2xl font-light text-gray-900 font-serif">
-                  Decentralized Finance (DeFi)
+                  Self Custody
                 </h3>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  Access lending and borrowing protocols with a structured, risk-aware approach. Learn how to optimize capital while maintaining security on Base and other networks.
+                  Complete control of your digital assets through Bitcoin security and DeFi strategies. Learn secure wallet management, hardware setup, and risk-aware approaches to decentralized finance.
                 </p>
                 <a 
-                  href="/defi"
+                  href="/self-custody"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
                 >
-                  Explore DeFi
+                  Learn Self Custody
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -297,25 +297,25 @@ const MuscadineHome = () => {
               </div>
             </div>
 
-            {/* Service 4 - Bitcoin Security (Bottom Right) */}
+            {/* Service 4 - Other Solutions (Bottom Right) */}
             <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="space-y-6">
                 {/* 3D Shape Container */}
                 <div className="w-full h-48 bg-gray-50 rounded-lg border border-gray-200">
-                  <PolyhedronShape path="/bitcoin" />
+                  <PolyhedronShape path="/solutions" />
                 </div>
                 
                 <h3 className="text-2xl font-light text-gray-900 font-serif">
-                  Bitcoin Security & Self-Custody
+                  Other Solutions
                 </h3>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  Establish secure self-custody with Bitcoin. Learn the fundamentals of hardware wallets, recovery planning, and long-term asset protection strategies that keep your digital wealth secure.
+                  Building new DeFi infrastructure and exploring cutting-edge solutions for the decentralized economy. From protocol development to innovative financial instruments that push the boundaries of what's possible in crypto.
                 </p>
                 <a 
-                  href="/bitcoin"
+                  href="/solutions"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
                 >
-                  Explore Bitcoin
+                  Explore Solutions
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

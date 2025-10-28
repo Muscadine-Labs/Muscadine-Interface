@@ -52,20 +52,20 @@ const SolutionsPage = () => {
             </div>
           </div>
 
-          {/* Bitcoin Security & Self-Custody */}
+          {/* Self Custody */}
           <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
             <div className="space-y-6">
               <h3 className="text-2xl font-light text-gray-900 font-serif">
-                Bitcoin Security & Self-Custody
+                Self Custody
               </h3>
               <p className="text-base text-gray-600 leading-relaxed">
-                Establish secure self-custody with Bitcoin. Learn the fundamentals of hardware wallets, recovery planning, and long-term asset protection strategies that keep your digital wealth secure.
+                Complete control of your digital assets through Bitcoin security and DeFi strategies. Learn secure wallet management, hardware setup, and risk-aware approaches to decentralized finance.
               </p>
               <Link 
-                to="/bitcoin"
+                to="/self-custody"
                 className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
               >
-                Explore Bitcoin
+                Learn Self Custody
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -73,24 +73,18 @@ const SolutionsPage = () => {
             </div>
           </div>
 
-          {/* Decentralized Finance (DeFi) */}
+          {/* Other Solutions */}
           <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
             <div className="space-y-6">
               <h3 className="text-2xl font-light text-gray-900 font-serif">
-                Decentralized Finance (DeFi)
+                Other Solutions
               </h3>
               <p className="text-base text-gray-600 leading-relaxed">
-                Access lending and borrowing protocols with a structured, risk-aware approach. Learn how to optimize capital while maintaining security on Base and other networks.
+                Building new DeFi infrastructure and exploring cutting-edge solutions for the decentralized economy. From protocol development to innovative financial instruments that push the boundaries of what's possible in crypto.
               </p>
-              <Link 
-                to="/defi"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
-              >
-                Explore DeFi
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+              <div className="text-gray-500 italic">
+                Coming Soon - Advanced DeFi Infrastructure
+              </div>
             </div>
           </div>
 

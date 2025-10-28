@@ -29,6 +29,12 @@ export default function MuscadineFooter() {
               >
                 About Us
               </Link>
+              <Link 
+                to="/contact"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Contact
+              </Link>
               <a 
                 href="https://docs.muscadine.io/" 
                 target="_blank" 
@@ -85,24 +91,6 @@ export default function MuscadineFooter() {
           <div>
             <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Solutions</h4>
             <div className="space-y-2">
-              <Link 
-                to="/bitcoin"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Bitcoin
-              </Link>
-              <Link 
-                to="/defi"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                DeFi
-              </Link>
-              <Link 
-                to="/node"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Bitcoin Node
-              </Link>
               <a 
                 href="https://app.muscadine.io/" 
                 target="_blank" 
@@ -111,6 +99,18 @@ export default function MuscadineFooter() {
               >
                 App
               </a>
+              <Link 
+                to="/self-custody"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Self Custody
+              </Link>
+              <Link 
+                to="/node"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Node
+              </Link>
             </div>
           </div>
           
